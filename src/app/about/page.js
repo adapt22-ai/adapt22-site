@@ -6,4 +6,12 @@ export default function About() {
       </main>
     );
   }
+  export default function About() {
+    return (
+      <div>
+        <h1>About Adapt22</h1>
+        <p>Welcome to the About page! Here, we will share our mission and vision.</p>
+      </div>
+    );
+  }
   

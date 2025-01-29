@@ -6,4 +6,12 @@ export default function Solutions() {
       </main>
     );
   }
+  export default function Solutions() {
+    return (
+      <div>
+        <h1>Our Solutions</h1>
+        <p>Explore the AI-driven solutions that Adapt22 offers.</p>
+      </div>
+    );
+  }
   
