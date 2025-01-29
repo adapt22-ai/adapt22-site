@@ -12,8 +12,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Adapt22 | AI Automation – Without the Headache",
-  description: "Adapt22 provides AI-driven automation solutions to simplify business workflows.",
+  title: "Adapt22 | AI Automation",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 
