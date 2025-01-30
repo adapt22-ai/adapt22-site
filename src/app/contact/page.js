@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Ensure it's a client component
 
 import { useState } from "react";
 import { toast } from "react-hot-toast";
@@ -24,26 +24,22 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mjkgrkgr", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setIsSuccess(true);
-        toast.success("Message sent successfully!");
-        setFormData({ name: "", company: "", email: "", phone: "", message: "" });
-      } else {
-        toast.error("Failed to send message. Try again later.");
-      }
+      if (!response.ok) throw new Error("Failed to send message.");
+
+      setIsSuccess(true);
+      toast.success("Message sent successfully!");
+      setFormData({ name: "", company: "", email: "", phone: "", message: "" });
     } catch (error) {
       toast.error("Error sending message.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
   };
 
   return (
@@ -53,10 +49,7 @@ export default function ContactPage() {
         Fill out the form below, and we'll get back to you as soon as possible.
       </p>
 
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-lg bg-gray-800 p-6 rounded-lg shadow-lg"
-      >
+      <form onSubmit={handleSubmit} className="w-full max-w-lg bg-gray-800 p-6 rounded-lg shadow-lg">
         <div className="mb-4">
           <label className="block text-sm font-medium">Name</label>
           <input
@@ -124,9 +117,7 @@ export default function ContactPage() {
         </button>
       </form>
 
-      {isSuccess && (
-        <p className="mt-4 text-cyan-400">Your message has been sent!</p>
-      )}
+      {isSuccess && <p className="mt-4 text-cyan-400">Your message has been sent!</p>}
     </div>
   );
 }
