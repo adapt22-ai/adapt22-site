@@ -1,8 +1,29 @@
+"use client";
+import Script from "next/script";
+
 export default function Contact() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">Contact Us</h1>
-      <p className="text-lg text-gray-700 mt-4">Get in touch to learn more about our AI solutions.</p>
-    </main>
+    <div className="max-w-2xl mx-auto mt-10 px-4 text-gray-200">
+      <h1 className="text-3xl font-bold text-cyan-400 mb-4">Contact Us</h1>
+      <p className="mb-4">
+        Have questions? Schedule a call below or email us at{" "}
+        <a href="mailto:info@adapt22.ai" className="text-cyan-300">
+          info@adapt22.ai
+        </a>.
+      </p>
+
+      {/* Calendly Inline Embed */}
+      <div
+        className="calendly-inline-widget"
+        data-url="https://calendly.com/jackson-adapt22/30min"
+        style={{ minWidth: "320px", height: "630px" }}
+      />
+
+      {/* Calendly Script */}
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="afterInteractive"
+      />
+    </div>
   );
 }
