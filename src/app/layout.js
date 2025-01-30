@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             </div>
 
             {/* Right side: nav links */}
-            <ul className="flex space-x-6 text-white font-semibold">
+            <ul className="flex space-x-6 list-none text-white font-semibold">
               <li>
                 <a href="/" className="hover:text-cyan-400">
                   Home
