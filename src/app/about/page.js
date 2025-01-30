@@ -1,14 +1,11 @@
-"use client";
-
 export default function About() {
   return (
-    <div className="max-w-4xl mx-auto mt-10 px-4 text-gray-200">
-      <h1 className="text-3xl font-bold text-cyan-400 mb-4">About Adapt22</h1>
-      <p className="mb-4 leading-7">
-        I am deeply committed to implementing powerful AI tools into the SMBs 
-        that keep our world running (trades, field service, construction, retail)...
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+      <h1 className="text-5xl font-bold text-cyan-400 drop-shadow-lg mb-6">About Adapt22</h1>
+      <p className="text-lg text-gray-300 max-w-2xl">
+        Adapt22 was founded to help small and medium-sized businesses harness the power of AI automation.
+        Our mission is to streamline operations and remove the tech headaches from your workflow.
       </p>
-      {/* Additional paragraphs from your bio here */}
     </div>
   );
 }

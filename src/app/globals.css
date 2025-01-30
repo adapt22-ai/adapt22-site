@@ -1,23 +1,59 @@
+/* ============================
+   Tailwind Directives (Required)
+============================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================
+   Google Fonts (Futuristic)
+============================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ============================
+   Global Styling
+============================= */
 body {
-  background: #0a0a0a;
-  color: #fff;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(120deg, #0c0c0c, #1a1a1a) no-repeat;
+  animation: gradient-animate 8s ease infinite alternate;
+  color: #e0e0e0;
+  cursor: none;
+}
+
+/* Animated Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: cyan;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+  transform: translate(-50%, -50%);
+}
+
+/* Animated Glow Effects */
+.glow-text {
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+/* Button Hover Effects */
+.btn-glow {
+  transition: 0.3s;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradient-animate {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+/* Ensure cursor is always visible */
+body, html {
+  cursor: auto !important;
 }
