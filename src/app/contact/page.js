@@ -2,10 +2,49 @@
 
 import { useState } from "react";
 import { toast } from "react-hot-toast";
-import { useForm } from "@formspree/react";
 
 export default function ContactPage() {
-  const [state, handleSubmit] = useForm("f/mjkgrkgr"); // ✅ Your actual Formspree ID
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mjkgrkgr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", company: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Try again later.");
+      }
+    } catch (error) {
+      toast.error("Error sending message.");
+    }
+
+    setIsSubmitting(false);
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-white px-4">
@@ -14,7 +53,6 @@ export default function ContactPage() {
         Fill out the form below, and we'll get back to you as soon as possible.
       </p>
 
-      {/* Contact Form */}
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg bg-gray-800 p-6 rounded-lg shadow-lg"
@@ -24,8 +62,9 @@ export default function ContactPage() {
           <input
             type="text"
             name="name"
-            autoComplete="name" // ✅ Enables autofill
             required
+            value={formData.name}
+            onChange={handleChange}
             className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
           />
         </div>
@@ -35,7 +74,8 @@ export default function ContactPage() {
           <input
             type="text"
             name="company"
-            autoComplete="organization" // ✅ Autofill for company name
+            value={formData.company}
+            onChange={handleChange}
             className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
           />
         </div>
@@ -45,8 +85,9 @@ export default function ContactPage() {
           <input
             type="email"
             name="email"
-            autoComplete="email" // ✅ Autofill for email
             required
+            value={formData.email}
+            onChange={handleChange}
             className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
           />
         </div>
@@ -56,7 +97,8 @@ export default function ContactPage() {
           <input
             type="tel"
             name="phone"
-            autoComplete="tel" // ✅ Autofill for phone number
+            value={formData.phone}
+            onChange={handleChange}
             className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
           />
         </div>
@@ -66,38 +108,25 @@ export default function ContactPage() {
           <textarea
             name="message"
             rows="4"
-            autoComplete="off" // ❌ No autofill for free-text message
             required
+            value={formData.message}
+            onChange={handleChange}
             className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          disabled={state.submitting}
+          disabled={isSubmitting}
           className="w-full bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-md transition-colors duration-200"
         >
-          {state.submitting ? "Sending..." : "Send Message"}
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
 
-      {state.succeeded && (
+      {isSuccess && (
         <p className="mt-4 text-cyan-400">Your message has been sent!</p>
       )}
-
-      {/* Contact Email Below the Form */}
-      <div className="mt-8 text-center">
-        <p className="text-lg text-gray-300">Prefer direct email?</p>
-        <p
-          className="text-xl font-semibold text-cyan-400 cursor-pointer"
-          onClick={() => {
-            navigator.clipboard.writeText("jackson@adapt22.ai");
-            toast.success("Email copied to clipboard!");
-          }}
-        >
-          jackson@adapt22.ai
-        </p>
-      </div>
     </div>
   );
 }
