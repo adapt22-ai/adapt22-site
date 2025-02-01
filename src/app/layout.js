@@ -1,5 +1,5 @@
 // ✅ This file is a **server component** (No "use client" directive)
-import "./globals.css"; // Ensure the correct path
+import "./globals.css"; // ✅ Ensure styles are applied globally
 import Image from "next/image";
 import ClientWrapper from "./ClientWrapper"; // Floating Calendly Button
 
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preload" href="https://assets.calendly.com/assets/external/widget.js" as="script" />
+      <script src="https://assets.calendly.com/assets/external/widget.js" defer></script>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
       </head>
 

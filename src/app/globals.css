@@ -19,6 +19,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(120deg, #0c0c0c, #1a1a1a) no-repeat;
   color: #e0e0e0;
+  isolation: isolate; /* ✅ Fixes hydration error */
 }
 
 /* Ensure contact page uses dark background */
