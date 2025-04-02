@@ -3,12 +3,12 @@
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
-export default function ContactPage() {
+export default function CareersPage() {
   const [formData, setFormData] = useState({
     name: "",
-    company: "",
     email: "",
-    phone: "",
+    linkedin: "",
+    resume: "",
     message: "",
   });
 
@@ -26,48 +26,44 @@ export default function ContactPage() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          message: `CAREERS FORM SUBMISSION\n\n${formData.message}\n\nLinkedIn: ${formData.linkedin}\nResume: ${formData.resume}`,
+        }),
       });
 
       if (response.ok) {
+        toast.success("Application sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          linkedin: "",
+          resume: "",
+          message: "",
+        });
         setIsSuccess(true);
-        toast.success("Message sent successfully!");
-        setFormData({ name: "", company: "", email: "", phone: "", message: "" });
       } else {
-        toast.error("Failed to send message. Try again later.");
+        toast.error("Failed to send application. Try again.");
       }
     } catch (error) {
-      toast.error("Error sending message.");
+      toast.error("Something went wrong.");
     }
 
     setIsSubmitting(false);
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4">
-      <h1 className="text-4xl font-bold mb-4 text-white text-center">Contact Us</h1>
-      <p className="text-lg text-gray-300 mb-6 text-center max-w-xl">
-        Fill out the form below and we'll get back to you as soon as possible. You can also schedule a call directly with us.
+    <div className="min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
+      <h1 className="text-4xl font-bold mb-4">Careers at Adapt22</h1>
+      <p className="text-lg max-w-2xl text-center text-gray-300 mb-8">
+        We’re always looking for mission-driven people who want to help shape the future of AI for SMBs.
+        Fill out the form below to introduce yourself.
       </p>
 
-      <a
-        href="https://calendly.com/jackson-adapt22/discoverycall"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mb-6 inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-md font-semibold"
-      >
-        Book a Call on Calendly
-      </a>
-
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-xl bg-gray-800 p-6 rounded-lg shadow-lg"
-      >
+      <form onSubmit={handleSubmit} className="w-full max-w-xl bg-gray-800 p-6 rounded-lg shadow-lg">
         <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Name</label>
+          <label className="block text-sm font-medium">Name</label>
           <input
             type="text"
             name="name"
@@ -79,18 +75,7 @@ export default function ContactPage() {
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Company Name</label>
-          <input
-            type="text"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Email</label>
+          <label className="block text-sm font-medium">Email</label>
           <input
             type="email"
             name="email"
@@ -102,18 +87,31 @@ export default function ContactPage() {
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Phone Number</label>
+          <label className="block text-sm font-medium">LinkedIn (optional)</label>
           <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
+            type="url"
+            name="linkedin"
+            value={formData.linkedin}
             onChange={handleChange}
+            placeholder="https://linkedin.com/in/yourname"
             className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Message</label>
+          <label className="block text-sm font-medium">Resume Link (optional)</label>
+          <input
+            type="url"
+            name="resume"
+            value={formData.resume}
+            onChange={handleChange}
+            placeholder="Link to resume or portfolio"
+            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-sm font-medium">Message</label>
           <textarea
             name="message"
             rows="4"
@@ -129,13 +127,11 @@ export default function ContactPage() {
           disabled={isSubmitting}
           className="w-full bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-md transition-colors duration-200"
         >
-          {isSubmitting ? "Sending..." : "Send Message"}
+          {isSubmitting ? "Sending..." : "Send Application"}
         </button>
       </form>
 
-      {isSuccess && (
-        <p className="mt-4 text-cyan-400">Your message has been sent!</p>
-      )}
+      {isSuccess && <p className="mt-4 text-cyan-400">Thanks! We'll review your info and be in touch.</p>}
     </div>
   );
 }
