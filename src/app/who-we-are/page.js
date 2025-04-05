@@ -7,8 +7,8 @@ export default function WhoWeArePage() {
       <h1 className="text-5xl font-bold mb-4 text-cyan-400">Who We Are</h1>
 
       <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-        <strong>“Why do the companies who keep our world going not have the software they need to thrive?”</strong>
-        This bothered Jackson for a long time as he had experience in both worlds — home service and software.
+        Adapt22 started from a personal, deep routed frustration, <strong>“Why do the companies who keep our world going not have the software they need to thrive?”</strong>
+        This bothered founder, Jackson McConnell, for a long time as he had a foot in both worlds - home service and software. 
       </p>
 
       {/* Founder Section */}
