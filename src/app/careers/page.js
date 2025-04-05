@@ -1,137 +1,48 @@
-"use client";
-
-import { useState } from "react";
-import { toast } from "react-hot-toast";
-
 export default function CareersPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    linkedin: "",
-    resume: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          message: `CAREERS FORM SUBMISSION\n\n${formData.message}\n\nLinkedIn: ${formData.linkedin}\nResume: ${formData.resume}`,
-        }),
-      });
-
-      if (response.ok) {
-        toast.success("Application sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          linkedin: "",
-          resume: "",
-          message: "",
-        });
-        setIsSuccess(true);
-      } else {
-        toast.error("Failed to send application. Try again.");
-      }
-    } catch (error) {
-      toast.error("Something went wrong.");
-    }
-
-    setIsSubmitting(false);
-  };
-
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
-      <h1 className="text-4xl font-bold mb-4">Careers at Adapt22</h1>
-      <p className="text-lg max-w-2xl text-center text-gray-300 mb-8">
-        We’re always looking for mission-driven people who want to help shape the future of AI for SMBs.
-        Fill out the form below to introduce yourself.
+    <section className="min-h-screen px-6 py-24 max-w-4xl mx-auto text-white">
+      <h1 className="text-5xl font-bold mb-6 text-cyan-400">Careers at Adapt22</h1>
+      <p className="text-lg text-gray-300 mb-8">
+        We're on a mission to make AI + automation accessible to the businesses that keep our world running. If you're passionate about tech, entrepreneurship, and serving others — we’d love to hear from you.
       </p>
 
-      <form onSubmit={handleSubmit} className="w-full max-w-xl bg-gray-800 p-6 rounded-lg shadow-lg">
-        <div className="mb-4">
-          <label className="block text-sm font-medium">Name</label>
-          <input
-            type="text"
-            name="name"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          />
+      <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-md space-y-6">
+        <div>
+          <h2 className="text-2xl font-semibold mb-2">Who We Hire</h2>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Creative problem-solvers with a bias toward action</li>
+            <li>People who care deeply about client success and long-term impact</li>
+            <li>Those who love learning, experimenting, and building</li>
+            <li>Folks who can operate independently, but thrive in collaboration</li>
+          </ul>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium">Email</label>
-          <input
-            type="email"
-            name="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          />
+        <div>
+          <h2 className="text-2xl font-semibold mb-2">How We Work</h2>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Flexible, hybrid work culture with a strong team bond</li>
+            <li>Optional 4-day work week — Fridays for rest, learning, focused work or service</li>
+            <li>We prioritize impact, not hours</li>
+            <li>Quarterly meetups in new cities (when remote)</li>
+          </ul>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium">LinkedIn (optional)</label>
-          <input
-            type="url"
-            name="linkedin"
-            value={formData.linkedin}
-            onChange={handleChange}
-            placeholder="https://linkedin.com/in/yourname"
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          />
+        <div>
+          <h2 className="text-2xl font-semibold mb-2">Don’t see an open role?</h2>
+          <p className="text-gray-300">
+            That’s okay — we’re always looking for talented people who want to be part of something meaningful. Reach out and tell us how you could contribute.
+          </p>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium">Resume Link (optional)</label>
-          <input
-            type="url"
-            name="resume"
-            value={formData.resume}
-            onChange={handleChange}
-            placeholder="Link to resume or portfolio"
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          />
+        <div className="mt-6">
+          <a
+            href="mailto:jackson@adapt22.ai"
+            className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-6 py-3 rounded-md transition"
+          >
+            Email Us Your Resume
+          </a>
         </div>
-
-        <div className="mb-4">
-          <label className="block text-sm font-medium">Message</label>
-          <textarea
-            name="message"
-            rows="4"
-            required
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-md transition-colors duration-200"
-        >
-          {isSubmitting ? "Sending..." : "Send Application"}
-        </button>
-      </form>
-
-      {isSuccess && <p className="mt-4 text-cyan-400">Thanks! We'll review your info and be in touch.</p>}
-    </div>
+      </div>
+    </section>
   );
 }

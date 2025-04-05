@@ -6,24 +6,54 @@
 @tailwind utilities;
 
 /* ============================
-   Google Fonts (Futuristic)
+   Global Theme (Professional Dark + Accent)
 ============================= */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+  --background: #0c0c0c;
+  --foreground: #f5f5f5;
+  --primary: #6ee7b7; /* Mint green */
+  --secondary: #94a3b8; /* Slate gray */
+  --accent: #facc15; /* Amber */
+}
 
-/* ============================
-   Global Styling
-============================= */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(120deg, #0c0c0c, #1a1a1a) no-repeat;
-  color: #e0e0e0;
-  isolation: isolate; /* ✅ Fixes hydration error */
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  isolation: isolate;
 }
 
-/* Ensure contact page uses dark background */
-.bg-background {
-  background: #0a0a0a;
-  color: #ededed;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+/* ============================
+   Layout Tweaks
+============================= */
+.max-w-screen-xl {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 5rem 1rem;
+}
+
+footer a:hover {
+  color: var(--accent);
 }

@@ -1,141 +1,93 @@
 "use client";
 
 import { useState } from "react";
-import { toast } from "react-hot-toast";
+
+export const metadata = {
+  title: "Contact | Adapt22",
+  description: "Reach out to Adapt22 to book a consultation or ask questions.",
+};
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const [status, setStatus] = useState("idle");
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setStatus("loading");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    const form = new FormData(event.target);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify({
+        name: form.get("name"),
+        email: form.get("email"),
+        message: form.get("message"),
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setIsSuccess(true);
-        toast.success("Message sent successfully!");
-        setFormData({ name: "", company: "", email: "", phone: "", message: "" });
-      } else {
-        toast.error("Failed to send message. Try again later.");
-      }
-    } catch (error) {
-      toast.error("Error sending message.");
-    }
-
-    setIsSubmitting(false);
-  };
+    setStatus(response.ok ? "success" : "error");
+  }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4">
-      <h1 className="text-4xl font-bold mb-4 text-white text-center">Contact Us</h1>
-      <p className="text-lg text-gray-300 mb-6 text-center max-w-xl">
-        Fill out the form below and we'll get back to you as soon as possible. You can also schedule a call directly with us.
+    <section className="min-h-screen px-6 py-24 max-w-4xl mx-auto text-white">
+      <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-cyan-400">
+        Let’s Talk
+      </h1>
+      <p className="text-gray-300 text-lg mb-10">
+        Whether you have questions, want to explore a custom AI/automation setup, or just want to brainstorm — we’d love to hear from you. 
+        <br />
+        Fill out the form below or email us directly at{" "}
+        <a
+          href="mailto:jackson@adapt22.ai"
+          className="text-cyan-400 hover:underline"
+        >
+          jackson@adapt22.ai
+        </a>
+        .
       </p>
 
-      <a
-        href="https://calendly.com/jackson-adapt22/discoverycall"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mb-6 inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-md font-semibold"
-      >
-        Book a Call on Calendly
-      </a>
-
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-xl bg-gray-800 p-6 rounded-lg shadow-lg"
-      >
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Name</label>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block mb-1 font-semibold">Your Name</label>
           <input
             type="text"
             name="name"
             required
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
+            className="w-full px-4 py-2 bg-white/10 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
           />
         </div>
-
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Company Name</label>
-          <input
-            type="text"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Email</label>
+        <div>
+          <label className="block mb-1 font-semibold">Email Address</label>
           <input
             type="email"
             name="email"
             required
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
+            className="w-full px-4 py-2 bg-white/10 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
           />
         </div>
-
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Phone Number</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-white">Message</label>
+        <div>
+          <label className="block mb-1 font-semibold">Message</label>
           <textarea
             name="message"
-            rows="4"
+            rows="5"
             required
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full p-2 mt-1 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-          ></textarea>
+            className="w-full px-4 py-2 bg-white/10 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          />
         </div>
-
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded-md transition-colors duration-200"
+          disabled={status === "loading"}
+          className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-6 py-3 rounded-md transition-all"
         >
-          {isSubmitting ? "Sending..." : "Send Message"}
+          {status === "loading" ? "Sending..." : "Send Message"}
         </button>
+        {status === "success" && (
+          <p className="text-green-400 mt-2">Thanks! We'll be in touch shortly.</p>
+        )}
+        {status === "error" && (
+          <p className="text-red-400 mt-2">Something went wrong. Please try again.</p>
+        )}
       </form>
-
-      {isSuccess && (
-        <p className="mt-4 text-cyan-400">Your message has been sent!</p>
-      )}
-    </div>
+    </section>
   );
 }
