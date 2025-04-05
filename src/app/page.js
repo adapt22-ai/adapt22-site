@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export default function HomePage() {
+export default function LandingPage() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-4 text-center">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold max-w-4xl leading-tight">
@@ -83,7 +83,7 @@ export default function HomePage() {
           </p>
 
           <div className="mt-6 text-center">
-            <Link href="/about">
+            <Link href="/who-we-are">
               <button className="text-white hover:text-cyan-400 transition text-lg">
                 Learn More About Adapt22
               </button>

@@ -38,9 +38,9 @@ export default function RootLayout({ children }) {
               <span className="text-2xl font-bold text-primary tracking-tight">Adapt22</span>
             </Link>
             <ul className="hidden md:flex items-center space-x-8 text-base font-medium text-white">
-              <li><Link href="/" className="hover:text-accent">Home</Link></li>
-              <li><Link href="/about" className="hover:text-accent">About</Link></li>
+              <li><Link href="/who-we-are" className="hover:text-accent">Who We Are</Link></li>
               <li><Link href="/what-we-do" className="hover:text-accent">What We Do</Link></li>
+              <li><Link href="/contact" className="hover:text-accent">Contact</Link></li>
               <li><Link href="/careers" className="hover:text-accent">Careers</Link></li>
               <li><Link href="/faq" className="hover:text-accent">FAQ</Link></li>
               <li><Link href="/testimonials" className="hover:text-accent">Testimonials</Link></li>
@@ -72,8 +72,7 @@ export default function RootLayout({ children }) {
             <div>
               <h4 className="text-white font-semibold mb-2">Quick Links</h4>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/" className="hover:text-accent">Home</Link></li>
-                <li><Link href="/about" className="hover:text-accent">About</Link></li>
+                <li><Link href="/who-we-are" className="hover:text-accent">Who We Are</Link></li>
                 <li><Link href="/what-we-do" className="hover:text-accent">What We Do</Link></li>
                 <li><Link href="/contact" className="hover:text-accent">Contact</Link></li>
                 <li><Link href="/careers" className="hover:text-accent">Careers</Link></li>

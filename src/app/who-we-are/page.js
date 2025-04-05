@@ -1,14 +1,10 @@
 import Image from "next/image";
 
-export const metadata = {
-  title: "About Us | Adapt22",
-  description: "The story behind Adapt22 and why we help SMBs scale with AI + automation.",
-};
 
-export default function AboutPage() {
+export default function WhoWeArePage() {
   return (
     <div className="min-h-screen px-6 py-20 max-w-6xl mx-auto text-white">
-      <h1 className="text-5xl font-bold mb-4 text-cyan-400">About Adapt22</h1>
+      <h1 className="text-5xl font-bold mb-4 text-cyan-400">Who We Are</h1>
 
       <p className="text-lg text-gray-300 mb-8 leading-relaxed">
         <strong>“Why do the companies who keep our world going not have the software they need to thrive?”</strong>
