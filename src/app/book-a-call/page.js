@@ -1,30 +1,35 @@
+// src/app/book-a-call/page.js — Restyled Book a Call Page
+
 "use client";
 
 export default function BookACallPage() {
   return (
-    <div className="min-h-screen px-6 py-20 max-w-3xl mx-auto text-white text-center">
-      <h1 className="text-5xl font-bold mb-6 text-cyan-400">Book a Call</h1>
-      <p className="text-lg text-gray-300 mb-10">
-        Schedule a free discovery call with Jackson to walk through your current setup, your biggest pain points, and see if Adapt22 can help. No pressure. No fluff. Just straight answers and a real conversation.
-      </p>
+    <div className="bg-[#f3f5f3] text-gray-900">
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto space-y-10 text-center">
+          <div className="space-y-4">
+            <h1 className="text-5xl font-extrabold text-primary">Book a Call</h1>
+            <div className="h-1 w-[20rem] bg-accent rounded-full mx-auto" />
+            <p className="text-lg text-gray-700">
+              Schedule a free discovery call with Jackson to walk through your current setup, your biggest pain points, and see if Adapt22 can help. No pressure. No fluff. Just straight answers and a real conversation.
+            </p>
+          </div>
 
-      <div className="bg-white/5 border border-white/10 rounded-xl p-4 sm:p-6 shadow-lg">
-        <iframe
-          src="https://calendly.com/jackson-adapt22/discoverycall"
-          width="100%"
-          height="700"
-          frameBorder="0"
-          scrolling="no"
-          className="w-full rounded-xl"
-        ></iframe>
-      </div>
+          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-200">
+            <iframe
+              src="https://calendly.com/jackson-adapt22/discoverycall"
+              width="100%"
+              height="700"
+              frameBorder="0"
+              scrolling="no"
+              className="w-full rounded-xl"
+              title="Calendly Booking Widget"
+            ></iframe>
+          </div>
 
-      <p className="text-sm text-gray-500 mt-6">
-        Prefer to reach out directly? Email us at{" "}
-        <a href="mailto:jackson@adapt22.ai" className="text-cyan-400 hover:underline">
-          jackson@adapt22.ai
-        </a>
-      </p>
+        
+        </div>
+      </section>
     </div>
   );
 }
