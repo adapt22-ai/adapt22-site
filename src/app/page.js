@@ -1,96 +1,148 @@
-"use client";
+// src/app/page.js — Clean + Finalized Landing Page
 
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
-export default function LandingPage() {
+export default function HomePage() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 text-center">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold max-w-4xl leading-tight">
-        AI Automation for the Businesses That Keep the World Running
-      </h1>
-      <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl">
-        Adapt22 is a white-glove concierge service designed to manage, implement, and scale AI + automation systems for SMBs in the trades, retail, field services, and construction.
-      </p>
+    <div className="bg-white text-gray-900">
+      {/* Hero Section with Motion Video */}
+<section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center">
+  {/* Background Video */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
+  >
+    <source src="/bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-      <p className="mt-4 text-md sm:text-lg text-gray-400 max-w-3xl">
-        Our primary focus is to deeply understand your problems and frustrations, and from there, we implement solutions that are scalable, 100% managed by our team, and actually work for you.
-      </p>
+  {/* Overlay Content */}
+  <div className="relative z-10 text-center max-w-3xl px-6">
+    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md text-grey-900">
+      AI Automation for the Businesses That Keep Our World Running
+    </h1>
+    <p className="text-lg md:text-xl mb-6 text-grey-200">
+      Adapt22 is a white-glove service designed to manage, implement,
+      and scale AI + automation systems for SMBs in the trades, retail,
+      field services, and construction.
+    </p>
+    <Link
+      href="/book-a-call"
+      className="inline-block bg-primary text-white text-lg font-semibold px-10 py-4 rounded-full shadow hover:bg-opacity-90 transition"
+    >
+      Book a Call
+    </Link>
+  </div>
+</section>
 
-      <p className="mt-4 text-md sm:text-lg text-gray-400 max-w-3xl">
-        We exist to remove the burden that AI and software can be. Let us create a tech environment tailored to your team, goals, and needs. We handle everything from implementing AI tools, customizing workflows, and automating busy work. You name your problems and we guarantee solutions.
-      </p>
+      {/* AI Service Cards with Intro Block */}
+      <section className="bg-green-900 py-20 px-6 text-white">
+        <div className="max-w-screen-xl mx-auto space-y-10">
+          <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center text-green-900">
+            <h3 className="text-2xl md:text-3xl font-extrabold mb-4">
+              Custom AI Implementation, Tailored to You
+            </h3>
+            <p className="text-md max-w-3xl mx-auto text-gray-800">
+              We specialize in white-glove AI automation services that adapt to your unique business needs.
+              Whether you're looking to overhaul your entire tech stack or implement one tool that finally works,
+              we’ll plan it, customize it, build it, and manage it — end to end. You don’t lift a finger.
+              Our goal is simple: remove complexity, streamline operations, and help you scale smarter.
+            </p>
+          </div>
 
-      <div className="mt-6 text-left max-w-3xl mx-auto text-gray-300 space-y-2">
-        <p className="font-medium">Whether it’s managing one tool or your entire tech stack, we are here to serve you:</p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Get time back. Reduce costs. Scale smarter — without the headache.</li>
-          <li>Focus on what matters: the craft you’ve mastered and the company you lead.</li>
-          <li>You maintain full control — we just handle the heavy lifting.</li>
-        </ul>
-      </div>
-
-      <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
-        <Link href="/book-a-call">
-          <button className="inline-flex items-center bg-cyan-500 hover:bg-cyan-600 text-white text-lg font-semibold px-8 py-4 rounded-md transition">
-            Book a Call
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
-        </Link>
-        <Link href="/what-we-do">
-          <button className="text-white hover:text-cyan-400 text-lg transition">
-            See What We Do
-          </button>
-        </Link>
-      </div>
-
-      <div className="mt-20 max-w-5xl w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">AI Calling & Text Bots</h3>
-            <p className="text-gray-400">24/7 voice and SMS systems that handle quotes, bookings, and FAQs — hands-free.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">CRM & Calendar Automation</h3>
-            <p className="text-gray-400">Instantly sync leads, jobs, and schedules. Never forget a follow-up again.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">AI-Generated Proposals</h3>
-            <p className="text-gray-400">Close more jobs with intelligent proposal templates powered by AI.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Meta & Google Ad Management</h3>
-            <p className="text-gray-400">We drive traffic with smart campaigns — or plug into your existing pipeline.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Intelligent Lead Routing</h3>
-            <p className="text-gray-400">Route new jobs to the right reps or techs based on zip code, priority, or availability.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Automated Email & Follow-ups</h3>
-            <p className="text-gray-400">Send timely emails and reminders using AI to boost conversions and reduce no-shows.</p>
+          <div className="grid gap-10 md:grid-cols-3 text-left">
+            {[{
+              title: "AI Calling & Text Bots",
+              desc: "24/7 voice and SMS systems that handle quotes, bookings, and FAQs — hands-free."
+            }, {
+              title: "CRM & Calendar Automation",
+              desc: "Instantly sync leads, jobs, and schedules. Never forget a follow-up again."
+            }, {
+              title: "AI-Generated Proposals",
+              desc: "Close more jobs with intelligent proposal templates powered by AI."
+            }, {
+              title: "Meta & Google Ad Management",
+              desc: "We drive traffic with smart campaigns — or plug into your existing pipeline."
+            }, {
+              title: "Intelligent Lead Routing",
+              desc: "Route new jobs to the right reps or techs based on zip code, priority, or availability."
+            }, {
+              title: "Automated Email & Follow-ups",
+              desc: "Send timely emails and reminders using AI to boost conversions and reduce no-shows."
+            }].map(({ title, desc }, i) => (
+              <div key={i} className="bg-white p-6 rounded-lg shadow hover:shadow-md transition text-green-900">
+                <h3 className="text-xl font-bold mb-2">{title}</h3>
+                <p className="text-sm text-gray-700">{desc}</p>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="mt-20 bg-white/5 p-8 rounded-xl border border-white/10 shadow-md text-left">
-          <h2 className="text-3xl font-bold mb-4 text-center">
-            Adapt22 Mission:
+      {/* Value Proposition Section */}
+      <section className="bg-[#f3f3f3] py-16 px-6 text-center">
+        <div className="max-w-4xl mx-auto space-y-4">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Whether it’s managing one tool or your entire tech stack, we are here to serve you:
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto text-center">
-            Serving Those Who Serve Us.
-            <br /><br />
-            Your work is essential to keep our world running and you deserve the same tools that billion-dollar companies have.
+          <p className="text-lg text-gray-800">
+            Get time back. Reduce costs. Scale smarter — without the headache.
           </p>
+          <p className="text-lg text-gray-800">
+            Focus on what matters: the craft you’ve mastered and the company you lead.
+          </p>
+          <p className="text-lg text-gray-800">
+            You maintain full control — we just handle the heavy lifting.
+          </p>
+          <Link
+            href="/what-we-do"
+            className="inline-block bg-green-900 text-white text-lg font-semibold px-8 py-3 rounded-full shadow hover:bg-green-800 transition mt-6"
+          >
+            See What We Do
+          </Link>
+        </div>
+      </section>
 
-          <div className="mt-6 text-center">
-            <Link href="/who-we-are">
-              <button className="text-white hover:text-cyan-400 transition text-lg">
-                Learn More About Adapt22
-              </button>
+      {/* Mission Statement */}
+      <section className="bg-gray-200 py-20 px-6 text-left">
+        <div className="max-w-4xl mx-auto space-y-10">
+          {/* Title: One line with color split */}
+          <h2 className="text-3xl md:text-4xl font-bold">
+            <span className="text-gray">Adapt22 Mission:</span>{" "}
+            <span className="text-gold font-semibold">Serving Those Who Serve Us.</span>
+          </h2>
+
+          {/* Bullet-style message with gold arrows */}
+          <div className="border-l-4 border-gold pl-6 space-y-6">
+  {[
+    "Your work is essential to keep our world running and you deserve the same tools that billion-dollar companies have.",
+    "Our focus is to understand the problems that cause wasted time and money, and then implement tailored solutions that actually work for you.",
+    "We exist to remove the burden that AI and software can be by creating a tech environment tailored to your team, goals, and needs.",
+    "Let us handle everything from implementing AI tools, customizing workflows, and automating busy work.",
+    "You name your problems and we give solutions."
+  ].map((text, index) => (
+    <p key={index} className="text-md text-gray-800 flex items-start gap-2">
+      <span className="text-gold text-lg leading-6">↠</span>
+      {text}
+    </p>
+  ))}
+</div>
+
+          {/* CTA Button - Centered */}
+          <div className="text-center">
+            <Link
+              href="/who-we-are"
+              className="inline-block mt-8 bg-green-900 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-green-800 transition"
+            >
+              Learn More About Adapt22
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

@@ -1,59 +1,123 @@
 /* ============================
-   Tailwind Directives (Required)
+   Tailwind Directives
 ============================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ============================
-   Global Theme (Professional Dark + Accent)
+   Global Theme - Modern AI (Deep Forest Green)
 ============================= */
 :root {
-  --background: #0c0c0c;
-  --foreground: #f5f5f5;
-  --primary: #6ee7b7; /* Mint green */
-  --secondary: #94a3b8; /* Slate gray */
-  --accent: #facc15; /* Amber */
+  --background: #0b2e23; /* Deep forest green */
+  --foreground: #f1f5f4; /* Soft off-white */
+  --primary: #14532d;    /* Deep forest green (now official) */
+  --secondary: #8aa79c;  /* Muted, stone gray */
+  --accent: #d4af37;     /* Elegant gold */
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--background);
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  background: linear-gradient(120deg, #0a0a0a, #0c1b16);
+  background-size: 400% 400%;
+  animation: bg-flow 15s ease-in-out infinite;
   color: var(--foreground);
   line-height: 1.6;
   isolation: isolate;
+}
+
+@keyframes bg-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+/* ============================
+   Color Utilities
+============================= */
 .text-accent {
   color: var(--accent);
-}
-
-.bg-primary {
-  background-color: var(--primary);
 }
 
 .text-primary {
   color: var(--primary);
 }
 
-/* ============================
-   Layout Tweaks
-============================= */
-.max-w-screen-xl {
-  max-width: 1280px;
-  margin: 0 auto;
+.bg-primary {
+  background-color: var(--primary);
 }
 
+/* ✅ FIXED: Gold Border Utility (Targeting Left Border Specifically) */
+.border-l-gold {
+  border-left-color: var(--accent) !important;
+}
+
+/* Optional extras for reusability */
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+/* ============================
+   Section Layouts
+============================= */
 section {
-  padding: 5rem 1rem;
+  padding: 6rem 1.5rem;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================
+   Extra Visual Polish
+============================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+button {
+  transition: all 0.2s ease-in-out;
 }
 
 footer a:hover {
   color: var(--accent);
+}
+
+/* Custom Calendly button styles */
+.calendly-badge-widget {
+  background-color: #19724d !important; /* Forest green */
+  color: white !important;
+  border: none !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  padding: 12px 20px !important;
+  border-radius: 9999px !important; /* fully rounded */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.calendly-badge-widget:hover {
+  background-color: #14532d !important; /* Slightly darker forest green */
+  transform: scale(1.05);
 }

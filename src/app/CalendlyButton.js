@@ -19,7 +19,7 @@ export default function CalendlyButton() {
     <div className="fixed bottom-6 right-6">
       <button
         onClick={openCalendlyPopup}
-        className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-3 rounded-full shadow-lg text-lg font-semibold transition transform hover:scale-105"
+        className="bg-green-900 hover:bg-green-800 text-white px-5 py-3 rounded-full shadow-lg text-lg font-semibold transition transform hover:scale-105"
       >
         📅 Book a Call
       </button>
