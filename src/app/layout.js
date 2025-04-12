@@ -8,7 +8,11 @@ import { ChevronDown } from "lucide-react";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Header from "../components/Header";
-import GoogleAnalytics from "../components/GoogleAnalytics";
+import dynamic from 'next/dynamic';
+
+const GoogleAnalytics = dynamic(() => import("../components/GoogleAnalytics"), {
+  ssr: false,
+});
 
 export const metadata = {
   title: "Adapt22 | AI & Automation for SMBs",
