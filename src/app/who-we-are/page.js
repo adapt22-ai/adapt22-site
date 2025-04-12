@@ -11,7 +11,8 @@ export default function WhoWeArePage() {
 
           {/* Page Title + Intro Quote */}
           <div>
-            <h1 className="text-5xl font-extrabold mb-6 text-primary text-center">Who We Are</h1>
+          <h1 className="text-5xl font-extrabold mb-6 text-primary text-center">Who We Are</h1>
+          <div className="h-1 w-[30ch] bg-accent rounded-full mx-auto mt-2 mb-6" />
             <div className="max-w-3xl mx-auto text-left">
               <p className="text-lg text-gray-700 leading-relaxed">
                 Adapt22 started from a personal, deep routed frustration, <strong>

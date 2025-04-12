@@ -1,5 +1,3 @@
-// src/app/privacy-policy/page.js — Restyled Privacy Policy Page
-
 export const metadata = {
   title: "Privacy Policy | Adapt22",
   description: "How we handle your data at Adapt22.",
@@ -10,14 +8,18 @@ export default function PrivacyPolicyPage() {
     <div className="bg-[#f3f5f3] text-gray-900">
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-10">
+          {/* Heading + Gold Bar */}
           <div className="space-y-4">
-            <h1 className="text-5xl font-extrabold text-primary">Privacy Policy</h1>
-            <div className="h-1 w-[21rem] bg-accent rounded-full" />
+            <div className="inline-flex flex-col items-start">
+              <h1 className="text-5xl font-extrabold text-primary">Privacy Policy</h1>
+              <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+            </div>
             <p className="text-lg text-gray-700">
               At Adapt22, your privacy is our priority. This Privacy Policy outlines how we collect, use, and protect your personal information when you interact with our services.
             </p>
           </div>
 
+          {/* Sections */}
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-primary mb-2">1. Information We Collect</h2>
@@ -53,7 +55,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-primary mb-2">5. Contact Us</h2>
               <p className="text-gray-800">
-                If you have questions about this Privacy Policy or your personal data, please email us at {" "}
+                If you have questions about this Privacy Policy or your personal data, please email us at{" "}
                 <a href="mailto:jackson@adapt22.ai" className="text-accent hover:underline">
                   jackson@adapt22.ai
                 </a>

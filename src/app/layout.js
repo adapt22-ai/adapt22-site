@@ -7,6 +7,7 @@ import ClientWrapper from "./ClientWrapper";
 import { ChevronDown } from "lucide-react";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Header from "../components/Header";
 
 export const metadata = {
   title: "Adapt22 | AI & Automation for SMBs",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
@@ -42,95 +44,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
         {/* Header */}
-        <header className="fixed w-full z-50 backdrop-blur-lg bg-white/90 border-b border-gray-200 shadow-sm">
-          <nav className="max-w-screen-xl mx-auto px-6 py-5 flex items-center space-x-10">
-            {/* Logo + Brand */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <Image
-                src="/logo.png"
-                alt="Adapt22 Logo"
-                width={50}
-                height={50}
-                priority
-                className="transition-transform duration-200 group-hover:scale-105"
-              />
-              <span className="text-3xl font-extrabold text-primary tracking-tight group-hover:text-accent">
-                Adapt22
-              </span>
-            </Link>
-
-            {/* Divider */}
-            <div className="h-10 border-l border-gray-400" />
-
-            {/* Navigation */}
-            <ul className="flex items-center space-x-8 text-base font-medium text-gray-800">
-              <li>
-                <Link href="/who-we-are" className="hover:text-accent">
-                  Who We Are
-                </Link>
-              </li>
-              <li>
-                <Link href="/what-we-do" className="hover:text-accent">
-                  What We Do
-                </Link>
-              </li>
-
-              {/* Dropdown Menu */}
-              <li className="relative group">
-                <button className="flex items-center space-x-1 hover:text-accent">
-                  <span>More</span>
-                  <ChevronDown size={16} />
-                </button>
-
-                {/* Dropdown */}
-                <ul className="absolute left-0 mt-5 w-44 bg-white/90 text-black border border-gray-200 rounded shadow-md z-50 
-                 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/careers"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Careers
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/faqs"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      FAQs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/testimonials"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Testimonials
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <Link
-                  href="/book-a-call"
-                  className="ml-6 bg-green-900 hover:bg-green-800 text-white px-6 py-3 rounded-full font-semibold transition"
-                >
-                  Book a Call
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
 
         {/* Main content */}
         <main className="flex-1 pt-32 px-6 md:px-10">{children}</main>

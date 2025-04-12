@@ -1,5 +1,3 @@
-// src/app/careers/page.js — Restyled Careers Page Matching Global Layout
-
 "use client";
 
 import { useState } from "react";
@@ -29,14 +27,20 @@ export default function CareersPage() {
     <div className="bg-[#f3f5f3] text-gray-900">
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-16">
+          {/* Heading + Gold Bar */}
           <div className="space-y-4">
-            <h1 className="text-5xl font-extrabold text-primary">Careers at Adapt22</h1>
-            <div className="h-1 w-[30rem] bg-accent rounded-full" />
+          <div className="inline-flex flex-col items-start">
+  <h1 className="text-5xl font-extrabold text-primary">
+    Careers at Adapt22
+  </h1>
+  <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+</div>
             <p className="text-lg text-gray-700">
               We're on a mission to make AI + automation accessible to the businesses that keep our world running. If you're passionate about tech, entrepreneurship, and serving others — we’d love to hear from you.
             </p>
           </div>
 
+          {/* Info Sections */}
           <div className="space-y-10">
             <div>
               <h2 className="text-2xl font-bold text-primary mb-3">Who We Hire</h2>
@@ -66,7 +70,11 @@ export default function CareersPage() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+          {/* Application Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 bg-white p-8 rounded-lg shadow-lg border border-gray-200"
+          >
             <div>
               <label className="block mb-1 font-semibold text-sm text-gray-800">Your Name</label>
               <input

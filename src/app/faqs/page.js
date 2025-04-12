@@ -1,5 +1,3 @@
-// src/app/faq/page.js — FAQ Page with Expandable Dropdowns
-
 "use client";
 
 import { useState } from "react";
@@ -46,11 +44,17 @@ export default function FAQPage() {
     <div className="bg-[#f3f5f3] text-gray-900">
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-12">
+          {/* Heading + Gold Bar */}
           <div className="space-y-4">
-            <h1 className="text-5xl font-extrabold text-primary text-left">Frequently Asked Questions</h1>
-            <div className="h-1 w-[43rem] bg-accent rounded-full" />
+            <div className="inline-flex flex-col items-start">
+              <h1 className="text-5xl font-extrabold text-primary">
+                Frequently Asked Questions
+              </h1>
+              <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+            </div>
           </div>
 
+          {/* FAQ List */}
           <div className="space-y-6">
             {faqs.map((item, index) => (
               <div

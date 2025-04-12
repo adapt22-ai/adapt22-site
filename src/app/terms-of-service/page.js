@@ -1,5 +1,3 @@
-// src/app/terms/page.js — Restyled Terms of Service Page
-
 export const metadata = {
   title: "Terms of Service | Adapt22",
   description: "Understand the terms for using our services and website.",
@@ -10,14 +8,18 @@ export default function TermsPage() {
     <div className="bg-[#f3f5f3] text-gray-900">
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-10">
+          {/* Heading + Gold Bar */}
           <div className="space-y-4">
-            <h1 className="text-5xl font-extrabold text-primary">Terms of Service</h1>
-            <div className="h-1 w-[26rem] bg-accent rounded-full" />
+            <div className="inline-flex flex-col items-start">
+              <h1 className="text-5xl font-extrabold text-primary">Terms of Service</h1>
+              <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+            </div>
             <p className="text-lg text-gray-700">
               By accessing this website or using our services, you agree to be bound by the following terms. If you do not agree, please do not use this site or our services.
             </p>
           </div>
 
+          {/* Terms Sections */}
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-primary mb-2">1. Use of Services</h2>

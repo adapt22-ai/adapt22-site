@@ -10,7 +10,8 @@ export default function WhatWeDoPage() {
 
           {/* Page Intro + CTA */}
           <div className="space-y-6 text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl font-extrabold text-primary">What We Do</h1>
+          <h1 className="text-5xl font-extrabold text-primary">What We Do</h1>
+          <div className="h-1 w-[30ch] bg-accent rounded-full mx-auto mt-2" />
             <p className="text-lg leading-relaxed text-gray-700">
               Adapt22 is a white-glove concierge service built to manage, implement, and scale your tech stack. Whether it’s one tool or your entire system, we become your AI and automation partner. Our job is to deeply understand your workflow, pain points, and goals — and to deliver scalable, automated, and intelligently integrated systems that work.
             </p>
