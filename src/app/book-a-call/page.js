@@ -12,7 +12,7 @@ export default function BookACallPage() {
   <div className="h-1 w-[120%] max-w-[300px] bg-accent rounded-full mt-2" />
 </div>
             <p className="text-lg text-gray-700">
-              Schedule a free discovery call with Jackson to walk through your current setup, your biggest pain points, and see if Adapt22 can help. No pressure. No fluff. Just straight answers and a real conversation.
+              Schedule a free discovery call with our strategists to walk through your current setup, your biggest pain points, and see if Adapt22 can help. No pressure. No fluff. Just straight answers and a real conversation.
             </p>
           </div>
 
