@@ -56,7 +56,7 @@ export default function CareersPage() {
               <h2 className="text-2xl font-bold text-primary mb-3">How We Work</h2>
               <ul className="list-disc list-inside text-gray-800 space-y-1">
                 <li>Flexible, hybrid work culture with a strong team bond</li>
-                <li>Optional 4-day work week — Fridays for rest, learning, focused work, or service</li>
+                <li>Focused 4-day work week — Fridays for rest, learning, focused work, or service</li>
                 <li>We prioritize impact, not hours</li>
                 <li>Quarterly meetups in new cities (when remote)</li>
               </ul>
