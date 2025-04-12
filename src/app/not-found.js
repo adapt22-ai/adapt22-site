@@ -1,5 +1,3 @@
-// src/app/not-found.js
-
 export default function NotFound() {
     return (
       <div className="min-h-screen flex flex-col justify-center items-center px-6 text-center bg-white text-gray-900">
@@ -10,4 +8,3 @@ export default function NotFound() {
       </div>
     );
   }
-  
