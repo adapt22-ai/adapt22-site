@@ -9,10 +9,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Header from "../components/Header";
 import dynamic from 'next/dynamic';
-
-const GoogleAnalytics = dynamic(() => import("../components/GoogleAnalytics"), {
-  ssr: false,
-});
+import AnalyticsWrapper from '../components/AnalyticsWrapper';
 
 export const metadata = {
   title: "Adapt22 | AI & Automation for SMBs",
@@ -148,7 +145,7 @@ export default function RootLayout({ children }) {
   `}
 </Script>
 
-<GoogleAnalytics measurementId="G-DTF5YPEVHQ" />
+<AnalyticsWrapper />
       </body>
     </html>
   );
