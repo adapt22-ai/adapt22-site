@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Header from "../components/Header";
-import dynamic from 'next/dynamic';
+import { Suspense } from "react"; // ✅ NEW
 import GoogleAnalytics from "../components/GoogleAnalytics";
 import AnalyticsWrapper from '../components/AnalyticsWrapper';
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
@@ -33,16 +33,16 @@ export default function RootLayout({ children }) {
         />
         <Script id="calendly-inline-widget" strategy="lazyOnload">
           {`
-    window.addEventListener('load', function() {
-      Calendly.initBadgeWidget({
-        url: 'https://calendly.com/jackson-adapt22/discoverycall',
-        text: 'Book a Call',
-        color: '#ffffff',
-        textColor: '#000000',
-        branding: false
-      });
-    });
-  `}
+            window.addEventListener('load', function() {
+              Calendly.initBadgeWidget({
+                url: 'https://calendly.com/jackson-adapt22/discoverycall',
+                text: 'Book a Call',
+                color: '#ffffff',
+                textColor: '#000000',
+                branding: false
+              });
+            });
+          `}
         </Script>
       </head>
       <body className="min-h-screen flex flex-col bg-background text-foreground font-sans">
@@ -127,26 +127,27 @@ export default function RootLayout({ children }) {
 
         {/* ✅ Vercel Speed Insights */}
         <SpeedInsights />
-        {/* Google Analytics Script */}
-<Script
-  strategy="afterInteractive"
-  src={`https://www.googletagmanager.com/gtag/js?id=G-DTF5YPEVHQ`}
-/>
-<Script
-  id="gtag-init"
-  strategy="afterInteractive"
->
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DTF5YPEVHQ', {
-      page_path: window.location.pathname,
-    });
-  `}
-</Script>
 
-<AnalyticsWrapper />
+        {/* Google Analytics Script */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-DTF5YPEVHQ`}
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DTF5YPEVHQ', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
+        {/* ✅ Wrapped in Suspense to fix useSearchParams on 404 */}
+        <Suspense fallback={null}>
+          <AnalyticsWrapper />
+        </Suspense>
       </body>
     </html>
   );
