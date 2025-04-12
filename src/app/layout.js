@@ -8,6 +8,7 @@ import { ChevronDown } from "lucide-react";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Header from "../components/Header";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 export const metadata = {
   title: "Adapt22 | AI & Automation for SMBs",
@@ -124,6 +125,26 @@ export default function RootLayout({ children }) {
 
         {/* ✅ Vercel Speed Insights */}
         <SpeedInsights />
+        {/* Google Analytics Script */}
+<Script
+  strategy="afterInteractive"
+  src={`https://www.googletagmanager.com/gtag/js?id=G-DTF5YPEVHQ`}
+/>
+<Script
+  id="gtag-init"
+  strategy="afterInteractive"
+>
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DTF5YPEVHQ', {
+      page_path: window.location.pathname,
+    });
+  `}
+</Script>
+
+<GoogleAnalytics measurementId="G-DTF5YPEVHQ" />
       </body>
     </html>
   );
