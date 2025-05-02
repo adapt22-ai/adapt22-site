@@ -117,7 +117,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto space-y-10">
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="text-gray-800">Adapt22 Mission:</span>{" "}
-            <span className="text-yellow-600 font-semibold">Serving Those Who Serve Us.</span>
+            <span className="text-yellow-500 font-semibold">Serving Those Who Serve Us.</span>
           </h2>
           <div className="border-l-4 border-yellow-500 pl-6 space-y-6">
             {[

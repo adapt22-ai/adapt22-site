@@ -80,7 +80,7 @@ export default function WhatWeDoPage() {
           <div className="mt-24 bg-gold bg-opacity-10 py-16 px-6 rounded-lg shadow-md">
             <div className="max-w-4xl mx-auto space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-gray-900">You Deserve Better</h2>
+                <h2 className="text-3xl font-bold text-primary">You Deserve Better</h2>
               </div>
               <div className="border-l-4 border-accent pl-6 space-y-4">
                 {[
