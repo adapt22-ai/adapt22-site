@@ -29,14 +29,15 @@ export default function CareersPage() {
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Heading + Gold Bar */}
           <div className="space-y-4">
-          <div className="inline-flex flex-col items-start">
-  <h1 className="text-5xl font-extrabold text-primary">
-    Careers at Adapt22
-  </h1>
-  <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
-</div>
+            <div className="inline-flex flex-col items-start">
+              <h1 className="text-5xl font-extrabold text-primary">Careers at Adapt22</h1>
+              <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+            </div>
             <p className="text-lg text-gray-700">
               We're on a mission to make AI + automation accessible to the businesses that keep our world running. If you're passionate about tech, entrepreneurship, and serving others — we’d love to hear from you.
+            </p>
+            <p className="text-md text-gray-600 italic">
+              Adapt22 is a Christian-led company built on Biblical values like service, persistence, and accountability. While not a ministry, we believe in purpose-driven work.
             </p>
           </div>
 
@@ -55,11 +56,34 @@ export default function CareersPage() {
             <div>
               <h2 className="text-2xl font-bold text-primary mb-3">How We Work</h2>
               <ul className="list-disc list-inside text-gray-800 space-y-1">
-                <li>Flexible, hybrid work culture with a strong team bond</li>
-                <li>Focused 4-day work week — Fridays for rest, learning, focused work, or service</li>
-                <li>We prioritize impact, not hours</li>
-                <li>Quarterly meetups in new cities (when remote)</li>
+                <li>100% remote — work from anywhere</li>
+                <li>Own your schedule. Hours don't matter - outcomes do.</li>
+                <li>We prioritize impact over hours and trust you to hit your goals</li>
+                <li>Quarterly team meetups</li>
+                <li>No wasted time: if it can be a Loom or Slack, make it one</li>
+                <li>Radical transparency and over-communication encouraged</li>
               </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-primary mb-3">What We Value</h2>
+              <ul className="list-disc list-inside text-gray-800 space-y-1">
+                <li>Hard Work</li>
+                <li>Service</li>
+                <li>Resilience</li>
+                <li>Persistence</li>
+                <li>Accountability</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-primary mb-3">Our Culture of Service</h2>
+              <p className="text-gray-800">
+                We donate to causes you care about, sponsor community service, and even serve together when we meet in person. “Serving Those Who Serve Us” is more than a tagline — it’s how we operate internally and externally.
+              </p>
+              <blockquote className="mt-4 italic text-gray-600 text-sm">
+                “You, my brothers and sisters, were called to be free. But do not use your freedom to indulge the flesh; rather, serve one another humbly in love.” — Galatians 5:13
+              </blockquote>
             </div>
 
             <div>

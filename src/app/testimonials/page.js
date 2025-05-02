@@ -1,3 +1,5 @@
+// src/app/testimonials/page.js — Testimonials Page (Restored)
+
 export const metadata = {
   title: "Testimonials | Adapt22",
   description: "Hear how Adapt22 helps service-based businesses scale with AI + automation.",
@@ -23,28 +25,28 @@ export default function TestimonialsPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                company: "Residential Fencing & Decking - Houston, TX.",
-                text: "We were spending hours chasing down leads and manually quoting jobs. Adapt22 gave us back our evenings.",
-              },
-              {
-                company: "Commercial Roofing - Tampa, FL.",
-                text: "The CRM & automations they implemented doubled our follow-up rate. We’re seeing way more closed jobs.",
-              },
-              {
-                company: "Residential HVAC - Knoxville, TN.",
+                company: "Residential Plumbing - Knoxville, TN.",
                 text: "Our team was drowning in paperwork. Now, quotes and scheduling are handled with one click.",
+              },
+              {
+                company: "Private Medical Practice - Charlotte, NC.",
+                text: "The automation around reminders, scheduling, and lead management has dramatically improved our workflow.",
+              },
+              {
+                company: "Commercial Fencing & Decking - Houston, TX.",
+                text: "We were spending hours chasing down leads and manually quoting jobs. Adapt22 gave us back our evenings.",
               },
               {
                 company: "Senior Care Facility - Orlando, FL.",
                 text: "Adapt22 built us an AI calling bot that actually answers questions and books appointments. It’s a game changer.",
               },
               {
-                company: "Commercial Landscaping - Boise, ID.",
-                text: "They handled everything: AI tools, setup, marketing — even our website. I just run my business now.",
+                company: "Commercial Roofing - Tampa, FL.",
+                text: "The CRM & automations they implemented doubled our follow-up rate. We’re seeing way more closed jobs.",
               },
               {
-                company: "Private Medical Practice - Charlotte, NC.",
-                text: "The automation around reminders, scheduling, and lead management has dramatically improved our workflow.",
+                company: "Residential Landscaping - Boise, ID.",
+                text: "They handled everything: AI tools, setup, marketing — even our website. I just run my business now.",
               },
             ].map((testimonial, index) => (
               <div

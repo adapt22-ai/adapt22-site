@@ -1,4 +1,4 @@
-// src/app/page.js — Clean + Finalized Landing Page
+// src/app/page.js — Finalized w/ Demo CTA + All Sections
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,37 +7,42 @@ export default function HomePage() {
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section with Motion Video */}
-<section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center">
-  {/* Background Video */}
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
-  >
-    <source src="/bg.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+      <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
+        >
+          <source src="/bg.mp4" type="video/mp4" />
+        </video>
 
-  {/* Overlay Content */}
-  <div className="relative z-10 text-center max-w-3xl px-6">
-    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md text-grey-900">
-      AI Automation for the Businesses That Keep Our World Running
-    </h1>
-    <p className="text-lg md:text-xl mb-6 text-grey-200">
-      Adapt22 is a white-glove service designed to manage, implement,
-      and scale AI + automation systems for SMBs in the trades, retail,
-      field services, and construction.
-    </p>
-    <Link
-      href="/book-a-call"
-      className="inline-block bg-primary text-white text-lg font-semibold px-10 py-4 rounded-full shadow hover:bg-opacity-90 transition"
-    >
-      Book a Call
-    </Link>
-  </div>
-</section>
+        <div className="relative z-10 text-center max-w-3xl px-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md text-gray-900">
+            AI Automation for the Businesses That Keep Our World Running
+          </h1>
+          <p className="text-lg md:text-xl mb-6 text-gray-900">
+            Adapt22 is a white-glove service designed to manage, implement,
+            and scale AI + automation systems for SMBs in the trades, retail,
+            field services, and construction.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Link
+              href="/book-a-call"
+              className="inline-block bg-green-900 text-white text-lg font-semibold px-10 py-4 rounded-full shadow hover:bg-green-800 transition"
+            >
+              Book a Call
+            </Link>
+            <Link
+              href="/demo"
+              className="inline-block bg-yellow-500 text-white text-lg font-semibold px-10 py-4 rounded-full shadow hover:bg-yellow-600 transition"
+            >
+              Try Our Demo
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* AI Service Cards with Intro Block */}
       <section className="bg-green-900 py-20 px-6 text-white">
@@ -110,29 +115,24 @@ export default function HomePage() {
       {/* Mission Statement */}
       <section className="bg-gray-200 py-20 px-6 text-left">
         <div className="max-w-4xl mx-auto space-y-10">
-          {/* Title: One line with color split */}
           <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-gray">Adapt22 Mission:</span>{" "}
-            <span className="text-gold font-semibold">Serving Those Who Serve Us.</span>
+            <span className="text-gray-800">Adapt22 Mission:</span>{" "}
+            <span className="text-yellow-600 font-semibold">Serving Those Who Serve Us.</span>
           </h2>
-
-          {/* Bullet-style message with gold arrows */}
-          <div className="border-l-4 border-gold pl-6 space-y-6">
-  {[
-    "Your work is essential to keep our world running and you deserve the same tools that billion-dollar companies have.",
-    "Our focus is to understand the problems that cause wasted time and money, and then implement tailored solutions that actually work for you.",
-    "We exist to remove the burden that AI and software can be by creating a tech environment tailored to your team, goals, and needs.",
-    "Let us handle everything from implementing AI tools, customizing workflows, and automating busy work.",
-    "You name your problems and we give solutions."
-  ].map((text, index) => (
-    <p key={index} className="text-md text-gray-800 flex items-start gap-2">
-      <span className="text-gold text-lg leading-6">↠</span>
-      {text}
-    </p>
-  ))}
-</div>
-
-          {/* CTA Button - Centered */}
+          <div className="border-l-4 border-yellow-500 pl-6 space-y-6">
+            {[
+              "Your work is essential to keep our world running and you deserve the same tools that billion-dollar companies have.",
+              "Our focus is to understand the problems that cause wasted time and money, and then implement tailored solutions that actually work for you.",
+              "We exist to remove the burden that AI and software can be by creating a tech environment tailored to your team, goals, and needs.",
+              "Let us handle everything from implementing AI tools, customizing workflows, and automating busy work.",
+              "You name your problems and we give solutions."
+            ].map((text, i) => (
+              <p key={i} className="text-md text-gray-800 flex items-start gap-2">
+                <span className="text-yellow-600 text-lg leading-6">↠</span>
+                {text}
+              </p>
+            ))}
+          </div>
           <div className="text-center">
             <Link
               href="/who-we-are"

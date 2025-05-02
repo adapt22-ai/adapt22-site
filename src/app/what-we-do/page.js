@@ -1,4 +1,4 @@
-// src/app/what-we-do/page.js — Adapt22 "What We Do" Page Updated Layout with AI Enhancements
+// src/app/what-we-do/page.js — Adapt22 "What We Do" Page Updated with Baku Enhancements
 
 import Link from "next/link";
 
@@ -56,26 +56,23 @@ export default function WhatWeDoPage() {
               These are just a few examples of the solutions we <span className="text-primary font-semibold">customize, implement, and maintain</span> for you. Every business is different — and so is every build.
             </p>
             <div className="grid md:grid-cols-2 gap-8 text-lg">
-              {[
-                "AI Calling & Text Bots – 24/7 quoting, booking, and client communication",
-                "CRM + Calendar Automation – Sync leads, jobs, and follow-ups",
-                "Intelligent Lead Routing – Assign jobs based on priority, zip code, or rep",
-                "AI-Generated Proposals – Smart quoting to help you close more deals",
-                "Automated Emails & Follow-Ups – Never forget to stay in touch",
-                "Meta & Google Ads – Managed growth or plug into your existing pipeline",
-                "Internal Knowledge Bots – Train AI on your business for fast answers",
-                "AI-Powered Onboarding – Custom workflows for new hire success",
-                "Workflow Tracking & Automation – Monitor performance and spot inefficiencies",
-                "Custom Internal Tools – Fully bespoke software designed to match your exact workflow"
-              ].map((service, i) => {
-                const [title, desc] = service.split(" – ");
-                return (
-                  <div key={i} className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition">
-                    <p className="font-bold text-primary mb-1">{title}</p>
-                    <p className="text-gray-700 text-sm">{desc}</p>
-                  </div>
-                );
-              })}
+              {[ // Each description enhanced to reflect VEX/ZARA/DRIFT capabilities
+                { title: "AI Calling & Text Bots", desc: "24/7 quoting, booking, and client communication — our smart assistant responds in seconds and books jobs while you sleep." },
+                { title: "CRM + Calendar Automation", desc: "Sync leads, jobs, and follow-ups across platforms — custom-built for your ops flow." },
+                { title: "Intelligent Lead Routing", desc: "Assign jobs based on priority, zip code, or rep — no lead left behind." },
+                { title: "AI-Generated Proposals", desc: "Smart quoting to help you close more deals — crafted from customer input automatically." },
+                { title: "Automated Emails & Follow-Ups", desc: "Never forget to stay in touch — revive old leads and re-engage past customers automatically." },
+                { title: "Meta & Google Ads", desc: "Managed growth or plug into your existing pipeline — no fluff, just ROI." },
+                { title: "Internal Knowledge Bots", desc: "Train AI on your business for fast internal answers — help your team self-serve instantly." },
+                { title: "AI-Powered Onboarding", desc: "Custom workflows for new hire success — reduce friction and ramp faster." },
+                { title: "Workflow Tracking & Automation", desc: "Monitor performance and spot inefficiencies — your systems should work as hard as your team does." },
+                { title: "Custom Internal Tools", desc: "Fully bespoke software designed to match your exact workflow — not another SaaS shortcut." },
+              ].map((item, i) => (
+                <div key={i} className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition">
+                  <p className="font-bold text-primary mb-1">{item.title}</p>
+                  <p className="text-gray-700 text-sm">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -91,7 +88,7 @@ export default function WhatWeDoPage() {
                   "Our focus is to understand the problems that cause wasted time and money, and then implement tailored solutions that actually work for you.",
                   "We exist to remove the burden that AI and software can be by creating a tech environment tailored to your team, goals, and needs.",
                   "Let us handle everything from implementing AI tools, customizing workflows, and automating busy work.",
-                  "You name your problems and we give solutions."
+                  "You name your problems and we give solutions — across trades, construction, retail, medical, and more."
                 ].map((text, index) => (
                   <p key={index} className="text-md text-gray-800 flex items-start gap-2">
                     <span className="text-gold text-lg leading-6">↠</span>
