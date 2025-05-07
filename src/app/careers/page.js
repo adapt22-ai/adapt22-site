@@ -15,6 +15,7 @@ export default function CareersPage() {
       body: JSON.stringify({
         name: form.get("name"),
         email: form.get("email"),
+        phone: form.get("phone"),
         message: form.get("message") + "\n\n(Submitted via Careers Page)",
       }),
       headers: { "Content-Type": "application/json" },
@@ -117,6 +118,14 @@ export default function CareersPage() {
                 className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
               />
             </div>
+            <div>
+  <label className="block mb-1 font-semibold text-sm text-gray-800">Phone</label>
+  <input
+    type="tel"
+    name="phone"
+    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
+  />
+</div>
             <div>
               <label className="block mb-1 font-semibold text-sm text-gray-800">Tell Us About Yourself</label>
               <textarea
