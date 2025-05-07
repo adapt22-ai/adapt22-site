@@ -24,7 +24,7 @@ export default function HomePage() {
           </h1>
           <p className="text-lg md:text-xl mb-6 text-gray-900">
             Adapt22 is a white-glove service designed to manage, implement,
-            and scale AI + automation systems for SMBs in the trades, retail,
+            and scale AI + communication & automation systems for SMBs in the trades, retail,
             field services, and construction.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -52,7 +52,7 @@ export default function HomePage() {
               Custom AI Implementation, Tailored to You
             </h3>
             <p className="text-md max-w-3xl mx-auto text-gray-800">
-              We specialize in white-glove AI automation services that adapt to your unique business needs.
+              We specialize in white-glove AI communication and automation services that adapt to your unique business needs.
               Whether you're looking to overhaul your entire tech stack or implement one tool that finally works,
               we’ll plan it, customize it, build it, and manage it — end to end. You don’t lift a finger.
               Our goal is simple: remove complexity, streamline operations, and help you scale smarter.

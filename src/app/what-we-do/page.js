@@ -13,7 +13,7 @@ export default function WhatWeDoPage() {
             <h1 className="text-5xl font-extrabold text-primary">What We Do</h1>
             <div className="h-1 w-[30ch] bg-accent rounded-full mx-auto mt-2" />
             <p className="text-lg leading-relaxed text-gray-700">
-              Adapt22 is a white-glove service built to manage, implement, and scale your tech stack. Whether it’s one tool or your entire system, we become your AI and automation partner. Our job is to deeply understand your workflow, pain points, and goals — and to deliver scalable, automated, and intelligently integrated systems that work.
+              Adapt22 is a white-glove service built to manage, implement, and scale your tech stack. Whether it’s one tool or your entire system, we become your partner for all things AI-powered automation and communication. Our job is to deeply understand your workflow, pain points, and goals — and to deliver scalable, automated, and intelligently integrated systems that work.
               <br /><br />
               From leveraging AI-powered bots and intelligent lead routing to building fully custom internal tools and automation workflows, we go beyond basic setups to provide enterprise-grade power for small and medium businesses. Our solutions increase efficiency, eliminate bottlenecks, and reduce manual busywork.
             </p>
