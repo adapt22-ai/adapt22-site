@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+            <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
@@ -40,6 +40,9 @@ export default function RootLayout({ children }) {
             });
           `}
         </Script>
+
+        {/* ✅ Meta domain verification for Facebook/Meta */}
+        <meta name="facebook-domain-verification" content="idjvwyb1kbhfmqjt9o98hsopbkgu41" />
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-[#f3f5f3] text-gray-900 font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
