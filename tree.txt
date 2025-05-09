@@ -1,0 +1,55 @@
+.
+├── jsconfig.json
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   ├── bg.mp4
+│   ├── favicon.ico
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── headshot.png
+│   ├── logo.png
+│   ├── next.svg
+│   ├── tailwind.css
+│   ├── vercel.svg
+│   └── window.svg
+├── README.md
+├── src
+│   ├── app
+│   │   ├── _app.js
+│   │   ├── _document.js
+│   │   ├── api
+│   │   ├── book-a-call
+│   │   ├── CalendlyButton.js
+│   │   ├── careers
+│   │   ├── ClientWrapper.js
+│   │   ├── contact
+│   │   ├── Cursor.js
+│   │   ├── demo
+│   │   ├── faqs
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── industries
+│   │   ├── layout.js
+│   │   ├── not-found.js
+│   │   ├── page.js
+│   │   ├── privacy-policy
+│   │   ├── robots.txt
+│   │   ├── sitemap.xml
+│   │   ├── terms-of-service
+│   │   ├── testimonials
+│   │   ├── Thumbs.db
+│   │   ├── what-we-do
+│   │   └── who-we-are
+│   └── components
+│       ├── AnalyticsWrapper.js
+│       ├── GoogleAnalytics.js
+│       ├── Header.js
+│       └── theme-provider.js
+├── tailwind-test.css
+├── tailwind.config.js
+└── tree.txt
+
+19 directories, 34 files
