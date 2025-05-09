@@ -14,8 +14,8 @@ export default function IndustriesPage() {
     "B2B / B2C",
     "Retail Service",
     "Care Facilities",
-    "Transporttion",
-    "Commercial - Residential"
+    "Transportation",
+    "Commercial / Residential"
   ];
 
   return (
