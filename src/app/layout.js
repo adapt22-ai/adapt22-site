@@ -32,12 +32,12 @@ export default function RootLayout({ children }) {
           {`
             window.addEventListener('load', function() {
               Calendly.initBadgeWidget({
-                url: 'https://calendly.com/jackson-adapt22/discoverycall',
-                text: 'Book a Call',
-                color: '#19724d',
-                textColor: '#ffffff',
-                branding: false
-              });
+  url: 'https://calendly.com/jackson-adapt22/discoverycall',
+  text: 'Book a Call',
+  color: '#014E44',       // ✅ New brand primaryDark
+  textColor: '#ffffff',
+  branding: false
+});
             });
           `}
         </Script>
@@ -54,67 +54,67 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
 
-      <body className={`${inter.className} min-h-screen flex flex-col bg-[#f3f5f3] text-gray-900 font-sans`}>
-        {/* ✅ Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KMNN5G7G"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
+      <body className={`${inter.className} min-h-screen flex flex-col bg-background text-textPrimary font-sans`}>
+  {/* ✅ Google Tag Manager (noscript) */}
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-KMNN5G7G"
+      height="0"
+      width="0"
+      style={{ display: "none", visibility: "hidden" }}
+    ></iframe>
+  </noscript>
 
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
-          <Header />
-          <main className="flex-1 pt-32 px-6 md:px-10">{children}</main>
+  <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+    <Header />
+    <main className="flex-1 pt-32 px-6 md:px-10">{children}</main>
 
-          <footer className="bg-[#0c1b16] border-t border-black text-gray-300 py-8 px-6">
-            <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
-              <div>
-                <h3 className="text-white font-bold text-lg mb-2">Adapt22</h3>
-                <p className="text-sm leading-relaxed text-gray-400">
-                  AI & automation solutions built for SMBs in the trades, retail,
-                  field services, construction, and medical industries. We help
-                  businesses implement modern tech — without the headache.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-white font-semibold mb-3">Quick Links</h4>
-                <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <Link href="/book-a-call" className="hover:text-accent font-semibold">Book a Call</Link>
-                  <Link href="/demo" className="hover:text-accent font-semibold">Try Our Demo</Link>
-                  <Link href="/careers" className="hover:text-accent">Careers</Link>
-                  <Link href="/who-we-are" className="hover:text-accent">Who We Are</Link>
-                  <Link href="/faqs" className="hover:text-accent">FAQs</Link>
-                  <Link href="/what-we-do" className="hover:text-accent">What We Do</Link>
-                  <Link href="/testimonials" className="hover:text-accent">Testimonials</Link>
-                  <Link href="/industries" className="hover:text-accent">Industries We Serve</Link>
-                  <Link href="/contact" className="hover:text-accent">Contact</Link>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-white font-semibold mb-3">Legal</h4>
-                <ul className="space-y-1 text-sm">
-                  <li><Link href="/privacy-policy" className="hover:text-accent">Privacy Policy</Link></li>
-                  <li><Link href="/terms-of-service" className="hover:text-accent">Terms of Service</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="text-center text-xs text-gray-500 mt-6">
-              © {new Date().getFullYear()} Adapt22.ai. All rights reserved.
-            </div>
-          </footer>
+    <footer className="bg-surface border-t border-border text-textPrimary py-8 px-6">
+      <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
+        <div>
+          <h3 className="text-white font-bold text-lg mb-2">Adapt22</h3>
+          <p className="text-sm leading-relaxed textMuted">
+            AI & automation solutions built for SMBs in the trades, retail,
+            field services, construction, and medical industries. We help
+            businesses implement modern tech — without the headache.
+          </p>
+        </div>
+        <div>
+          <h4 className="text-white font-semibold mb-3">Quick Links</h4>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
+            <Link href="/book-a-call" className="hover:text-primaryLight font-semibold">Book a Call</Link>
+            <Link href="/demo" className="hover:text-primaryLight font-semibold">Try Our Demo</Link>
+            <Link href="/careers" className="hover:text-accent-aqua">Careers</Link>
+            <Link href="/who-we-are" className="hover:text-accent-aqua">Who We Are</Link>
+            <Link href="/faqs" className="hover:text-accent-aqua">FAQs</Link>
+            <Link href="/what-we-do" className="hover:text-accent-aqua">What We Do</Link>
+            <Link href="/testimonials" className="hover:text-accent-aqua">Testimonials</Link>
+            <Link href="/industries" className="hover:text-accent-aqua">Industries We Serve</Link>
+            <Link href="/contact" className="hover:text-accent-aqua">Contact</Link>
+          </div>
+        </div>
+        <div>
+          <h4 className="text-white font-semibold mb-3">Legal</h4>
+          <ul className="space-y-1 text-sm">
+            <li><Link href="/privacy-policy" className="hover:text-accent-aqua">Privacy Policy</Link></li>
+            <li><Link href="/terms-of-service" className="hover:text-accent-aqua">Terms of Service</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="text-center text-xs textMuted mt-6">
+        © {new Date().getFullYear()} Adapt22.ai. All rights reserved.
+      </div>
+    </footer>
 
-          <ClientWrapper calendlyUrl="https://calendly.com/jackson-adapt22/discoverycall" />
-          <Analytics />
-          <SpeedInsights />
+    <ClientWrapper calendlyUrl="https://calendly.com/jackson-adapt22/discoverycall" />
+    <Analytics />
+    <SpeedInsights />
 
-          <Suspense fallback={null}>
-            <AnalyticsWrapper />
-          </Suspense>
-        </ThemeProvider>
-      </body>
+    <Suspense fallback={null}>
+      <AnalyticsWrapper />
+    </Suspense>
+  </ThemeProvider>
+</body>
     </html>
   );
 }

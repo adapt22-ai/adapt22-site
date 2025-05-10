@@ -5,16 +5,16 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="bg-[#f3f5f3] text-gray-900">
+    <div className="bg-background text-textPrimary">
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto space-y-10">
           {/* Heading + Gold Bar */}
           <div className="space-y-4">
             <div className="inline-flex flex-col items-start">
-              <h1 className="text-5xl font-extrabold text-primary">Terms of Service</h1>
-              <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+              <h1 className="text-5xl font-extrabold text-accentIndigo">Terms of Service</h1>
+              <div className="h-1 w-[103%] bg-primaryDark rounded-full mt-2" />
             </div>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg textMuted">
               By accessing this website or using our services, you agree to be bound by the following terms. If you do not agree, please do not use this site or our services.
             </p>
           </div>
@@ -22,34 +22,34 @@ export default function TermsPage() {
           {/* Terms Sections */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-primary mb-2">1. Use of Services</h2>
-              <p className="text-gray-800">
+              <h2 className="text-2xl font-bold text-primaryDark mb-2">1. Use of Services</h2>
+              <p className="text-textPrimary">
                 You agree to use Adapt22 services responsibly, for lawful purposes only, and in accordance with all applicable laws and regulations.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-primary mb-2">2. Intellectual Property</h2>
-              <p className="text-gray-800">
+              <h2 className="text-2xl font-bold text-primaryDark mb-2">2. Intellectual Property</h2>
+              <p className="text-textPrimary">
                 All content on this website, including text, graphics, logos, and software, is the property of Adapt22 unless otherwise stated.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-primary mb-2">3. Liability</h2>
-              <p className="text-gray-800">
+              <h2 className="text-2xl font-bold text-primaryDark mb-2">3. Liability</h2>
+              <p className="text-textPrimary">
                 Adapt22 is not liable for any damages arising from the use of this website or its services, including errors, omissions, or interruptions.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-primary mb-2">4. Changes to Terms</h2>
-              <p className="text-gray-800">
+              <h2 className="text-2xl font-bold text-primaryDark mb-2">4. Changes to Terms</h2>
+              <p className="text-textPrimary">
                 We reserve the right to update these terms at any time. Continued use of the website after changes means you accept the new terms.
               </p>
             </div>
 
-            <p className="text-sm text-gray-500 mt-10">Last updated: May 2025</p>
+            <p className="text-sm textMuted mt-10">Last updated: May 2025</p>
           </div>
         </div>
       </section>

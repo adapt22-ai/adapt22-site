@@ -18,7 +18,7 @@ export default function ClientWrapper() {
     <div className="fixed bottom-6 right-6">
       <button
         onClick={openCalendlyPopup}
-        className="bg-green-900 hover:bg-green-800 text-white px-5 py-3 rounded-full shadow-lg text-lg font-semibold transition transform hover:scale-105"ß
+        className="bg-primaryDark hover:bg-[#013c35] text-white px-5 py-3 rounded-full shadow-lg text-lg font-semibold transition transform hover:scale-105"
       >
         📅 Book a Call
       </button>

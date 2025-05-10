@@ -26,16 +26,16 @@ export default function ContactClient() {
   }
 
   return (
-    <div className="bg-[#f3f5f3] text-gray-900">
+    <div className="bg-background text-textPrimary">
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto space-y-12">
-          {/* Heading + Gold Bar */}
+          {/* Heading + Bar */}
           <div className="space-y-6">
             <div className="inline-flex flex-col items-start">
-              <h1 className="text-5xl font-extrabold text-primary">Let’s Talk</h1>
-              <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+              <h1 className="text-5xl font-extrabold text-accentIndigo">Let’s Talk</h1>
+              <div className="h-1 w-[103%] bg-primaryDark rounded-full mt-2" />
             </div>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg textMuted">
               Whether you have questions, want to explore a custom AI/automation setup, or just want to brainstorm — we’d love to hear from you.
             </p>
           </div>
@@ -43,63 +43,48 @@ export default function ContactClient() {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 bg-white p-8 rounded-lg shadow-lg border border-gray-200"
+            className="space-y-6 bg-surface p-8 rounded-lg shadow-lg border border-border"
           >
+            {[
+              { label: "Your Name", name: "name", type: "text" },
+              { label: "Email Address", name: "email", type: "email" },
+              { label: "Company", name: "company", type: "text" },
+              { label: "Phone", name: "phone", type: "tel" },
+            ].map(({ label, name, type }) => (
+              <div key={name}>
+                <label className="block mb-1 font-semibold text-sm text-textPrimary">{label}</label>
+                <input
+                  type={type}
+                  name={name}
+                  required={name !== "company" && name !== "phone"}
+                  className="w-full px-4 py-3 bg-[#262626] border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primaryLight"
+                />
+              </div>
+            ))}
+
             <div>
-              <label className="block mb-1 font-semibold text-sm text-gray-800">Your Name</label>
-              <input
-                type="text"
-                name="name"
-                required
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-            </div>
-            <div>
-              <label className="block mb-1 font-semibold text-sm text-gray-800">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-            </div>
-            <div>
-              <label className="block mb-1 font-semibold text-sm text-gray-800">Company</label>
-              <input
-                type="text"
-                name="company"
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-            </div>
-            <div>
-              <label className="block mb-1 font-semibold text-sm text-gray-800">Phone</label>
-              <input
-                type="tel"
-                name="phone"
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-            </div>
-            <div>
-              <label className="block mb-1 font-semibold text-sm text-gray-800">Message</label>
+              <label className="block mb-1 font-semibold text-sm text-textPrimary">Message</label>
               <textarea
                 name="message"
                 rows="5"
                 required
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
+                className="w-full px-4 py-3 bg-[#262626] border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primaryLight"
               />
             </div>
+
             <button
               type="submit"
               disabled={status === "loading"}
-              className="bg-primary hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-md transition-all"
+              className="bg-primaryDark hover:bg-[#013c35] text-white font-semibold px-6 py-3 rounded-md transition-all"
             >
               {status === "loading" ? "Sending..." : "Send Message"}
             </button>
+
             {status === "success" && (
-              <p className="text-green-600 mt-2">Thanks! We'll be in touch shortly.</p>
+              <p className="text-success mt-2">Thanks! We'll be in touch shortly.</p>
             )}
             {status === "error" && (
-              <p className="text-red-500 mt-2">Something went wrong. Please try again.</p>
+              <p className="text-error mt-2">Something went wrong. Please try again.</p>
             )}
           </form>
         </div>

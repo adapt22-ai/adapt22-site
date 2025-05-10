@@ -6,16 +6,23 @@
 @tailwind utilities;
 
 /* ============================
-   Global Theme - Modern AI (Deep Forest Green)
+   CSS Variable Reference (same names as Tailwind config)
 ============================= */
 :root {
-  --background: #0b2e23; /* Deep forest green */
-  --foreground: #f1f5f4; /* Soft off-white */
-  --primary: #14532d;    /* Deep forest green (now official) */
-  --secondary: #8aa79c;  /* Muted, stone gray */
-  --accent: #d4af37;     /* Elegant gold */
+  --background: #0a0a0a;
+  --surface: #1a1a1a;
+  --primaryDark: #0f362e;
+  --primaryLight: #e0ee28;
+  --accentAqua: #dffbcb;
+  --accentIndigo: #096554;
+  --textPrimary: #e0e0e0;
+  --textMuted: #9e9e9e;
+  --border: #2a2a2a;
 }
 
+/* ============================
+   Base Setup
+============================= */
 html,
 body {
   max-width: 100vw;
@@ -26,10 +33,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Montserrat', sans-serif;
-  background: linear-gradient(120deg, #0a0a0a, #0c1b16);
+  background-color: var(--background);
   background-size: 400% 400%;
   animation: bg-flow 15s ease-in-out infinite;
-  color: var(--foreground);
+  color: var(--textPrimary);
   line-height: 1.6;
   isolation: isolate;
 }
@@ -44,39 +51,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================
-   Color Utilities
+   Utility Class Overrides
 ============================= */
-.text-accent {
-  color: var(--accent);
-}
+.text-primaryDark { color: var(--primaryDark); }
+.text-primaryLight { color: var(--primaryLight); }
+.text-accentAqua { color: var(--accentAqua); }
+.text-accentIndigo { color: var(--accentIndigo); }
+.textMuted { color: var(--textMuted); }
 
-.text-primary {
-  color: var(--primary);
-}
+.bg-primaryDark { background-color: var(--primaryDark); }
+.bg-primaryLight { background-color: var(--primaryLight); }
+.bg-accentAqua { background-color: var(--accentAqua); }
+.bg-accentIndigo { background-color: var(--accentIndigo); }
+.bg-surface { background-color: var(--surface); }
 
-.bg-primary {
-  background-color: var(--primary);
-}
-
-/* ✅ FIXED: Gold Border Utility (Targeting Left Border Specifically) */
-.border-l-gold {
-  border-left-color: var(--accent) !important;
-}
-
-/* Optional extras for reusability */
-.bg-accent {
-  background-color: var(--accent);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
+.border-l-primaryLight { border-left-color: var(--primaryLight) !important; }
+.border { border-color: var(--border); }
 
 /* ============================
-   Section Layouts
+   Layout Utility
 ============================= */
 section {
-  padding: 6rem 1.5rem;
+  padding-block: 6rem;
+  padding-inline: 0rem;
 }
 
 .max-w-screen-xl {
@@ -100,23 +97,25 @@ a {
 }
 
 footer a:hover {
-  color: var(--accent);
+  color: var(--primaryLight);
 }
 
-/* Custom Calendly button styles */
+/* ============================
+   Calendly Button
+============================= */
 .calendly-badge-widget {
-  background-color: #19724d !important; /* Forest green */
+  background-color: var(--primaryDark) !important;
   color: white !important;
   border: none !important;
   font-weight: 600 !important;
   font-size: 16px !important;
   padding: 12px 20px !important;
-  border-radius: 9999px !important; /* fully rounded */
+  border-radius: 9999px !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-in-out;
 }
 
 .calendly-badge-widget:hover {
-  background-color: #14532d !important; /* Slightly darker forest green */
+  background-color: #013c35 !important;
   transform: scale(1.05);
 }

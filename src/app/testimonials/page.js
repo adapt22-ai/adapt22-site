@@ -7,16 +7,16 @@ export const metadata = {
 
 export default function TestimonialsPage() {
   return (
-    <div className="bg-[#f3f5f3] text-gray-900">
+    <div className="bg-background text-textPrimary">
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto space-y-12">
           {/* Heading + Gold Bar */}
           <div className="space-y-4">
             <div className="inline-flex flex-col items-start">
-              <h1 className="text-5xl font-extrabold text-primary">Client Testimonials</h1>
-              <div className="h-1 w-[103%] bg-accent rounded-full mt-2" />
+              <h1 className="text-5xl font-extrabold text-accentIndigo">Client Testimonials</h1>
+              <div className="h-1 w-[103%] bg-primaryDark rounded-full mt-2" />
             </div>
-            <p className="text-lg text-gray-700 max-w-3xl">
+            <p className="text-lg textMuted max-w-3xl">
               Here’s what real business owners are saying about working with Adapt22. From AI-driven systems to hands-off automation — our clients are getting time back, cutting costs, and scaling smarter.
             </p>
           </div>
@@ -51,10 +51,10 @@ export default function TestimonialsPage() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md border-l-4 border-primary hover:shadow-lg transition"
+                className="bg-surface p-6 rounded-xl shadow-md border-l-4 border-primaryDark hover:shadow-lg transition"
               >
-                <p className="text-gray-800 italic mb-4">“{testimonial.text}”</p>
-                <p className="text-primary font-semibold text-sm">{testimonial.company}</p>
+                <p className="text-textPrimary italic mb-4">“{testimonial.text}”</p>
+                <p className="text-accentIndigo font-semibold text-sm">{testimonial.company}</p>
               </div>
             ))}
           </div>
