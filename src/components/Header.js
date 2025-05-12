@@ -20,7 +20,7 @@ export default function Header() {
             priority
             className="transition-transform duration-200 lg:group-hover:scale-105"
           />
-          <span className="text-5xl font-extrabold text-primaryDark tracking-tight lg:group-hover:text-primaryLight">
+          <span className="text-5xl font-extrabold text-[#0F362E] tracking-tight lg:group-hover:text-primaryLight">
             Adapt22
           </span>
         </Link>

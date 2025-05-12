@@ -129,22 +129,22 @@ export default function HomePage() {
 
 
    <div className="border-l-4 pl-6 space-y-6" style={{ borderColor: "#e0ee28" }}>
-     {[
-       "Your work is essential to keep our world running and you deserve the same tools that billion-dollar companies have.",
-       "Our focus is to understand the problems that cause wasted time and money, and then implement tailored solutions that actually work for you.",
-       "We exist to remove the burden that AI and software can be by creating a tech environment tailored to your team, goals, and needs.",
-       "Let us handle everything from implementing AI tools, customizing workflows, and automating busy work.",
-       "You name your problems and we give solutions."
-     ].map((text, index) => (
-       <p
-         key={index}
-         className="text-md flex items-start gap-2 font-medium text-textPrimary"
-       >
-         <span className="text-primaryLight text-lg leading-6">➜</span>
-         {text}
-       </p>
-     ))}
-   </div>
+  {[
+    "Your work is essential to keep our world running and you deserve the same tools that billion-dollar companies have.",
+    "Our focus is to understand the problems that cause wasted time and money, and then implement tailored solutions that actually work for you.",
+    "We exist to remove the burden that AI and software can be by creating a tech environment tailored to your team, goals, and needs.",
+    "Let us handle everything from implementing AI tools, customizing workflows, and automating busy work.",
+    "You name your problems and we give solutions."
+  ].map((text, index) => (
+    <p
+      key={index}
+      className="text-md text-textPrimary flex items-start gap-2"
+    >
+      <span className="text-primaryLight text-lg leading-6">↠</span>
+      {text}
+    </p>
+  ))}
+</div>
 
 
    <div className="text-center">
