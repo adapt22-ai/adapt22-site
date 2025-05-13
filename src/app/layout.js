@@ -24,8 +24,12 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Adapt22" />
+<link rel="manifest" href="/site.webmanifest" />
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
         <Script id="calendly-inline-widget" strategy="lazyOnload">
