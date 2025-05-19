@@ -69,7 +69,7 @@ export default function HomePage() {
       {/* Missed Leads & Poor Follow-Up */}
       <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
         <h4 className="text-2xl font-bold mb-4 text-white">Missed Leads & Poor Follow-Up</h4>
-        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside leading-relaxed">
           <li>“We can’t follow up fast enough — and lose jobs because of it.”</li>
           <li>“Leads come in from 5 different places and fall through the cracks.”</li>
           <li>“If they don’t call us, we forget they even reached out.”</li>
@@ -80,7 +80,7 @@ export default function HomePage() {
       {/* Too Many Manual, Repetitive Tasks */}
       <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
         <h4 className="text-2xl font-bold mb-4 text-white">Too Many Manual, Repetitive Tasks</h4>
-        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside leading-relaxed">
           <li>“It feels like we spend half our day clicking buttons and typing when I know there has to be a better way to do this.”</li>
           <li>“We waste hours sending reminders, rescheduling, answering the same questions, filling out paperwork.”</li>
           <li>“Nothing is connected — I have to enter the same info in 3 different places.”</li>
@@ -90,8 +90,8 @@ export default function HomePage() {
       {/* Feeling Stuck in the Day-to-Day */}
       <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
         <h4 className="text-2xl font-bold mb-4 text-white">Feeling Stuck in the Day-to-Day</h4>
-        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
-          <li>“Everything depends on me. I can’t take a vacation, much less a day off.”</li>
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside leading-relaxed">
+          <li>“Everything depends on me. I can’t take a vacation, much less a day off. I playing catch up instead of spending time with my family.”</li>
           <li>“There’s no system — it’s all in my head and no one seems to understand it but me.”</li>
           <li>“My business isn’t growing because I’m too busy working to maintain everything.”</li>
         </ul>
@@ -100,7 +100,7 @@ export default function HomePage() {
       {/* Missed Calls, No-Shows, Disorganized Communication */}
       <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
         <h4 className="text-2xl font-bold mb-4 text-white">Missed Calls, No-Shows & Disorganized Communication</h4>
-        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside leading-relaxed">
           <li>“I miss calls when I’m on a job — and forget to call back because I am so busy.”</li>
           <li>“Customers forget appointments because our system doesn’t remind them.”</li>
           <li>“We get messages from all over — email, text, DMs, voicemails — and things fall through the cracks.”</li>
@@ -110,7 +110,7 @@ export default function HomePage() {
       {/* Customer Experience That Feels Outdated */}
       <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
         <h4 className="text-2xl font-bold mb-4 text-white">Customer Experience That Feels Outdated</h4>
-        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside leading-relaxed">
           <li>“We don’t look as professional as we are — our process comes off as messy to customers.”</li>
           <li>“Our competitors offer online booking and automated texts — we’re still doing everything manually.”</li>
           <li>“When a customer reschedules or cancels — sometimes our system messes up the dates and reminders.”</li>
@@ -120,7 +120,7 @@ export default function HomePage() {
       {/* Wasted Software & Disconnected Tools */}
       <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
         <h4 className="text-2xl font-bold mb-4 text-white">Wasted Software & Disconnected Tools</h4>
-        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside leading-relaxed">
           <li>“Our systems don’t talk to each other — and we spend so much time manually inputting information across all our systems.”</li>
           <li>“We pay so much for software, but it feels like the features we need are always missing.”</li>
           <li>“It’s all too complicated. My team is always putting out fires caused by our software.”</li>
