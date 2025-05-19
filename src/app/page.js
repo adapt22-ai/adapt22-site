@@ -48,57 +48,94 @@ export default function HomePage() {
 </section>
 
 
-     {/* AI Service Cards Section */}
-     <section className="bg-background py-20 px-6 text-white">
-       <div className="max-w-screen-xl mx-auto space-y-10">
-         <div className="bg-surface p-8 rounded-lg shadow-md hover:shadow-lg transition text-center text-accentIndigo border-l-4 border-primaryDark">
- <h3 className="text-2xl md:text-3xl font-extrabold mb-4">
-   Custom AI Implementation, Tailored to You
- </h3>
- <p className="text-md max-w-3xl mx-auto textMuted">
-   We specialize in white-glove AI communication and automation services that adapt to your unique business needs.
-   Whether you're looking to overhaul your entire tech stack or implement one tool that finally works,
-   we’ll plan it, customize it, build it, and manage it — end to end. You don’t lift a finger.
-   Our goal is simple: remove complexity, streamline operations, and help you scale smarter.
- </p>
-</div>
+{/* Problems We Solve Section */}
+<section className="bg-background py-20 px-6 text-white">
+  <div className="max-w-screen-xl mx-auto space-y-16">
+    
+    {/* Section Header */}
+    <div className="bg-surface p-8 rounded-lg shadow-md hover:shadow-lg transition text-center text-accentIndigo border-l-4 border-primaryDark">
+      <h3 className="text-3xl md:text-4xl font-extrabold mb-4">
+        The Most Common Problems We Solve
+      </h3>
+      <p className="text-md max-w-5xl mx-auto textMuted">
+        No two businesses are the same — and we treat them that way. But whether it’s dropped leads, clunky workflows, or too much manual work, the root causes often echo across industries.
+        We hear the following problems constantly — and we’ve built our entire service model around solving them.
+      </p>
+    </div>
 
+    {/* Problem Blocks Grid */}
+    <div className="grid gap-12 md:grid-cols-2">
+      
+      {/* Missed Leads & Poor Follow-Up */}
+      <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
+        <h4 className="text-2xl font-bold mb-4 text-white">Missed Leads & Poor Follow-Up</h4>
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+          <li>“We can’t follow up fast enough — and lose jobs because of it.”</li>
+          <li>“Leads come in from 5 different places and fall through the cracks.”</li>
+          <li>“If they don’t call us, we forget they even reached out.”</li>
+          <li>“We spend on ads, but the lead quality is terrible.”</li>
+        </ul>
+      </div>
 
-         <div className="grid gap-10 md:grid-cols-3 text-left">
-           {[{
- title: "AI Calling & Text Bots",
- desc: "24/7 voice and SMS systems that handle quotes, bookings, and FAQs — hands-free."
-}, {
- title: "CRM & Calendar Automation",
- desc: "Instantly sync leads, jobs, and schedules. Never forget a follow-up again."
-}, {
- title: "AI-Generated Proposals",
- desc: "Close more jobs with intelligent proposal templates powered by AI."
-}, {
- title: "Meta & Google Ad Management",
- desc: "We drive traffic with smart campaigns — or plug into your existing pipeline."
-}, {
- title: "Intelligent Lead Routing",
- desc: "Route new jobs to the right reps or techs based on zip code, priority, or availability."
-}, {
- title: "Automated Email & Follow-ups",
- desc: "Send timely emails and reminders using AI to boost conversions and reduce no-shows."
-}].map(({ title, desc }, i) => (
- <div key={i} className="bg-surface p-6 rounded-lg shadow hover:shadow-md transition text-white border-l-4 border-primaryDark">
-   <h3 className="text-xl font-bold mb-2">{title}</h3>
-   <p className="text-sm textMuted">{desc}</p>
- </div>
-))}
-         </div>
-       </div>
-     </section>
+      {/* Too Many Manual, Repetitive Tasks */}
+      <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
+        <h4 className="text-2xl font-bold mb-4 text-white">Too Many Manual, Repetitive Tasks</h4>
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+          <li>“It feels like we spend half our day clicking buttons and typing when I know there has to be a better way to do this.”</li>
+          <li>“We waste hours sending reminders, rescheduling, answering the same questions, filling out paperwork.”</li>
+          <li>“Nothing is connected — I have to enter the same info in 3 different places.”</li>
+        </ul>
+      </div>
+
+      {/* Feeling Stuck in the Day-to-Day */}
+      <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
+        <h4 className="text-2xl font-bold mb-4 text-white">Feeling Stuck in the Day-to-Day</h4>
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+          <li>“Everything depends on me. I can’t take a vacation, much less a day off.”</li>
+          <li>“There’s no system — it’s all in my head and no one seems to understand it but me.”</li>
+          <li>“My business isn’t growing because I’m too busy working to maintain everything.”</li>
+        </ul>
+      </div>
+
+      {/* Missed Calls, No-Shows, Disorganized Communication */}
+      <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
+        <h4 className="text-2xl font-bold mb-4 text-white">Missed Calls, No-Shows & Disorganized Communication</h4>
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+          <li>“I miss calls when I’m on a job — and forget to call back because I am so busy.”</li>
+          <li>“Customers forget appointments because our system doesn’t remind them.”</li>
+          <li>“We get messages from all over — email, text, DMs, voicemails — and things fall through the cracks.”</li>
+        </ul>
+      </div>
+
+      {/* Customer Experience That Feels Outdated */}
+      <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
+        <h4 className="text-2xl font-bold mb-4 text-white">Customer Experience That Feels Outdated</h4>
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+          <li>“We don’t look as professional as we are — our process comes off as messy to customers.”</li>
+          <li>“Our competitors offer online booking and automated texts — we’re still doing everything manually.”</li>
+          <li>“When a customer reschedules or cancels — sometimes our system messes up the dates and reminders.”</li>
+        </ul>
+      </div>
+
+      {/* Wasted Software & Disconnected Tools */}
+      <div className="bg-surface p-6 rounded-lg shadow border-l-4 border-primaryDark">
+        <h4 className="text-2xl font-bold mb-4 text-white">Wasted Software & Disconnected Tools</h4>
+        <ul className="space-y-3 text-sm text-textMuted list-disc list-inside">
+          <li>“Our systems don’t talk to each other — and we spend so much time manually inputting information across all our systems.”</li>
+          <li>“We pay so much for software, but it feels like the features we need are always missing.”</li>
+          <li>“It’s all too complicated. My team is always putting out fires caused by our software.”</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 
      {/* Value Proposition */}
-     <section className="bg-surface text-center">
+     <section className="bg-surface text-center text-accentIndigo py-12">
        <div className="max-w-4xl mx-auto space-y-4">
          <h2 className="text-3xl md:text-4xl font-bold">
-           Whether it’s managing one tool or your entire tech stack, we are here to serve you:
+           If any of this sounds familiar, you’re in the right place.
          </h2>
          <p className="text-lg textMuted">
            Get time back. Reduce costs. Scale smarter — without the headache.
@@ -107,7 +144,7 @@ export default function HomePage() {
            Focus on what matters: the craft you’ve mastered and the company you lead.
          </p>
          <p className="text-lg textMuted">
-           You maintain full control — we just handle the heavy lifting.
+           You maintain full control — we just do the heavy lifting.
          </p>
          <Link
            href="/what-we-do"

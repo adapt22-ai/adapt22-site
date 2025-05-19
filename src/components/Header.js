@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="fixed w-full z-50 backdrop-blur-lg bg-black/70 border-b border-border shadow-sm">
-      <nav className="max-w-screen-xl mx-auto px-6 h-[140px] flex items-center justify-between overflow-hidden">
+      <nav className="max-w-screen-xl mx-auto px-6 h-[140px] flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="group">
   <div className="relative transition-transform duration-200 lg:group-hover:scale-105">

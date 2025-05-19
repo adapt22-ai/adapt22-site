@@ -39,8 +39,8 @@ export default function WhoWeArePage() {
 
           {/* Founder Section */}
           <div className="flex flex-col md:flex-row items-start gap-10">
-            <div className="w-full md:w-1/3 pt-8">
-              <Image
+            <div className="w-full md:w-1/3 pt-9">
+               <Image
                 src="/headshot.png"
                 alt="Jackson McConnell"
                 width={500}
@@ -49,53 +49,56 @@ export default function WhoWeArePage() {
               />
             </div>
             <div className="w-full md:w-2/3 space-y-5 text-textPrimary">
-              <h2 className="text-2xl font-bold text-white">Jackson McConnell</h2>
-              <p>
-                Jackson started a home services business in high school and grew it over 5 years. As Covid struck and the evolution of AI emerged,
-                he pivoted into the world of software. Eventually, Jackson was leading a team building custom software for SMBs in trades,
-                construction, service industries, retail, and medical.
-              </p>
-              <p>
-                While it was incredibly fulfilling to be serving these companies and working directly with the entrepreneurs,
-                he still didn’t feel like he was doing enough for them. One last problem remained, and likely the most pressing —
-                no matter how shiny the solution was, implementing, managing, and scaling it was still a disaster.
-              </p>
-              <p>
-                “Implement, Manage, Scale” are the three ends of the triskelion in the Adapt22 logo and happen to be what Jackson enjoyed doing most.
-                This is why Adapt22 was born — to be a white-glove service handling everything tech related, so you get to solely focus on your craft and team.
-              </p>
-              <p>
-                Our mission is straightforward: <strong>“Serving Those Who Serve Us.”</strong> Your work is essential to keep our world running and you deserve
-                the same tools that billion-dollar companies have. Too many people feel as if modern AI and software solutions have left them behind — we exist to change that narrative.
-              </p>
-            </div>
+  <h2 className="text-2xl font-bold text-white">Jackson McConnell</h2>
+  <p>
+    Jackson was born and raised in Atlanta, Georgia, and got an early start in the trades. While still in high school, he launched a home services business — and grew it steadily over five years. He fell in love with the work itself: serving real people by solving real problems and keeping homes and businesses running smoothly.
+  </p>
+  <p>
+While running his crews and managing day-to-day operations, Jackson noticed how clunky, outdated, and frustrating most software tools were — not just for his company, but for every contractor and partner he worked with.
+  </p>
+  <p>
+    When the pandemic hit and AI started reshaping industries, Jackson saw an opportunity to pivot — not away from trades, but to better serve them. He moved into software, eventually leading a team building custom solutions for SMBs in construction, home services, retail, and healthcare.
+  </p>
+  <p>
+    But even great software wasn’t enough. Jackson kept seeing the same issue: no matter how powerful the tool, implementing it, managing it, and getting it to scale without friction was always the bottleneck.
+  </p>
+  <p>
+    “Implement, Manage, Scale” — those are the three ends of the triskelion in the Adapt22 logo, and they represent exactly what Jackson set out to solve. Adapt22 was built to be a white-glove service that handles everything tech-related — so you can stay focused on your craft, your customers, and your team.
+  </p>
+  <p>
+    The mission is simple: <strong>“Serving Those Who Serve Us.”</strong> Your work keeps the world running. You deserve the same powerful tools billion-dollar companies have — without the hassle. Most modern software leaves tradespeople behind. We exist to change that.
+  </p>
+</div>
           </div>
 
           {/* Full-width Quote */}
-          <div className="bg-surface border-t-4 border-primaryDark text-center text-lg italic text-textPrimary px-8 py-10 rounded shadow-md">
-            <p className="max-w-3xl mx-auto">
-              “Long-term partnerships mean everything to me in this space. I’m not in this for a ‘one-and-done’ relationship. I want to see you and your team continue to win again and again, and get to be a small part of that equation.”
-            </p>
-            <footer className="mt-4 text-base textMuted">— Jackson McConnell</footer>
-          </div>
+         <div className="bg-surface border-t-4 border-primaryDark text-center text-xl text-textPrimary px-8 py-10 rounded shadow-md">
+           <p className="max-w-3xl mx-auto">
+             “You, my brothers and sisters, were called to be free. But do not use your freedom to indulge the flesh; rather, serve one another humbly in love.”
+           </p>
+           <footer className="mt-4 text-base textMuted">— Galatians 5:13</footer>
+         </div>
 
-          {/* Core Values */}
-          <div className="bg-primaryDark border-t-4 border-surface text-white py-12 px-6 rounded-md shadow-md text-center">
-            <h2 className="text-3xl font-semibold mb-8 text-white">Adapt22 Core Values</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-              {["Hard Work", "Service", "Resilience", "Persistence", "Accountability"].map((val, i) => (
-                <div key={i} className="bg-white text-primaryDark font-bold py-4 rounded shadow-md">
-                  {val}
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Scripture Blockquote */}
-          <blockquote className="text-center text-xl font-semibold italic textMuted mt-16">
-            “You, my brothers and sisters, were called to be free. But do not use your freedom to indulge the flesh; rather, serve one another humbly in love.”
-            <footer className="mt-2 text-base textMuted">— Galatians 5:13</footer>
-          </blockquote>
+         {/* Core Values */}
+         <div className="bg-primaryDark border-t-4 border-surface text-white py-12 px-6 rounded-md shadow-md text-center">
+           <h2 className="text-3xl font-semibold mb-8 text-white">Adapt22 Core Values</h2>
+           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+             {["Hard Work", "Service", "Resilience", "Persistence", "Accountability"].map((val, i) => (
+               <div key={i} className="bg-white text-primaryDark font-bold py-4 rounded shadow-md">
+                 {val}
+               </div>
+             ))}
+           </div>
+         </div>
+
+
+         {/* Scripture Blockquote */}
+         <blockquote className="text-center text-xl font-semibold italic textMuted mt-16">
+           “Long-term partnerships mean everything to me in this space. I’m not in this for a ‘one-and-done’ relationship. I want to see you and your team continue to win again and again, and get to be a small part of that equation.” 
+           <footer className="mt-2 text-base textMuted">— Jackson McConnell</footer>
+         </blockquote>
+
 
           {/* Dual Column Grid */}
           <div className="grid md:grid-cols-2 gap-12 mt-20">
