@@ -9,53 +9,53 @@ export default function Header() {
 
   return (
     <header className="fixed w-full z-50 backdrop-blur-lg bg-black/70 border-b border-border shadow-sm">
-      <nav className="max-w-screen-xl mx-auto px-6 h-[140px] flex items-center justify-between">
+      <nav className="max-w-screen-xl mx-auto px-4 sm:px-6 min-h-[120px] flex flex-wrap items-center justify-between gap-4">
         {/* Logo */}
-        <div className="relative z-10 flex items-center ml-4 sm:ml-6">
-  <Link href="/" className="block">
-    <div className="relative group transition-transform duration-200 hover:scale-105">
-      {/* Primary Dark Logo */}
-      <Image
-        src="/A22-pD.png"
-        alt="Adapt22 Logo PD"
-        width={320}
-        height={100}
-        priority
-        className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300 sm:hidden"
-      />
-      {/* Primary Light Logo */}
-      <Image
-        src="/A22-pL.png"
-        alt="Adapt22 Logo PL"
-        width={320}
-        height={100}
-        priority
-        className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 sm:hidden"
-      />
+        <div className="relative z-10 flex items-center">
+          <Link href="/" className="block">
+            <div className="relative group transition-transform duration-200 hover:scale-105">
+              {/* Mobile Logo - Dark */}
+              <Image
+                src="/A22-pD.png"
+                alt="Adapt22 Logo PD"
+                width={240}
+                height={80}
+                priority
+                className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300 sm:hidden"
+              />
+              {/* Mobile Logo - Light */}
+              <Image
+                src="/A22-pL.png"
+                alt="Adapt22 Logo PL"
+                width={240}
+                height={80}
+                priority
+                className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 sm:hidden"
+              />
+              {/* Desktop Logo - Dark */}
+              <Image
+                src="/A22-pD.png"
+                alt="Adapt22 Logo PD"
+                width={360}
+                height={120}
+                priority
+                className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300 hidden sm:block"
+              />
+              {/* Desktop Logo - Light */}
+              <Image
+                src="/A22-pL.png"
+                alt="Adapt22 Logo PL"
+                width={360}
+                height={120}
+                priority
+                className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block"
+              />
+            </div>
+          </Link>
+        </div>
 
-      {/* Desktop Logo - Dark */}
-      <Image
-        src="/A22-pD.png"
-        alt="Adapt22 Logo PD"
-        width={360}
-        height={120}
-        priority
-        className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300 hidden sm:block"
-      />
-      {/* Desktop Logo - Light */}
-      <Image
-        src="/A22-pL.png"
-        alt="Adapt22 Logo PL"
-        width={360}
-        height={120}
-        priority
-        className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block"
-      />
-    </div>
-  </Link>
-</div>
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center space-x-8 text-base font-medium text-textPrimary">
+        <ul className="hidden lg:flex items-center flex-wrap space-x-6 text-base font-medium text-textPrimary">
           <li><Link href="/who-we-are" className="hover:text-primaryLight">Who We Are</Link></li>
           <li><Link href="/what-we-do" className="hover:text-primaryLight">What We Do</Link></li>
 
@@ -77,7 +77,7 @@ export default function Header() {
           <li>
             <Link
               href="/demo"
-              className="ml-2 bg-primaryDark hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold transition"
+              className="bg-primaryDark hover:brightness-110 text-white px-6 py-3 rounded-full font-semibold transition text-center"
             >
               Try Our Demo
             </Link>
@@ -85,7 +85,7 @@ export default function Header() {
           <li>
             <Link
               href="/book-a-call"
-              className="ml-2 bg-primaryLight hover:brightness-110 text-black px-6 py-3 rounded-full font-semibold transition"
+              className="bg-primaryLight hover:bg-[#f5f542] text-black px-6 py-3 rounded-full font-semibold transition text-center"
             >
               Book a Call
             </Link>
