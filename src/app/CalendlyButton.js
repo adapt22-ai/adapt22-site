@@ -10,13 +10,15 @@ export default function CalendlyButton() {
   }, []);
 
   const openCalendlyPopup = () => {
-    Calendly.initPopupWidget({
-      url: "https://calendly.com/jackson-adapt22?hide_landing_page_details=1",
-    });
+    if (typeof window !== "undefined" && window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: "https://calendly.com/jackson-adapt22?hide_landing_page_details=1",
+      });
+    }
   };
 
   return (
-    <div className="fixed bottom-6 right-6">
+    <div className="fixed bottom-6 right-6 z-50 sm:bottom-4 sm:right-4">
       <button
         onClick={openCalendlyPopup}
         className="bg-primaryDark hover:bg-[#013c35] text-white px-5 py-3 rounded-full shadow-lg text-lg font-semibold transition transform hover:scale-105"

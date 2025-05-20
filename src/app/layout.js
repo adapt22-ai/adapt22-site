@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
     <main className="flex-1 pt-32 px-6 md:px-10">{children}</main>
 
     <footer className="bg-surface border-t border-border text-textPrimary py-8 px-6">
-      <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20">
+      <div className="max-w-screen-xl mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-20">
         <div>
           <h3 className="text-white font-bold text-lg mb-2">Adapt22</h3>
           <p className="text-sm leading-relaxed textMuted">

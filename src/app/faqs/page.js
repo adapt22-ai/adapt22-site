@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 
 export default function FAQPage() {
@@ -42,15 +41,15 @@ export default function FAQPage() {
 
   return (
     <div className="bg-background text-textPrimary">
-      <section className="py-20 px-6">
+      <section className="py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Heading + Gold Bar */}
-          <div className="space-y-4">
-            <div className="inline-flex flex-col items-start">
-              <h1 className="text-5xl font-extrabold text-accentIndigo">
+          <div className="text-center space-y-4">
+            <div className="inline-flex flex-col items-center">
+              <h1 className="text-4xl sm:text-5xl font-extrabold text-accentIndigo">
                 Frequently Asked Questions
               </h1>
-              <div className="h-1 w-[103%] bg-surface rounded-full mt-2" />
+              <div className="h-1 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[103%] bg-primaryDark rounded-full mt-2" />
             </div>
           </div>
 
@@ -66,7 +65,9 @@ export default function FAQPage() {
                   className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-primaryText hover:bg-surface transition"
                 >
                   {item.q}
-                  <span className="text-accentIndigo text-2xl">{openIndex === index ? "−" : "+"}</span>
+                  <span className="text-accentIndigo text-2xl">
+                    {openIndex === index ? "−" : "+"}
+                  </span>
                 </button>
                 {openIndex === index && (
                   <div className="px-6 pb-4 textMuted leading-relaxed">

@@ -27,15 +27,13 @@ export default function ContactClient() {
 
   return (
     <div className="bg-background text-textPrimary">
-      <section className="py-20 px-6">
+      <section className="py-20 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto space-y-12">
           {/* Heading + Bar */}
-          <div className="space-y-6">
-            <div className="inline-flex flex-col items-start">
-              <h1 className="text-5xl font-extrabold text-accentIndigo">Let’s Talk</h1>
-              <div className="h-1 w-[103%] bg-primaryDark rounded-full mt-2" />
-            </div>
-            <p className="text-lg textMuted">
+          <div className="text-center space-y-6">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-accentIndigo">Let’s Talk</h1>
+            <div className="h-1 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[30ch] bg-primaryDark rounded-full mx-auto" />
+            <p className="text-md sm:text-lg textMuted">
               Whether you have questions, want to explore a custom AI/automation setup, or just want to brainstorm — we’d love to hear from you.
             </p>
           </div>
@@ -43,7 +41,7 @@ export default function ContactClient() {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 bg-surface p-8 rounded-lg shadow-lg border border-border"
+            className="space-y-6 bg-surface p-6 sm:p-8 rounded-lg shadow-lg border border-border"
           >
             {[
               { label: "Your Name", name: "name", type: "text" },
@@ -81,10 +79,10 @@ export default function ContactClient() {
             </button>
 
             {status === "success" && (
-              <p className="text-success mt-2">Thanks! We'll be in touch shortly.</p>
+              <p className="text-primaryLight mt-2">Thanks! We'll be in touch shortly.</p>
             )}
             {status === "error" && (
-              <p className="text-error mt-2">Something went wrong. Please try again.</p>
+              <p className="text-red-500 mt-2">Something went wrong. Please try again.</p>
             )}
           </form>
         </div>

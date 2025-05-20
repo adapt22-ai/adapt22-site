@@ -2,22 +2,39 @@ import { Resend } from "resend";
 
 export async function POST(req) {
   try {
-    const { name, company, email, phone, message } = await req.json();
+    const body = await req.json();
+    const { name, company = "N/A", email, phone = "N/A", message } = body;
 
-    // Initialize Resend with your API key
+    if (!name || !email || !message) {
+      return new Response(JSON.stringify({ success: false, error: "Missing required fields." }), {
+        status: 400,
+      });
+    }
+
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Send email using Resend
     const response = await resend.emails.send({
-      from: "jackson@adapt22.ai", // This must match an authorized sender in Resend
-      to: "jackson@adapt22.ai", // This is where the form submissions go
+      from: "jackson@adapt22.ai",
+      to: "jackson@adapt22.ai",
       subject: "New Contact Form Submission - Adapt22",
-      text: `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`,
+      text: `
+New Contact Submission:
+
+Name: ${name}
+Email: ${email}
+Company: ${company}
+Phone: ${phone}
+
+Message:
+${message}
+      `.trim(),
     });
 
     return new Response(JSON.stringify({ success: true, data: response }), { status: 200 });
   } catch (error) {
     console.error("Email sending error:", error);
-    return new Response(JSON.stringify({ success: false, error: error.message }), { status: 500 });
+    return new Response(JSON.stringify({ success: false, error: error.message }), {
+      status: 500,
+    });
   }
 }

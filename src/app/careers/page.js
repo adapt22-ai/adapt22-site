@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 
 export default function CareersPage() {
@@ -26,18 +25,16 @@ export default function CareersPage() {
 
   return (
     <div className="bg-background text-textPrimary">
-      <section className="py-20 px-6">
+      <section className="py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Heading + Bar */}
-          <div className="space-y-4">
-            <div className="inline-flex flex-col items-start">
-              <h1 className="text-5xl font-extrabold text-accentIndigo">Careers at Adapt22</h1>
-              <div className="h-1 w-[103%] bg-primaryDark rounded-full mt-2" />
-            </div>
-            <p className="text-lg text-textPrimary">
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-accentIndigo">Careers at Adapt22</h1>
+            <div className="h-1 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[30ch] bg-primaryDark rounded-full mx-auto mt-2" />
+            <p className="text-md sm:text-lg text-textPrimary max-w-2xl mx-auto">
               We're on a mission to make AI + automation accessible to the businesses that keep our world running...
             </p>
-            <p className="text-md textMuted italic">
+            <p className="text-sm textMuted italic max-w-xl mx-auto">
               Adapt22 is a Christian-led company built on Biblical values like service, persistence, and accountability.
             </p>
           </div>
@@ -58,7 +55,7 @@ export default function CareersPage() {
                 title: "How We Work",
                 items: [
                   "100% remote — work from anywhere",
-                  "Own your schedule. Hours don't matter - outcomes do.",
+                  "Own your schedule. Hours don't matter — outcomes do.",
                   "We prioritize impact over hours and trust you to hit your goals",
                   "Quarterly team meetups",
                   "No wasted time: if it can be a Loom or Slack, make it one",
@@ -99,7 +96,7 @@ export default function CareersPage() {
           {/* Application Form */}
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 bg-surface p-8 rounded-lg shadow-lg border border-border"
+            className="space-y-6 bg-surface p-6 sm:p-8 rounded-lg shadow-lg border border-border"
           >
             {[
               { label: "Your Name", name: "name", type: "text" },
@@ -136,10 +133,10 @@ export default function CareersPage() {
             </button>
 
             {status === "success" && (
-              <p className="text-success mt-2">Thanks! We'll be in touch shortly.</p>
+              <p className="text-primaryLight mt-2">Thanks! We'll be in touch shortly.</p>
             )}
             {status === "error" && (
-              <p className="text-error mt-2">Something went wrong. Please try again.</p>
+              <p className="text-red-500 mt-2">Something went wrong. Please try again.</p>
             )}
           </form>
         </div>

@@ -25,7 +25,7 @@ export default function IndustriesPage() {
           {/* Header */}
           <div className="text-center space-y-4">
             <h1 className="text-5xl font-extrabold text-accentIndigo">Industries We Serve</h1>
-            <div className="h-1 w-[50ch] bg-primaryDark rounded-full mx-auto mt-2" />
+            <div className="h-1 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[50ch] bg-primaryDark rounded-full mx-auto mt-2" />
             <p className="text-lg textMuted max-w-2xl mx-auto">
               We specialize in helping field-based SMBs modernize their operations with AI communication + automation across the U.S.
             </p>
