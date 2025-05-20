@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
           <div className="space-y-4">
             <div className="inline-flex flex-col items-start">
               <h1 className="text-5xl font-extrabold text-accentIndigo">Privacy Policy</h1>
-              <div className="h-1 w-[103%] bg-primaryDark rounded-full mt-2" />
+              <div className="h-1 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[50ch] bg-primaryDark rounded-full mt-2" />
             </div>
             <p className="text-lg textMuted">
               At Adapt22, your privacy is our priority. This Privacy Policy outlines how we collect, use, and protect your personal information when you interact with our services.

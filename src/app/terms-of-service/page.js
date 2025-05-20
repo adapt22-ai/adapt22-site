@@ -12,7 +12,7 @@ export default function TermsPage() {
           <div className="space-y-4">
             <div className="inline-flex flex-col items-start">
               <h1 className="text-4xl sm:text-5xl font-extrabold text-accentIndigo">Terms of Service</h1>
-              <div className="h-1 w-[110%] sm:w-[103%] bg-primaryDark rounded-full mt-2" />
+              <div className="h-1 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[50ch] bg-primaryDark rounded-full mt-2" />
             </div>
             <p className="text-md sm:text-lg textMuted">
               By accessing this website or using our services, you agree to be bound by the following terms. If you do not agree, please do not use this site or our services.
