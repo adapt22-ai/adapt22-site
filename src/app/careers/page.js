@@ -84,7 +84,7 @@ export default function CareersPage() {
                 We donate to causes you care about, sponsor community service...
               </p>
               <blockquote className="mt-4 italic textMuted text-sm">
-                “You, my brothers and sisters, were called to be free... — Galatians 5:13”
+                “You, my brothers and sisters, were called to be free. But do not use your freedom to indulge the flesh; rather, serve one another humbly in love. — Galatians 5:13”
               </blockquote>
             </div>
 

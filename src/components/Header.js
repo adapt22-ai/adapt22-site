@@ -11,22 +11,47 @@ export default function Header() {
     <header className="fixed w-full z-50 backdrop-blur-lg bg-black/70 border-b border-border shadow-sm">
       <nav className="max-w-screen-xl mx-auto px-6 h-[140px] flex items-center justify-between">
         {/* Logo */}
-        <div className="relative z-10 flex items-center h-[140px]">
-  <Link href="/" className="group block relative w-[420px] h-full">
-    <Image
-      src="/A22-pD.png"
-      alt="Adapt22 Logo PD"
-      fill
-      priority
-      className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300"
-    />
-    <Image
-      src="/A22-pL.png"
-      alt="Adapt22 Logo PL"
-      fill
-      priority
-      className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-    />
+        <div className="relative z-10 flex items-center ml-4 sm:ml-6">
+  <Link href="/" className="block">
+    <div className="relative group transition-transform duration-200 hover:scale-105">
+      {/* Primary Dark Logo */}
+      <Image
+        src="/A22-pD.png"
+        alt="Adapt22 Logo PD"
+        width={320}
+        height={100}
+        priority
+        className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300 sm:hidden"
+      />
+      {/* Primary Light Logo */}
+      <Image
+        src="/A22-pL.png"
+        alt="Adapt22 Logo PL"
+        width={320}
+        height={100}
+        priority
+        className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 sm:hidden"
+      />
+
+      {/* Desktop Logo - Dark */}
+      <Image
+        src="/A22-pD.png"
+        alt="Adapt22 Logo PD"
+        width={360}
+        height={120}
+        priority
+        className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300 hidden sm:block"
+      />
+      {/* Desktop Logo - Light */}
+      <Image
+        src="/A22-pL.png"
+        alt="Adapt22 Logo PL"
+        width={360}
+        height={120}
+        priority
+        className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block"
+      />
+    </div>
   </Link>
 </div>
         {/* Desktop Nav */}
