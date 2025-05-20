@@ -11,29 +11,24 @@ export default function Header() {
     <header className="fixed w-full z-50 backdrop-blur-lg bg-black/70 border-b border-border shadow-sm">
       <nav className="max-w-screen-xl mx-auto px-6 h-[140px] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="group">
-  <div className="relative transition-transform duration-200 lg:group-hover:scale-105">
-    {/* Primary Dark Logo */}
+        <div className="relative z-10 flex items-center h-[140px]">
+  <Link href="/" className="group block relative w-[420px] h-full">
     <Image
       src="/A22-pD.png"
       alt="Adapt22 Logo PD"
-      width={500}
-      height={140}
+      fill
       priority
       className="object-contain opacity-100 group-hover:opacity-0 transition-opacity duration-300"
     />
-    {/* Primary Light Logo (overlapping) */}
     <Image
       src="/A22-pL.png"
       alt="Adapt22 Logo PL"
-      width={500}
-      height={140}
+      fill
       priority
       className="object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
     />
-  </div>
-</Link>
-
+  </Link>
+</div>
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center space-x-8 text-base font-medium text-textPrimary">
           <li><Link href="/who-we-are" className="hover:text-primaryLight">Who We Are</Link></li>
