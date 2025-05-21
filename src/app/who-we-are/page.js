@@ -15,7 +15,7 @@ export default function WhoWeArePage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
         >
-          <source src="/Vid-4.mp4" type="video/mp4" />
+          <source src="/3-wwa.mp4" type="video/mp4" />
         </video>
 
         <div className="relative z-10 text-center max-w-5xl space-y-8 sm:space-y-10">

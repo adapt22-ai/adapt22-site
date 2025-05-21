@@ -15,7 +15,7 @@ export default function HomePage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
         >
-          <source src="/bg-new.mp4" type="video/mp4" />
+          <source src="/1-page.mp4" type="video/mp4" />
         </video>
 
         <div className="relative z-10 text-center max-w-4xl px-4 sm:px-8">

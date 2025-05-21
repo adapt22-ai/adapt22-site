@@ -8,14 +8,17 @@ export default function WhatWeDoPage() {
       {/* Hero Section with Video */}
       <section className="relative w-full min-h-[90vh] overflow-hidden flex items-center justify-center text-textPrimary px-4">
         <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
-        >
-          <source src="/Vid-two.mp4" type="video/mp4" />
-        </video>
+  ref={(video) => {
+    if (video) video.playbackRate = 1.5;
+  }}
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover opacity-60 z-0"
+>
+  <source src="/2-wwd.mp4" type="video/mp4" />
+</video>
 
         <div className="relative z-10 max-w-6xl mx-auto space-y-14 px-4 sm:px-6 text-center">
           <div className="space-y-6 max-w-4xl mx-auto">
