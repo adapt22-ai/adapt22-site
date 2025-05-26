@@ -18,7 +18,7 @@ export default function DemoPage() {
               Experience how our AI systems interact with your leads, handle customer conversations, and automate tasks — all custom-built around real business workflows.
             </p>
             <div className="bg-surface text-textPrimary border-l-4 border-primaryDark px-6 py-8 rounded shadow-lg text-center text-lg sm:text-xl font-semibold max-w-xl mx-auto">
-              Demo Site Launch: <span className="text-xl sm:text-2xl font-semibold text-accentIndigo">May 21</span>
+              Demo Site Launch: <span className="text-xl sm:text-2xl font-semibold text-accentIndigo">June 5th</span>
             </div>
           </div>
 
