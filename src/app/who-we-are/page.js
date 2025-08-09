@@ -79,7 +79,7 @@ export default function WhoWeArePage() {
 
           {/* Core Values */}
           <div className="bg-primaryDark border-t-4 border-surface text-white py-12 px-6 rounded-md shadow-md text-center">
-            <h2 className="text-3xl font-semibold mb-8 text-white">Adapt22 Core Values</h2>
+            <h2 className="text-3xl font-semibold mb-8 text-white">Adapt22 Virtues</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
               {["Hard Work", "Service", "Resilience", "Persistence", "Accountability"].map((val, i) => (
                 <div key={i} className="bg-white text-primaryDark font-bold py-4 rounded shadow-md">
