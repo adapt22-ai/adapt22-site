@@ -44,3 +44,4 @@ adapt22-full.zip
 /test-results/
 /playwright-report/
 *.bundle
+/review/

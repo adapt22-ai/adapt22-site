@@ -21,3 +21,5 @@ npm start
 npm run test:e2e
 
 Playwright may require `npx playwright install chromium`. Use local mocks for contact failure/success tests, not real inbox delivery. Read IMPLEMENTATION_STATUS.md for actual checks performed.
+
+For the additional mocked contact UI tests, run a second server on port 3001 from the same built output with dummy values for the five variables above. Intercept the Turnstile script and contact POST as the test file does. Do not use real sending credentials for these tests. See tests/browser/contact-states.spec.js.
