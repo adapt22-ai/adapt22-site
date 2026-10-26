@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { contactRateConfig } from "./contact-rate-config.mjs";
 const MAX_BYTES = 20000;
 const response = (status, error) =>
   Response.json(
@@ -68,12 +69,8 @@ export async function handleContact(
     !/^[0-9a-f-]{36}$/.test(body.submissionId)
   )
     return response(400, "Please complete the verification and try again.");
-  if (
-    !env.RESEND_API_KEY ||
-    !env.TURNSTILE_SECRET_KEY ||
-    !env.UPSTASH_REDIS_REST_URL ||
-    !env.UPSTASH_REDIS_REST_TOKEN
-  )
+  const rateConfig = contactRateConfig(env);
+  if (!env.RESEND_API_KEY || !env.TURNSTILE_SECRET_KEY || !rateConfig)
     return response(
       503,
       "The message form is temporarily unavailable. Please use the scheduling link.",
@@ -117,10 +114,10 @@ export async function handleContact(
       .digest("hex");
     const script =
       "local n=redis.call('INCR',KEYS[1]); if n==1 then redis.call('EXPIRE',KEYS[1],600) end; return n";
-    const rate = await fetcher(env.UPSTASH_REDIS_REST_URL, {
+    const rate = await fetcher(rateConfig.url, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${env.UPSTASH_REDIS_REST_TOKEN}`,
+        Authorization: `Bearer ${rateConfig.token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(["EVAL", script, "1", `contact:${hash}`]),

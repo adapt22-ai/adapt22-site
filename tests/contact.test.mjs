@@ -153,3 +153,33 @@ test("successful send fixes recipient, uses reply-to and idempotency, returns no
   assert.equal(options.idempotencyKey, "contact-" + data.submissionId);
   assert.deepEqual(await r.json(), { success: true });
 });
+
+test("Vercel Marketplace credentials use the shared Redis write endpoint", async () => {
+  let rateRequest;
+  const result = await handleContact(
+    request(),
+    deps({
+      env: {
+        RESEND_API_KEY: "test",
+        TURNSTILE_SECRET_KEY: "test",
+        KV_REST_API_URL: "https://marketplace.example",
+        KV_REST_API_TOKEN: "write-token",
+      },
+      fetcher: async (url, options) => {
+        if (url.includes("siteverify"))
+          return Response.json({
+            success: true,
+            action: "contact",
+            hostname: "preview.example",
+          });
+        rateRequest = { url, options };
+        return Response.json({ result: 1 });
+      },
+    }),
+  );
+  assert.equal(result.status, 200);
+  assert.equal(rateRequest.url, "https://marketplace.example");
+  assert.equal(rateRequest.options.headers.Authorization, "Bearer write-token");
+  assert.match(rateRequest.options.body, /EXPIRE/);
+  assert.match(rateRequest.options.body, /600/);
+});

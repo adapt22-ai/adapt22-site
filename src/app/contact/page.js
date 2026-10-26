@@ -1,3 +1,4 @@
+import { contactRateConfig } from "../../lib/contact-rate-config.mjs";
 import { PageIntro } from "../../components/Shared";
 import ContactForm from "../../components/ContactForm";
 import { calendlyUrl } from "../../lib/content";
@@ -13,8 +14,7 @@ export default function Contact() {
     process.env.RESEND_API_KEY &&
     process.env.TURNSTILE_SECRET_KEY &&
     process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY &&
-    process.env.UPSTASH_REDIS_REST_URL &&
-    process.env.UPSTASH_REDIS_REST_TOKEN,
+    contactRateConfig(process.env),
   );
   return (
     <>
