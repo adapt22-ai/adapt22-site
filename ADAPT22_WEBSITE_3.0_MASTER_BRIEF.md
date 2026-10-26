@@ -82,3 +82,6 @@ C3 / Shared center is selected for implementation across the website, including 
 
 ## Prelaunch audit, October 26
 Owner requests comprehensive performance, content, accessibility, link, SEO, security, and connected-service readiness checks, with the approved visual design/C3 retained. See docs/PRELAUNCH_AUDIT.md and docs/LAUNCH_CHECKLIST.md. No production release authorized. Owner confirmed private info@ alias delivers to Jackson and Calendly retains its current Eastern schedule. Direct active booking link is now https://calendly.com/jackson-adapt22/discoverycall . Earlier public email instructions are superseded; public addresses remain prohibited. Contact infrastructure and sending SPF repair remain open; provider status must not be mistaken for tested delivery. Production requires a fresh production build, not promotion of a preview artifact.
+
+## Contact setup follow-up
+See docs/CONTACT_SETUP.md. Owner-approved managed Turnstile, free Upstash Redis rate limiting, sending-SPF repair and one actual form test are complete. Gmail inbox delivery and SPF/DKIM/DMARC pass verified. Native Marketplace KV_REST_API_URL/KV_REST_API_TOKEN are accepted alongside direct-Upstash settings. No production release or further real messages authorized.

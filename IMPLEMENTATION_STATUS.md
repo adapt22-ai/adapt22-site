@@ -2,7 +2,13 @@
 
 Updated October 26, 2026 (America/Chicago), after prelaunch audit.
 
-## Prelaunch audit: latest status
+## Contact setup: latest status
+
+Owner authorized the SPF repair, real contact configuration, free-tier Upstash terms acceptance, and one real email test. All three requested setup tasks are complete on protected staging: managed Turnstile and free shared Redis connected; SPF repaired and re-verified; actual form message delivered to the owner-confirmed inbox with SPF/DKIM/DMARC all passing. Eleven handler tests and local build pass. Exact evidence, provider/resource details and remaining production-network/replay-test limits: docs/CONTACT_SETUP.md.
+
+Stable working contact preview: https://adapt22-site-git-website-3-rebrand-adapt22s-projects.vercel.app/contact . Implementation b89ce70205f7db2077be2d142bc0588b1e522d85; immutable preview https://adapt22-site-21lvr3z16-adapt22s-projects.vercel.app/ . Use the stable hostname for real Turnstile submissions. Production/main unchanged. The only authorized DNS mutation was the new sending SPF TXT. Earlier missing-contact/SPF findings below are historical and superseded by this section.
+
+## Prelaunch audit: earlier audit results
 
 Website fixes implemented: static responsive scene images with inline placeholders and intent warmup; consistent hero motion; sampled photo-text contrast repairs; enlarged-text grid reflow; skip-link and form-success focus; both analytics URL sanitizers; www canonical consistency; direct active Calendly event; concise copy corrections; pinned CI workflow. C3 and approved photography/layout preserved.
 

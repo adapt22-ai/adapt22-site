@@ -2,7 +2,10 @@
 
 October 26, 2026. Development branch: `website-3-rebrand`. Draft PR: https://github.com/adapt22-ai/adapt22-site/pull/2 . This audit does not authorize a production release, main merge, live configuration change, DNS edit, real email, or booking.
 
-## Decision
+## Setup follow-up
+The owner subsequently authorized the contact setup, free-tier Redis integration, SPF repair and one real delivery test. These are completed and verified on protected staging; see CONTACT_SETUP.md. The missing-service/SPF findings below describe the earlier audit state. Production release remains separately gated, including the actual Cloudflare proxy client-IP path and remaining account/business acceptance checks.
+
+## Original audit decision
 
 The approved design and content are ready for final staging review after the fixes below. **Production acceptance remains blocked by contact infrastructure, a missing sending-domain SPF record, and an actual delivery test.** Provider access and code are not evidence of successful delivery. See LAUNCH_CHECKLIST.md for the release sequence.
 

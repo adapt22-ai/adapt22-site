@@ -1,14 +1,14 @@
 # Release checklist
 
-October 26, 2026. Status: **hold production**. The audit and development commit do not authorize main, production, DNS, live service changes, real email, or bookings.
+October 26, 2026. Status: **contact setup verified; hold production pending separate release approval and remaining acceptance checks**. The audit and development commit do not authorize main, production, DNS, live service changes, real email, or bookings.
 
 ## Finish before requesting release approval
 
-- [ ] Provision shared Upstash Redis rate limiting and Cloudflare Turnstile through a secure account workflow. No widget/store was created during the audit. Restrict Turnstile to the actual production/staging hostnames; never allow all of vercel.app. If a provider account, billing authorization, or interactive sign-in is required, surface that exact step rather than asking the owner to paste secrets.
-- [ ] Set the five contact settings for preview and production securely. Verify private sender and recipient configuration; intended destination info@adapt22.ai is owner-confirmed to deliver to Jackson. Never publish the address.
-- [ ] With separate DNS approval, add the missing sending-subdomain SPF TXT documented in PRELAUNCH_AUDIT.md, then confirm DNS propagation and Resend status. Preserve Google Workspace mail records and DMARC.
+- [x] Provision shared Upstash Redis rate limiting and Cloudflare Turnstile through a secure account workflow. Completed after the audit under explicit owner approval; see CONTACT_SETUP.md. Restrict Turnstile to the actual production/staging hostnames; never allow all of vercel.app. If a provider account, billing authorization, or interactive sign-in is required, surface that exact step rather than asking the owner to paste secrets.
+- [x] Set the contact settings for preview and production securely. Verify private sender and recipient configuration; intended destination info@adapt22.ai is owner-confirmed to deliver to Jackson. Never publish the address.
+- [x] With separate DNS approval, add the missing sending-subdomain SPF TXT documented in PRELAUNCH_AUDIT.md, then confirm DNS propagation and Resend status. Preserve Google Workspace mail records and DMARC.
 - [ ] Resolve/validate the Cloudflare-to-Vercel client-IP path before accepting the rate limiter. Test successful verification, invalid/expired verification, rate limits, provider failure, retry/idempotency, and success against configured staging.
-- [ ] Obtain explicit authorization for one controlled real contact delivery test. Confirm inbox receipt, reply-to, authentication headers, spam placement, and absence of sensitive logging. A mocked success is insufficient.
+- [x] Obtain explicit authorization for one controlled real contact delivery test. Completed through the actual staging form; Resend delivered, Gmail INBOX, SPF/DKIM/DMARC pass. Confirm inbox receipt, reply-to, authentication headers, spam placement, and absence of sensitive logging. A mocked success is insufficient.
 - [ ] Review the broader Calendly intake-question wording; keep the confirmed Eastern schedule, active discovery event, and Google Meet unchanged.
 - [ ] Verify hosted CI green for the final code commit and administrator-enforced review/check requirements on main. Connector cannot inspect branch-protection administration.
 - [ ] Complete an assistive-technology user pass (VoiceOver/NVDA or independent specialist) and actual device spot checks. No ADA legal guarantee follows from automated checks. Confirm notices match actual business privacy/retention/deletion practices.
