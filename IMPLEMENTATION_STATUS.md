@@ -5,7 +5,11 @@ Updated October 25, 2026 (America/Chicago), after the owner's detailed first-pas
 ## Current revision
 Development branch: `website-3-rebrand` in adapt22-ai/adapt22-site. Draft PR: https://github.com/adapt22-ai/adapt22-site/pull/2 . Not merged.
 
-This revision is ready for protected staging review. The deployment-specific URL will be recorded after Vercel finishes building. The prior first-pass preview remains available separately; immutable deployment URLs do not update in place.
+Protected revision 2 preview: https://adapt22-site-ib0vquolh-adapt22s-projects.vercel.app . Implementation commit 50fd68169fae3e9eee085f56e94d807311eb74e8. Deployment dpl_EVPsuRHqTFFxKAY9i31HkqcFux29. The prior first-pass preview remains available separately; immutable deployment URLs do not update in place.
+
+Logo comparison: https://adapt22-site-ib0vquolh-adapt22s-projects.vercel.app/brand-review .
+
+Authenticated checks of home, services, Salesforce detail, approach, About, contact, logo review, and accessibility all returned 200 with noindex/nofollow/noarchive. Anonymous access redirects to Vercel authentication. Main remains at a82280731d2e04b5e1c8b5038b34b2dfcd1b6057.
 
 ## Review 2 delivered
 - Preserved the homepage mountain and Adapt / evolve / move forward, with explicit consulting/software/Salesforce/support copy.
