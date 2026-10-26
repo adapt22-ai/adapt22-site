@@ -1,3 +1,4 @@
+import Mark from "../components/Mark";
 import { ImageResponse } from "next/og";
 export const alt = "adapt22 | Built for what comes next.";
 export const size = { width: 1200, height: 630 };
@@ -16,7 +17,18 @@ export default function Image() {
         padding: 70,
       }}
     >
-      <div style={{ display: "flex", fontSize: 44, letterSpacing: -2 }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 24,
+          fontSize: 44,
+          letterSpacing: -2,
+        }}
+      >
+        <div style={{ display: "flex", color: "#9b8264" }}>
+          <Mark size={70} />
+        </div>
         adapt22
       </div>
       <div

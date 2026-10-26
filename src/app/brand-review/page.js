@@ -17,7 +17,7 @@ const families = [
         "baseline",
         "N11-C",
         "Original reference",
-        "Unchanged from your previous review. This is a reference for exploration, not a final identity selection.",
+        "Unchanged from your previous review. Retained as the starting reference. C3 is now the selected website logo.",
       ],
     ],
   },
@@ -43,7 +43,7 @@ const families = [
         "shared",
         "C3",
         "Shared center",
-        "Each inner return flows back to the central junction, making three closed, connected paths.",
+        "Selected for the website. Each inner return flows back to the central junction, making three closed, connected paths.",
       ],
       [
         "whisper",
@@ -116,7 +116,7 @@ export default function BrandReview() {
     <div className={styles.studio}>
       <PageIntro
         image={false}
-        label="Private logo studio / N11-C exploration"
+        label="Selected identity / C3"
         title={
           <>
             Let the lines flow.
@@ -124,7 +124,7 @@ export default function BrandReview() {
             See where they lead.
           </>
         }
-        description="N11-C is the starting point. This round explores seamless returns, tapered paisley forms, and more adventurous shapes with three-part roots. The rest of the website and its current logo are unchanged."
+        description="N11-C is the starting point. This round explores seamless returns, tapered paisley forms, and more adventurous shapes with three-part roots. C3 is now selected and used across the website. Other studies remain here as the design record."
       />
       <section
         className="logo-overview section"
@@ -173,6 +173,7 @@ export default function BrandReview() {
               <article key={id} id={`concept-${id}`} data-concept={id}>
                 <p className="eyebrow">
                   {id} / {title}
+                  {id === "C3" ? " / Selected" : ""}
                 </p>
                 <div className="logo-large">
                   <LogoStudy variant={variant} />

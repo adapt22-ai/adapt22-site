@@ -35,3 +35,6 @@
 
 ## Review 6 vector studies
 `src/components/LogoStudy.js` contains twelve new authored single-color SVG studies around the unchanged N11-C reference. C1–C6 explore tapered and connected returns; P1–P6 explore looser paisley, floral and three-part forms, including a mathematically constructed trefoil curve. No raster assets or public-site identity assets changed. Studies are unapproved exploration, with no trademark-clearance claim.
+
+## Review 7 selected identity
+C3 / Shared center is owner-selected. Exact path/stroke from the C3 exploration is centralized in `src/lib/brand-mark.js` and shared by `Mark` and the private C3 study. SVG favicon/app icon, multi-size ICO (16/32/48/256), 96px browser PNG, 180px Apple icon and 192/512px manifest icons are rasterizations of that same authored SVG, bronze on ink. Social preview now includes the selected C3 mark. No photo assets changed.

@@ -1,4 +1,5 @@
 import LogoConcept from "./LogoConcept";
+import { brandMark } from "../lib/brand-mark";
 
 // New studies use geometric taper and shared paths, never an opacity fade.
 const curl =
@@ -12,7 +13,7 @@ const studies = {
     d: curl + "C84 49 74 51 70 44C66 36 77 27 86 32C90 34 92 37 92 39",
     width: 7,
   },
-  shared: { d: curl + "C85 52 73 61 60 60", width: 8 },
+  shared: brandMark,
   whisper: {
     fill: true,
     d: "M64 64C34 55 32 22 55 12C78 2 103 18 99 37C96 54 77 63 66 52C56 43 62 29 74 29C86 29 91 41 83 48C88 37 77 33 71 39C65 47 77 53 85 45C98 32 86 15 69 17C47 18 40 42 64 56Z",

@@ -76,3 +76,6 @@ The owner's later first-pass review supersedes earlier copy and visual choices:
 
 ## Owner review 6: logo-only scope
 The website is accepted for this design round. Focus solely on the private logo page: N11-C as reference, endpoints that merge/taper into other lines, paisley/circle forms, and adventurous alternatives with triskelion roots. Preserve public page content, layout, imagery and current identity. No final logo selected yet. See docs/REVIEW_6.md.
+
+## Owner review 7: identity selected
+C3 / Shared center is selected for implementation across the website, including shared logo placements, browser/app icons and social preview. Retain its exact study geometry and the existing bronze/ink palette. This overrides prior provisional-logo and logo-page-only restrictions. Production/live-site changes still require separate explicit approval. See docs/REVIEW_7.md.
