@@ -1,10 +1,13 @@
+import Link from "next/link";
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-6 text-center bg-background text-textPrimary">
-      <h1 className="text-5xl font-extrabold text-primaryDark mb-6">404 — Page Not Found</h1>
-      <p className="text-lg max-w-xl">
-        Sorry, we couldn’t find what you were looking for. Double-check the URL or go back to the homepage.
-      </p>
-    </div>
+    <section className="section not-found">
+      <p className="eyebrow">404 / A different direction</p>
+      <h1>This page isn’t here.</h1>
+      <p>Head back to the home page or start a conversation with Jackson.</p>
+      <Link className="button" href="/">
+        Back to the beginning ↗
+      </Link>
+    </section>
   );
 }
