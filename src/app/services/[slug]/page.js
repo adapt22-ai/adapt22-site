@@ -42,7 +42,7 @@ export default async function Service({ params }) {
               </li>
             ))}
           </ul>
-          <h3>What you should leave with</h3>
+          <h3>What the work is designed to give you</h3>
           <p>{s.result}</p>
           <p className="small-copy">
             The scope is agreed around your business. These are examples of the

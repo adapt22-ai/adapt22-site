@@ -8,6 +8,9 @@ const paths = [
   "/contact",
   "/privacy-policy",
   "/terms-of-service",
+  "/accessibility",
+  "/brand-review",
+  "/services/salesforce-consulting",
   "/services/custom-software",
   "/services/technology-leadership",
   "/services/applied-ai",
@@ -46,13 +49,13 @@ for (const path of paths)
     ).toBe(false);
     expect(errors).toEqual([]);
     const a11y = await new AxeBuilder({ page })
-      .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+      .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
       .analyze();
     expect(a11y.violations).toEqual([]);
   });
 test("menu, keyboard escape, and navigation", async ({ page }, info) => {
   await page.goto("/");
-  if (info.project.name === "mobile") {
+  if (page.viewportSize().width <= 700) {
     const menu = page.locator(".menu-toggle");
     await menu.click();
     await expect(menu).toHaveAttribute("aria-expanded", "true");
@@ -86,7 +89,7 @@ test("contact has usable external alternatives and honest disabled form", async 
     page.getByRole("button", { name: /Send your message/ }),
   ).toBeDisabled();
   await expect(
-    page.getByText("The message form is not available in this preview.", {
+    page.getByText("The message form is temporarily unavailable.", {
       exact: false,
     }),
   ).toBeVisible();
@@ -113,4 +116,55 @@ test("reduced motion disables decorative animation", async ({ page }) => {
       .locator(".hero-image")
       .evaluate((e) => getComputedStyle(e).animationName),
   ).toBe("none");
+});
+
+test("updated identity, public email, legal links and Salesforce are visible", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const footer = page.locator("footer");
+  await expect(
+    footer.getByText("info@adapt22.ai", { exact: false }),
+  ).toBeVisible();
+  await expect(footer.getByText(/Adapt 22 LLC/)).toBeVisible();
+  await expect(
+    footer.getByRole("link", { name: "Privacy", exact: true }),
+  ).toHaveAttribute("href", "/privacy-policy");
+  await expect(
+    footer.getByRole("link", { name: "Terms", exact: true }),
+  ).toHaveAttribute("href", "/terms-of-service");
+  await expect(
+    footer.getByRole("link", { name: "Accessibility", exact: true }),
+  ).toHaveAttribute("href", "/accessibility");
+  await expect(
+    page.getByRole("link", { name: /Salesforce consulting/ }),
+  ).toBeVisible();
+  expect(await page.locator("body").innerText()).not.toContain(
+    "jackson@adapt22.ai",
+  );
+});
+test("sticky header leaves anchor content visible", async ({ page }) => {
+  await page.goto("/approach#questions");
+  await page.waitForTimeout(300);
+  const header = await page.locator(".header").boundingBox();
+  const questions = await page.locator("#questions").boundingBox();
+  if (page.viewportSize().height > 500)
+    expect(questions.y).toBeGreaterThanOrEqual(header.height);
+  await page.locator("summary").first().focus();
+  await expect(page.locator("summary").first()).toBeFocused();
+});
+test("portrait preserves source aspect ratio and all arms", async ({
+  page,
+}) => {
+  await page.goto("/about");
+  const image = page.locator(".portrait img");
+  await image.scrollIntoViewIfNeeded();
+  await image.evaluate((img) => img.decode());
+  const result = await image.evaluate((img) => ({
+    ratio: img.clientWidth / img.clientHeight,
+    natural: img.naturalWidth / img.naturalHeight,
+    fit: getComputedStyle(img).objectFit,
+  }));
+  expect(result.fit).toBe("contain");
+  expect(Math.abs(result.ratio - result.natural)).toBeLessThan(0.02);
 });

@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-export const alt = "adapt22 — Built for what comes next.";
+export const alt = "adapt22 | Built for what comes next.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default function Image() {
@@ -38,7 +38,7 @@ export default function Image() {
           letterSpacing: 3,
         }}
       >
-        IMPLEMENT. MANAGE. SCALE.
+        TECHNOLOGY CONSULTING. SOFTWARE. SALESFORCE.
       </div>
     </div>,
     size,

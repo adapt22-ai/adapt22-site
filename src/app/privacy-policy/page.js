@@ -9,9 +9,9 @@ export default function Privacy() {
       <p className="eyebrow">Website information / October 25, 2026</p>
       <h1>Privacy notice</h1>
       <p>
-        This notice describes the information handled by this website. Questions
-        or privacy requests can be sent to{" "}
-        <a href="mailto:jackson@adapt22.ai">jackson@adapt22.ai</a>.
+        Adapt 22 LLC operates the adapt22 website. This notice describes how
+        information is handled here. Questions or privacy requests can be sent
+        to <a href="mailto:info@adapt22.ai">info@adapt22.ai</a>.
       </p>
       <h2>Information you choose to provide</h2>
       <p>
@@ -47,16 +47,28 @@ export default function Privacy() {
         Vercel hosts the website and may process technical request data for
         hosting and security. The production configuration includes Vercel Web
         Analytics and Speed Insights to understand page usage and performance.
-        Analytics are disabled in development and preview builds. Query strings
-        and fragments are removed from Web Analytics page URLs by this site.
+        Vercel describes its Web Analytics service as using no third-party
+        cookies. Analytics are disabled in development and preview builds. Query
+        strings and fragments are removed from Web Analytics page URLs by this
+        site.
       </p>
       <h2>Use, access, and retention</h2>
       <p>
         Inquiry information is intended for responding to you and evaluating a
-        working relationship. Access and deletion requests can be sent to
-        Jackson at the address above. Retention of correspondence and provider
-        logs depends on the systems in which it is held; contact Jackson for
-        questions about a specific record.
+        working relationship. Access and deletion requests can be sent to our
+        team at the address above. Retention of correspondence and provider logs
+        depends on the systems in which it is held; contact us for questions
+        about a specific record.
+      </p>
+      <h2>Self-hosted content and external services</h2>
+      <p>
+        Fonts and site photographs are served with the website. Following a
+        scheduling link or using an enabled contact form can involve external
+        providers. Their privacy information is available from{" "}
+        <a href="https://resend.com/legal/privacy-policy">Resend</a>,{" "}
+        <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>,{" "}
+        <a href="https://upstash.com/trust/privacy.pdf">Upstash</a>, and{" "}
+        <a href="https://vercel.com/legal/privacy-notice">Vercel</a>.
       </p>
       <h2>Changes to this notice</h2>
       <p>

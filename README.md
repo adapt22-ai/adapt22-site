@@ -6,9 +6,9 @@ Read [the master brief](ADAPT22_WEBSITE_3.0_MASTER_BRIEF.md), [working instructi
 
 ## Development
 
-Node.js 22 or later. `npm ci`, `npm run dev`. Release build: `npm run build`, then `npm start`.
+Node.js 22 or later. `npm ci`, `npm run dev`. Release build: `npm run build`, then `npm start`. Browser tests use port 3100 (`npm start -- -p 3100`) plus a dummy-configured contact server on 3101, documented in docs/CONFIGURATION.md.
 
-Tests: `npm test` for contact handling; `npm run test:e2e` with the local server running for desktop/mobile routes, accessibility, images, navigation, redirects, and preview indexing. Install Chromium with `npx playwright install chromium`, or use `PLAYWRIGHT_CHANNEL=chrome` when Chrome is installed.
+Tests: `npm test` for contact handling; `npm run test:e2e` with the local server running for desktop, tablet, phone, landscape, and WebKit routes, accessibility, images, navigation, redirects, and preview indexing. Install Chromium with `npx playwright install chromium`, or use `PLAYWRIGHT_CHANNEL=chrome` when Chrome is installed.
 
 ## Integration and deployment
 

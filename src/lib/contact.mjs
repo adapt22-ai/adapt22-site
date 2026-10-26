@@ -76,7 +76,7 @@ export async function handleContact(
   )
     return response(
       503,
-      "The message form is temporarily unavailable. Please email jackson@adapt22.ai.",
+      "The message form is temporarily unavailable. Please email info@adapt22.ai.",
     );
   try {
     const verified = await fetcher(
@@ -110,7 +110,7 @@ export async function handleContact(
     if (!ip)
       return response(
         503,
-        "The message form is temporarily unavailable. Please email Jackson.",
+        "The message form is temporarily unavailable. Please email info@adapt22.ai.",
       );
     const hash = createHash("sha256")
       .update(ip + env.TURNSTILE_SECRET_KEY)
@@ -129,13 +129,13 @@ export async function handleContact(
     if (!rate.ok)
       return response(
         503,
-        "The message form is temporarily unavailable. Please email Jackson.",
+        "The message form is temporarily unavailable. Please email info@adapt22.ai.",
       );
     const rateData = await rate.json();
     if (rateData.error || !Number.isInteger(rateData.result))
       return response(
         503,
-        "The message form is temporarily unavailable. Please email Jackson.",
+        "The message form is temporarily unavailable. Please email info@adapt22.ai.",
       );
     if (rateData.result > 5)
       return response(
@@ -144,10 +144,10 @@ export async function handleContact(
       );
     const sent = await send(
       {
-        from: "adapt22 Website <jackson@adapt22.ai>",
-        to: "jackson@adapt22.ai",
+        from: "adapt22 Website <info@adapt22.ai>",
+        to: "info@adapt22.ai",
         replyTo: clean.email,
-        subject: "Website inquiry — adapt22",
+        subject: "Website inquiry | adapt22",
         text: `Name: ${clean.name}\nEmail: ${clean.email}\nCompany: ${clean.company || "Not supplied"}\n\n${clean.message}`,
       },
       { idempotencyKey: `contact-${body.submissionId}` },
@@ -155,7 +155,7 @@ export async function handleContact(
     if (sent.error || !sent.data?.id)
       return response(
         502,
-        "Your message could not be sent. Please try again or email Jackson directly.",
+        "Your message could not be sent. Please try again or email info@adapt22.ai.",
       );
     return Response.json(
       { success: true },
@@ -164,7 +164,7 @@ export async function handleContact(
   } catch {
     return response(
       503,
-      "The message form is temporarily unavailable. Please try again or email Jackson directly.",
+      "The message form is temporarily unavailable. Please try again or email info@adapt22.ai.",
     );
   }
 }

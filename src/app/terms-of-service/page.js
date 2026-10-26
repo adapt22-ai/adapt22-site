@@ -10,9 +10,9 @@ export default function Terms() {
       <p className="eyebrow">Website information / October 25, 2026</p>
       <h1>Website terms</h1>
       <p>
-        This website describes adapt22’s services and provides ways to start a
-        conversation. For questions, email{" "}
-        <a href="mailto:jackson@adapt22.ai">jackson@adapt22.ai</a>.
+        This website is operated by Adapt 22 LLC under the adapt22 brand and
+        describes our services and provides ways to start a conversation. For
+        questions, email <a href="mailto:info@adapt22.ai">info@adapt22.ai</a>.
       </p>
       <h2>Service information</h2>
       <p>
@@ -38,7 +38,7 @@ export default function Terms() {
       <p>
         Information may change as services develop. If you need to rely on a
         specific capability, availability, or delivery timeline, confirm it
-        directly with Jackson and include it in the agreed scope.
+        directly with our team and include it in the agreed scope.
       </p>
     </article>
   );

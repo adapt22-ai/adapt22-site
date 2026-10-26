@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 export function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -5,18 +6,18 @@ export function Arrow() {
 export function CTA() {
   return (
     <section className="cta section">
-      <p className="eyebrow">A good place to start</p>
+      <p className="eyebrow">Let’s take a look together</p>
       <div>
         <h2>
-          What’s getting
+          Tell us what’s
           <br />
-          in your way?
+          on your plate.
         </h2>
         <div>
           <p>
-            A system that no longer fits. A decision that needs a second
-            opinion. A business that’s ready for what comes next. Let’s talk it
-            through.
+            A system that keeps breaking. A Salesforce project. A business that
+            needs someone to own its technology. Start with what you need help
+            with.
           </p>
           <Link href="/contact" className="button">
             Start a conversation <Arrow />
@@ -26,12 +27,34 @@ export function CTA() {
     </section>
   );
 }
-export function PageIntro({ label, title, description }) {
+export function PageIntro({
+  label,
+  title,
+  description,
+  image = "/images/ridges.jpg",
+  imageAlt = "Layers of mountain ridges fading into a blue-gray horizon",
+  className = "",
+}) {
   return (
-    <section className="page-intro section">
-      <p className="eyebrow">{label}</p>
-      <h1>{title}</h1>
-      {description && <p className="intro-copy">{description}</p>}
+    <section
+      className={`page-intro section ${image ? "page-intro-split" : ""} ${className}`}
+    >
+      <div className="intro-text">
+        <p className="eyebrow">{label}</p>
+        <h1>{title}</h1>
+        {description && <p className="intro-copy">{description}</p>}
+      </div>
+      {image && (
+        <div className="intro-image">
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            priority
+            sizes="(max-width: 700px) 100vw, 42vw"
+          />
+        </div>
+      )}
     </section>
   );
 }

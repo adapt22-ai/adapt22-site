@@ -29,9 +29,9 @@ export default function Home() {
           </h1>
           <div className="hero-bottom">
             <p>
-              Your business keeps moving.
+              Technology consulting, custom software,
               <br />
-              Your technology should, too.
+              Salesforce, and ongoing support.
             </p>
             <Link href="/services" className="button button-light">
               Explore what we do <Arrow />
@@ -61,10 +61,10 @@ export default function Home() {
               years ago.
             </p>
             <p>
-              adapt22 helps you make the next decision, connect the systems you
-              depend on, and build what’s missing. From fractional leadership to
-              hands-on development, the work starts with how your business
-              actually runs.
+              We work as part of your team and take ownership of the technology,
+              data, systems, and AI work you bring to us. We coordinate the
+              vendors, make a plan, and carry it through. You stay in control
+              without having to manage every technical detail.
             </p>
             <Link href="/approach" className="text-link">
               How we work <Arrow />
@@ -75,17 +75,17 @@ export default function Home() {
       <section className="services-home section">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">What we do / 01—06</p>
+            <p className="eyebrow">What we do / 01–07</p>
             <h2>
-              Direction.
+              Your technology.
               <br />
-              Then delivery.
+              Our responsibility.
             </h2>
           </div>
           <p>
-            One partner to see the whole picture
+            A team to plan, build, and manage it.
             <br />
-            and help move the right work forward.
+            So it stops landing back on your desk.
           </p>
         </div>
         <div className="service-list">
@@ -107,8 +107,8 @@ export default function Home() {
       </section>
       <section className="nature-break">
         <Image
-          src="/images/forest.jpg"
-          alt="Sunlight falling through a dense green forest"
+          src="/images/ridges.jpg"
+          alt="Muted mountain ridges receding into mist"
           fill
           sizes="100vw"
         />
@@ -121,16 +121,18 @@ export default function Home() {
             <br />
             picture in view.
           </h2>
-          <p>Good decisions account for what comes after them.</p>
+          <p>
+            A practical roadmap. Clear priorities. A team that stays involved.
+          </p>
         </div>
       </section>
       <section className="method section">
         <div>
           <p className="eyebrow">The adapt22 approach</p>
           <h2>
-            Made to work.
+            We build it.
             <br />
-            Built to last.
+            We stay with it.
           </h2>
           <Link className="text-link" href="/approach">
             A closer look <Arrow />
@@ -141,17 +143,17 @@ export default function Home() {
             [
               "01",
               "Implement",
-              "Get the right things in place. Understand the problem, agree on the plan, and build with the people who will use it.",
+              "Understand the business, agree the priorities, and put the right systems in place. Start with an intentional roadmap, not a shopping list of tools.",
             ],
             [
               "02",
               "Manage",
-              "Give the work a clear owner. Document the systems, support the people, and make sure the everyday details hold up.",
+              "We take responsibility for the agreed technology scope. Systems, vendors, data, and support have an owner your team can turn to.",
             ],
             [
               "03",
               "Scale",
-              "Prepare for the next chapter. Improve what works, address what doesn’t, and make room for the business to grow.",
+              "Keep improving as the business changes. We review the roadmap together and plan for new locations, acquisitions, new services, or an eventual exit.",
             ],
           ].map(([n, t, d]) => (
             <article key={n}>
@@ -167,14 +169,14 @@ export default function Home() {
       <section className="founder-note section">
         <Mark />
         <p>
-          The point is to make the business work better. The technology is how
-          we get there.
+          One team to call when it involves technology. A plan for what comes
+          next.
         </p>
         <div>
-          <span>Jackson McConnell</span>
-          <span>Founder, adapt22</span>
+          <span>Founder-led. Team-delivered.</span>
+          <span>Working as part of your business.</span>
           <Link href="/about" className="text-link">
-            Meet Jackson <Arrow />
+            Meet adapt22 <Arrow />
           </Link>
         </div>
       </section>

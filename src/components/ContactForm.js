@@ -20,7 +20,7 @@ export default function ContactForm({ enabled, siteKey }) {
         "error-callback": () => {
           setToken("");
           setMessage(
-            "The verification could not load. Please reload or email Jackson directly.",
+            "The verification could not load. Please reload or email our team.",
           );
         },
       });
@@ -55,7 +55,7 @@ export default function ContactForm({ enabled, siteKey }) {
       setState("error");
       setMessage(
         error.message ||
-          "Your message could not be sent. Please email Jackson directly.",
+          "Your message could not be sent. Please email our team.",
       );
       setToken("");
       if (window.turnstile && widgetId.current !== null)
@@ -68,7 +68,7 @@ export default function ContactForm({ enabled, siteKey }) {
         <p className="eyebrow">Message submitted</p>
         <h2>Thanks for getting in touch.</h2>
         <p>
-          Your message was accepted for delivery to Jackson. You can also use
+          Your message was accepted for delivery to our team. You can also use
           the scheduling link to find a time to talk.
         </p>
         <button
@@ -145,8 +145,8 @@ export default function ContactForm({ enabled, siteKey }) {
         </>
       ) : (
         <p className="form-status">
-          The message form is not available in this preview. You can email{" "}
-          <a href="mailto:jackson@adapt22.ai">jackson@adapt22.ai</a> or book a
+          The message form is temporarily unavailable. Please email{" "}
+          <a href="mailto:info@adapt22.ai">info@adapt22.ai</a> or book a
           conversation.
         </p>
       )}

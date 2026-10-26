@@ -19,7 +19,7 @@ export default function Services() {
             Done properly.
           </>
         }
-        description="Sometimes you need direction. Sometimes you need someone to build. Often, you need both. We connect the business decision to the work it takes to deliver it."
+        description="We plan, build, connect, and manage your technology. From Salesforce and custom software to AI and ongoing leadership, our team takes responsibility for getting the work done."
       />
       <section className="service-grid section">
         {services.map((s, i) => (
@@ -41,16 +41,30 @@ export default function Services() {
         ))}
       </section>
       <section className="section scope-note">
-        <p className="eyebrow">Start with the problem</p>
-        <h2>
-          You don’t have to know
-          <br />
-          what to ask for yet.
-        </h2>
-        <p>
-          Tell us what is slowing you down or what is about to change. We’ll
-          help define the work before recommending the tools.
-        </p>
+        <div>
+          <p className="eyebrow">Start with the problem</p>
+          <h2>
+            You don’t have to know
+            <br />
+            what to ask for yet.
+          </h2>
+          <p>
+            Tell us what is slowing you down or what is about to change. We’ll
+            help define the work before recommending the tools.
+          </p>
+        </div>
+        <div className="scope-examples">
+          <p className="eyebrow">These are all good starting points</p>
+          <ul>
+            <li>“We have Salesforce, but nobody owns it.”</li>
+            <li>“Our team keeps entering the same data twice.”</li>
+            <li>“We’re acquiring a business. What needs to connect?”</li>
+            <li>“I need technology off my plate.”</li>
+          </ul>
+          <Link href="/contact" className="text-link">
+            Let’s work through it <Arrow />
+          </Link>
+        </div>
       </section>
       <CTA />
     </>

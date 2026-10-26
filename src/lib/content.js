@@ -3,14 +3,14 @@ export const services = [
   {
     slug: "technology-leadership",
     title: "Fractional technology leadership",
-    short: "A clear direction. Someone to own it.",
+    short: "Your technology, with a team responsible for it.",
     description:
-      "Senior technology judgment without hiring a full-time executive. Get a practical plan, a realistic budget, and someone accountable for moving the work forward.",
+      "A technology lead who works as part of your business, backed by a team that carries the work through. We take responsibility for the roadmap, budget, vendors, systems, and day-to-day priorities.",
     items: [
       "Technology strategy and investment priorities",
       "Vendor selection, contracts, and accountability",
       "IT governance and operating plans",
-      "Leadership support across business and technical teams",
+      "Ongoing ownership of technology, data, and AI priorities",
     ],
     result:
       "A sequenced roadmap, clear ownership, and a budget tied to the work that matters.",
@@ -30,7 +30,7 @@ export const services = [
       "Product development and ongoing maintenance",
     ],
     result:
-      "Working software, documented decisions, and a handover your team can use.",
+      "Working software, documented decisions, and an agreed plan for ongoing management and support.",
     trigger:
       "A critical process depends on manual work, disconnected spreadsheets, or software that cannot support it.",
   },
@@ -50,6 +50,23 @@ export const services = [
       "A defined use case, a measured pilot, and a clear decision about whether to scale.",
     trigger:
       "Your team sees potential in AI but needs to know what is useful, what is safe, and what is worth paying for.",
+  },
+  {
+    slug: "salesforce-consulting",
+    title: "Salesforce consulting",
+    short: "A Salesforce system your team can rely on.",
+    description:
+      "Plan, improve, and manage Salesforce around the work your team needs to do. We connect the platform to your processes, clean up the data, and stay involved as those needs change.",
+    items: [
+      "Salesforce strategy, implementation, and administration",
+      "Process design, configuration, and automation",
+      "Data migration, integrations, and reporting",
+      "User training, adoption, and ongoing support",
+    ],
+    result:
+      "A clear plan for Salesforce, a platform that supports the agreed workflows, and an owner for what happens next.",
+    trigger:
+      "You are adopting Salesforce, struggling with an existing setup, or need a team to manage it alongside the rest of your technology.",
   },
   {
     slug: "enterprise-modernization",
@@ -110,11 +127,19 @@ export const faqs = [
   ],
   [
     "Can you work with our existing team and vendors?",
-    "Yes. The work can sit alongside your internal team, your current providers, or both. Responsibilities and decision-making are agreed up front.",
+    "Yes. We become part of your working team and coordinate with your people and providers. You keep authority over the business; we own the agreed technology responsibilities and make sure work does not fall between vendors.",
   ],
   [
     "Do we need to know which technology we want?",
     "No. Start with the problem. Sometimes the right answer is to use more of what you already own; sometimes it is an integration, a new platform, or a custom build.",
+  ],
+  [
+    "Will you take ownership of all our technology?",
+    "That is the intent of our ongoing partnerships. We agree the scope together, then become the team responsible for technology, data, systems, AI, and the vendors involved. You get a clear point of contact, a plan, and people accountable for following through.",
+  ],
+  [
+    "How do you decide what to work on first?",
+    "We build a roadmap around your business priorities. Each step has an owner, dependencies, an expected cost, and a reason for its place in the sequence. We review it with you as priorities change, rather than treating it as a document that gets filed away.",
   ],
   [
     "How are engagements structured?",
@@ -122,6 +147,6 @@ export const faqs = [
   ],
   [
     "What happens after implementation?",
-    "Support, documentation, training, and ongoing ownership are part of the planning conversation. We agree who maintains the system and how changes will be handled before handover.",
+    "We can stay with you. Ongoing management, support, training, and improvements are central to the relationship, not an afterthought. We keep the roadmap current and stay responsible for the agreed scope for as long as you want that partnership. If you prefer a handover, we plan that properly too.",
   ],
 ];

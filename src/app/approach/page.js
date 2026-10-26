@@ -1,56 +1,99 @@
-import Image from "next/image";
-import { PageIntro, CTA } from "../../components/Shared";
+import Link from "next/link";
+import { PageIntro, CTA, Arrow } from "../../components/Shared";
 import { faqs } from "../../lib/content";
 export const metadata = {
   title: "Our approach",
   description:
-    "A practical path from understanding the business to implementation, ownership, and measured improvement.",
+    "A technology team that works as part of your business. Clear roadmaps, accountable delivery, and ongoing ownership of systems, data, AI, and vendors.",
   alternates: { canonical: "/approach" },
 };
+const steps = [
+  [
+    "01",
+    "Understand the business.",
+    "Talk to the people doing the work. Map the systems, data, providers, and constraints. Understand where the friction is and what the business needs to do next.",
+    "A shared view of the problems, risks, and priorities.",
+  ],
+  [
+    "02",
+    "Build the roadmap.",
+    "Set an intentional sequence. Agree what happens now, what waits, who owns it, what it costs, and which dependencies have to be resolved first.",
+    "A practical roadmap you can use to make decisions.",
+  ],
+  [
+    "03",
+    "Take responsibility.",
+    "Our team coordinates the providers, does the technical work, and tests changes against real workflows. We keep you informed without asking you to manage the technical details.",
+    "Clear ownership and working changes, delivered in manageable stages.",
+  ],
+  [
+    "04",
+    "Stay and improve.",
+    "We manage the agreed systems, support the people using them, and work through the next set of priorities with you. As the business changes, the roadmap changes too.",
+    "An ongoing technology partner, not a finished project left on your desk.",
+  ],
+];
 export default function Approach() {
   return (
     <>
       <PageIntro
         label="How we work"
+        image="/images/bison.jpg"
+        imageAlt="A bison standing in falling snow, framed by muted brown and slate tones"
+        className="approach-intro"
         title={
           <>
-            Understand first.
+            Your team.
             <br />
-            Build with purpose.
+            Our responsibility.
           </>
         }
-        description="A useful plan makes the tradeoffs clear. A useful partner stays close enough to the work to know when the plan needs to change."
+        description="Bring us the technology questions, the data problems, the AI ideas, and the systems nobody wants to deal with. We work as part of your company and take the agreed work off your shoulders."
       />
+      <section className="ownership section">
+        <div>
+          <p className="eyebrow">What the relationship is built on</p>
+          <h2>
+            You shouldn’t have
+            <br />
+            to become the
+            <br />
+            technology expert.
+          </h2>
+        </div>
+        <div>
+          <p>
+            You need someone who understands the business, owns the detail, and
+            follows through. That is the role we take.
+          </p>
+          <p>
+            We bring the people and providers together, turn uncertainty into a
+            plan, and stay accountable for the work. You keep authority over
+            priorities and spending. We take care of moving the agreed work
+            forward.
+          </p>
+          <ul>
+            <li>One team responsible for the agreed scope.</li>
+            <li>A roadmap tied to the business.</li>
+            <li>Clear updates and decisions, in plain language.</li>
+            <li>Ongoing management and support.</li>
+          </ul>
+        </div>
+      </section>
       <section className="approach-steps section">
-        {[
-          [
-            "01",
-            "Get the full picture.",
-            "Listen to the people doing the work. Map the systems, constraints, and business priorities. Separate the urgent symptom from the underlying problem.",
-            "A shared view of the problem and what a better outcome looks like.",
-          ],
-          [
-            "02",
-            "Agree on the next move.",
-            "Compare the options, including improving what you already have. Define the scope, costs, dependencies, and who owns each decision.",
-            "A defined plan with clear deliverables and responsibilities.",
-          ],
-          [
-            "03",
-            "Build, connect, and test.",
-            "Deliver in manageable stages. Test with real workflows, make the risks visible, and involve the people who will use the system.",
-            "Working changes, tested against agreed requirements.",
-          ],
-          [
-            "04",
-            "Make it stick.",
-            "Document the system. Train the team. Agree how support, maintenance, and future changes will work. Revisit the priorities as the business changes.",
-            "A clear handover and a practical plan for what comes next.",
-          ],
-        ].map(([n, t, d, r]) => (
+        <div className="roadmap-heading">
+          <p className="eyebrow">Intentional progress</p>
+          <h2>
+            A roadmap.
+            <br />
+            And a team to carry it through.
+          </h2>
+          <p>We make the order of the work as deliberate as the work itself.</p>
+        </div>
+        {steps.map(([n, t, d, r]) => (
           <article key={n}>
             <span className="step-number">{n}</span>
-            <h2>{t}</h2>
+            <h3>{t}</h3>
             <div>
               <p>{d}</p>
               <p className="deliverable">{r}</p>
@@ -58,31 +101,22 @@ export default function Approach() {
           </article>
         ))}
       </section>
-      <section className="wildlife-panel">
-        <Image
-          src="/images/wildlife.jpg"
-          alt="Deer standing quietly in a forest clearing"
-          fill
-          sizes="100vw"
-        />
-        <p>Observe. Understand. Then move.</p>
-      </section>
       <section className="engagements section">
-        <p className="eyebrow">Ways to work together</p>
-        <h2>A scope that fits the need.</h2>
+        <p className="eyebrow">Ways to begin</p>
+        <h2>Start where the business needs us.</h2>
         <div>
           {[
             [
               "A focused assessment",
-              "Get a clear view of a system, a technology decision, or an upcoming business change before committing to a larger piece of work.",
+              "Get clarity on a system, a technology decision, or an upcoming acquisition before committing to a larger piece of work.",
             ],
             [
               "A defined project",
-              "Build, connect, migrate, or improve something specific, with deliverables and responsibilities agreed before work begins.",
+              "Build, connect, migrate, or improve something specific, with the scope and ongoing ownership agreed from the start.",
             ],
             [
-              "Ongoing leadership",
-              "Bring experienced technology judgment into the business on a fractional basis, with time and scope shaped around your priorities.",
+              "An ongoing partnership",
+              "Bring us in as your technology team or fractional leadership. We own the agreed priorities, support the business, and keep the roadmap moving.",
             ],
           ].map(([t, d]) => (
             <article key={t}>
@@ -91,6 +125,9 @@ export default function Approach() {
             </article>
           ))}
         </div>
+        <Link href="/contact" className="text-link">
+          Talk through the right starting point <Arrow />
+        </Link>
       </section>
       <section id="questions" className="faq section">
         <p className="eyebrow">Before we begin</p>

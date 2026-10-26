@@ -10,7 +10,9 @@ test.beforeEach(async ({ page }) => {
   );
 });
 async function fill(page) {
-  await page.goto("http://localhost:3001/contact");
+  await page.goto(
+    `${process.env.CONTACT_TEST_URL || "http://localhost:3101"}/contact`,
+  );
   await page.getByLabel("Name", { exact: true }).fill("Test Person");
   await page.getByLabel("Work email").fill("person@example.com");
   await page
@@ -46,7 +48,9 @@ test("contact error retains message and permits recovery", async ({ page }) => {
   );
   await fill(page);
   await page.getByRole("button", { name: /Send your message/ }).click();
-  await expect(page.locator('form').getByRole("alert")).toContainText("Please try again");
+  await expect(page.locator("form").getByRole("alert")).toContainText(
+    "Please try again",
+  );
   await expect(page.getByLabel("What are you working through?")).toHaveValue(
     "A local mock test about business systems.",
   );

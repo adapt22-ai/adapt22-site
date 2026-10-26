@@ -148,7 +148,7 @@ test("successful send fixes recipient, uses reply-to and idempotency, returns no
     }),
   );
   assert.equal(r.status, 200);
-  assert.equal(payload.to, "jackson@adapt22.ai");
+  assert.equal(payload.to, "info@adapt22.ai");
   assert.equal(payload.replyTo, data.email);
   assert.equal(options.idempotencyKey, "contact-" + data.submissionId);
   assert.deepEqual(await r.json(), { success: true });

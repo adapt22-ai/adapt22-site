@@ -27,19 +27,19 @@ export default function Contact() {
             what’s on your mind.
           </>
         }
-        description="You don’t need a finished brief. Tell us what is changing, what is getting in the way, or what you want the business to be able to do."
+        description="You don’t need a finished brief. Tell us what you need help with, from a Salesforce issue to finding a team that can take care of your technology."
       />
       <section className="contact-layout section">
         <div className="contact-options">
           <div>
             <h2>
-              A conversation,
+              Let’s talk about
               <br />
-              without the pitch.
+              what you need.
             </h2>
             <p>
-              Book a time with Jackson. We’ll talk about your situation, ask a
-              few questions, and work out whether there’s a useful next step.
+              Book a conversation with Jackson. We’ll talk about what is on your
+              plate, where you need help, and whether our team is the right fit.
             </p>
             <a
               className="button"
@@ -53,7 +53,7 @@ export default function Contact() {
           </div>
           <div>
             <p className="eyebrow">Prefer email?</p>
-            <a href="mailto:jackson@adapt22.ai">jackson@adapt22.ai ↗</a>
+            <a href="mailto:info@adapt22.ai">info@adapt22.ai ↗</a>
           </div>
         </div>
         <ContactForm
