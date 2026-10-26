@@ -1,0 +1,867 @@
+:global(body):has(.studio) > :global(.header),
+:global(body):has(.studio) > :global(.footer) {
+  display: none;
+}
+.studio {
+  background: #e8e4dc;
+  color: #15191e;
+  padding: 0 5vw 70px;
+  --canvas: #15191e;
+  --mark: #9b8264;
+  --on-canvas: #f2f0eb;
+}
+.studio * {
+  min-width: 0;
+}
+.studio h1 {
+  font-size: clamp(38px, 5.3vw, 76px);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+}
+.studio h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.1;
+}
+.studio h3 {
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.studio p {
+  line-height: 1.55;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #15191e30;
+  padding: 26px 0;
+}
+.topbar > span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555b60;
+}
+.lockup {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--on-canvas);
+}
+.lockup svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--mark);
+}
+.lockup > span {
+  font-size: 29px;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+.small svg {
+  width: 24px;
+  height: 24px;
+}
+.small > span {
+  font-size: 23px;
+}
+.topbar .lockup {
+  --on-canvas: #15191e;
+  --mark: #9b8264;
+}
+.intro {
+  max-width: 780px;
+  padding: 55px 0 38px;
+}
+.kicker {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.intro > p:last-child {
+  max-width: 600px;
+  color: #4b5055;
+  font-size: 17px;
+  margin-top: 24px;
+}
+.choices,
+.slogans {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.choices legend,
+.slogans legend {
+  padding: 0;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.choiceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.choice {
+  background: #f4f1eb;
+  border: 1px solid #15191e25;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.choice:hover {
+  border-color: #9b8264;
+}
+.choice.selected {
+  border: 2px solid #15191e;
+  padding: 19px;
+  background: #faf8f3;
+}
+.choice:has(input:focus-visible) {
+  outline: 3px solid #9b8264;
+  outline-offset: 4px;
+}
+.choice > input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.choiceTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+.choiceTop > span {
+  font-size: 22px;
+}
+.choiceTop small {
+  display: block;
+  font-size: 10px;
+  color: #555b60;
+  margin-top: 4px;
+}
+.choice strong {
+  display: block;
+  font-size: 22px;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+.choice p {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #555b60;
+}
+.swatches {
+  display: flex;
+  gap: 5px;
+  margin-top: 18px;
+}
+.swatches i {
+  width: 28px;
+  height: 6px;
+  border: 1px solid #15191e20;
+}
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: var(--canvas);
+  color: var(--mark);
+  border: 1px solid #15191e20;
+  flex-shrink: 0;
+}
+.avatar > svg {
+  width: 70%;
+  height: 70%;
+}
+.square {
+  border-radius: 18%;
+}
+.tiny {
+  width: 50px;
+  height: 50px;
+}
+.slogans {
+  margin-top: 30px;
+}
+.slogans > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid #15191e25;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f2efe8;
+}
+.slogans label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 17px;
+  cursor: pointer;
+  border-right: 1px solid #15191e25;
+}
+.slogans label:last-child {
+  border: 0;
+}
+.slogans input,
+.guideToggle input {
+  accent-color: #343c45;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.slogans strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.slogans small {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #555b60;
+  margin-top: 8px;
+}
+.sayingSelected {
+  background: #fffdf8;
+  box-shadow: inset 0 -3px #9b8264;
+}
+.slogans > p {
+  font-size: 12px;
+  color: #555b60;
+  margin-top: 10px;
+}
+.board {
+  margin-top: 48px;
+  border-top: 1px solid #15191e30;
+  padding-top: 30px;
+}
+.boardHeading {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+.boardHeading .kicker {
+  margin-bottom: 10px;
+}
+.boardHeading > p {
+  max-width: 440px;
+  font-size: 14px;
+  color: #4b5055;
+}
+.previewGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px 20px;
+}
+.previewGrid > article {
+  min-width: 0;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+.label > span {
+  font-size: 10px;
+  color: #555b60;
+  text-align: right;
+}
+.profile {
+  border: 1px solid #15191e20;
+  background: #faf8f3;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.banner {
+  aspect-ratio: 2.9;
+  position: relative;
+  background: var(--canvas);
+  overflow: hidden;
+}
+.banner > img {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  right: 0;
+  opacity: 0.65;
+}
+.banner:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--canvas) 33%, transparent);
+}
+.bannerCopy {
+  position: relative;
+  z-index: 1;
+  padding: 22px;
+  color: var(--on-canvas);
+}
+.bannerCopy .lockup svg {
+  width: 20px;
+  height: 20px;
+}
+.bannerCopy .lockup > span {
+  font-size: 20px;
+}
+.bannerCopy > p {
+  font-size: clamp(23px, 2.8vw, 40px);
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+  margin-top: 15px;
+}
+.bannerCopy > p > span,
+.meetingBrand > p > span {
+  display: block;
+}
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 22px 20px;
+  position: relative;
+  z-index: 2;
+}
+.profileInfo > .avatar {
+  margin-top: -20px;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 0 4px #faf8f3;
+}
+.profileInfo h4 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin: 16px 0 3px;
+}
+.profileInfo p {
+  font-size: 11px;
+  color: #555b60;
+}
+.caption {
+  color: #555b60;
+  font-size: 12px;
+  margin-top: 12px;
+  max-width: 700px;
+}
+.identityCard {
+  background: #f2efe8;
+  border: 1px solid #15191e20;
+  border-radius: 4px;
+  padding: 18px 20px;
+}
+.avatarPair {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+.smallSizes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 27px;
+  margin: 8px 0 15px;
+}
+.smallSizes > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.smallSizes > div > span {
+  display: inline-flex;
+}
+.smallSizes .avatar {
+  width: 100%;
+  height: 100%;
+}
+.smallSizes small {
+  font-size: 10px;
+  color: #555b60;
+}
+.meeting {
+  aspect-ratio: 16/9;
+  position: relative;
+  background: var(--canvas);
+  color: var(--on-canvas);
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #15191e20;
+}
+.meeting > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  right: 0;
+  opacity: 0.16;
+}
+.meetingBrand {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  max-width: 49%;
+}
+.meetingBrand > p {
+  font-size: clamp(13px, 1.6vw, 22px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-top: 14px;
+}
+.watermark {
+  position: absolute;
+  width: 42%;
+  aspect-ratio: 1;
+  right: -6%;
+  bottom: -20%;
+  opacity: 0.08;
+  color: var(--mark);
+}
+.watermark svg {
+  width: 100%;
+  height: 100%;
+}
+.cameraGuide {
+  position: absolute;
+  left: 42%;
+  top: 28%;
+  bottom: 0;
+  width: 30%;
+  border: 1px dashed #8a9298;
+  border-radius: 50% 50% 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cameraGuide span {
+  font-size: 10px;
+  background: #f2f0eb;
+  color: #343c45;
+  border: 1px solid #343c4540;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+.guideToggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.guideToggle small {
+  font-size: 10px;
+  color: #555b60;
+}
+.emailWindow {
+  background: #fff;
+  border: 1px solid #15191e25;
+  border-radius: 4px;
+  min-height: 235px;
+}
+.emailToolbar {
+  background: #f3f3f1;
+  border-bottom: 1px solid #15191e15;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 12px;
+}
+.emailToolbar i {
+  width: 5px;
+  height: 5px;
+  background: #afb2b1;
+  border-radius: 50%;
+}
+.emailToolbar > span {
+  font-size: 10px;
+  color: #555b60;
+  margin-left: 10px;
+}
+.signature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 27px 22px;
+}
+.signature > .avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+}
+.signature strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+.signature > div > span {
+  display: block;
+  font-size: 11px;
+  color: #555b60;
+  margin-top: 4px;
+}
+.signature p {
+  font-size: 11px;
+  margin: 14px 0 10px;
+  color: #343c45;
+}
+.signature a {
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.creative {
+  margin-top: 32px;
+}
+.creativeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.creativeImage {
+  aspect-ratio: 1.6;
+  position: relative;
+  background: var(--canvas);
+  color: var(--on-canvas);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.creativeImage > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.17;
+}
+.creativeImage > div {
+  position: relative;
+  z-index: 1;
+  padding: 18px;
+}
+.creativeImage p {
+  font-size: clamp(17px, 2vw, 29px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  margin-top: 22px;
+  max-width: 90%;
+}
+.creativeImage .small svg {
+  width: 18px;
+  height: 18px;
+}
+.creativeImage .small > span {
+  font-size: 18px;
+}
+.palette {
+  display: flex;
+  gap: 22px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.palette > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #555b60;
+}
+.palette i {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #15191e20;
+}
+.coverage {
+  margin-top: 35px;
+  border-top: 1px solid #15191e30;
+  border-bottom: 1px solid #15191e30;
+}
+.coverage > summary {
+  padding: 19px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+.coverage > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+  padding: 0 0 25px;
+}
+.coverage p {
+  font-size: 13px;
+  color: #4b5055;
+}
+.decision {
+  padding-top: 45px;
+  max-width: 760px;
+}
+.decision > p:not(.kicker) {
+  font-size: 15px;
+  color: #4b5055;
+  margin-top: 20px;
+}
+.decision > span {
+  display: block;
+  font-size: 11px;
+  color: #555b60;
+  margin-top: 28px;
+}
+.directionB .banner > img,
+.directionB .creativeImage > img {
+  filter: grayscale(1);
+}
+.directionB .banner > img {
+  opacity: 0.3;
+}
+.directionC .banner > img {
+  width: 100%;
+  opacity: 0.4;
+}
+.directionC .banner:after {
+  background: linear-gradient(90deg, #343c45e8, #343c4590);
+}
+.directionC .meeting > img {
+  width: 100%;
+  opacity: 0.17;
+}
+@media (min-width: 1500px) {
+  .studio {
+    padding-inline: max(5vw, calc((100vw - 1360px) / 2));
+  }
+}
+@media (max-width: 850px) {
+  .previewGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner {
+    aspect-ratio: 2.3;
+  }
+  .bannerCopy {
+    padding: 18px;
+  }
+  .profileInfo {
+    padding-inline: 18px;
+    gap: 12px;
+  }
+  .profileInfo > .avatar {
+    width: 55px;
+    height: 55px;
+  }
+  .boardHeading {
+    display: block;
+  }
+  .boardHeading > p {
+    max-width: 600px;
+    margin-top: 14px;
+  }
+  .avatarPair > .avatar {
+    width: 64px;
+    height: 64px;
+  }
+  .identityCard {
+    padding: 15px;
+  }
+  .smallSizes {
+    gap: 12px;
+  }
+  .smallSizes > div {
+    flex-direction: column;
+  }
+  .meetingBrand {
+    padding: 18px;
+  }
+  .meetingBrand .small > span {
+    font-size: 18px;
+  }
+  .meetingBrand .small svg {
+    width: 18px;
+    height: 18px;
+  }
+  .creativeImage {
+    aspect-ratio: 1.2;
+  }
+}
+@media (max-width: 600px) {
+  .studio {
+    padding: 0 20px 45px;
+  }
+  .topbar {
+    padding: 20px 0;
+    gap: 20px;
+  }
+  .topbar > span {
+    max-width: 120px;
+    font-size: 9px;
+    line-height: 1.5;
+    text-align: right;
+  }
+  .intro {
+    padding: 35px 0 28px;
+  }
+  .intro > p:last-child {
+    font-size: 15px;
+  }
+  .choiceGrid {
+    gap: 7px;
+  }
+  .choice {
+    padding: 13px 10px;
+  }
+  .choice.selected {
+    padding: 12px 9px;
+  }
+  .choiceTop {
+    gap: 5px;
+    align-items: flex-start;
+    margin-bottom: 13px;
+  }
+  .choiceTop .tiny {
+    width: 34px;
+    height: 34px;
+  }
+  .choiceTop > span {
+    font-size: 16px;
+  }
+  .choiceTop small {
+    display: none;
+  }
+  .choice strong {
+    font-size: 17px;
+    line-height: 1.1;
+    min-height: 38px;
+  }
+  .choice p {
+    display: none;
+  }
+  .swatches {
+    gap: 3px;
+    margin-top: 12px;
+  }
+  .swatches i {
+    width: 16px;
+    height: 5px;
+  }
+  .slogans > div {
+    grid-template-columns: 1fr;
+  }
+  .slogans label {
+    border-right: 0;
+    border-bottom: 1px solid #15191e25;
+    padding: 14px;
+  }
+  .slogans small {
+    margin-top: 3px;
+  }
+  .board {
+    margin-top: 32px;
+  }
+  .previewGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .banner {
+    aspect-ratio: 2.25;
+  }
+  .bannerCopy > p {
+    font-size: clamp(24px, 6.5vw, 35px);
+  }
+  .bannerCopy .small > span {
+    font-size: 18px;
+  }
+  .bannerCopy .small svg {
+    width: 18px;
+    height: 18px;
+  }
+  .profileInfo {
+    padding-bottom: 16px;
+  }
+  .profileInfo > .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .label h3 {
+    font-size: 15px;
+  }
+  .label > span {
+    font-size: 9px;
+  }
+  .identityCard {
+    padding: 18px;
+  }
+  .avatarPair {
+    padding-top: 8px;
+  }
+  .smallSizes {
+    gap: 28px;
+    margin-bottom: 10px;
+  }
+  .smallSizes > div {
+    flex-direction: row;
+  }
+  .meetingBrand > p {
+    font-size: clamp(13px, 3.6vw, 18px);
+  }
+  .emailWindow {
+    min-height: 220px;
+  }
+  .creativeGrid {
+    gap: 8px;
+    grid-template-columns: 1fr;
+  }
+  .creativeImage {
+    aspect-ratio: 2.3;
+  }
+  .creativeImage > div {
+    padding: 18px;
+  }
+  .creativeImage p {
+    font-size: 25px;
+    margin-top: 18px;
+    max-width: 78%;
+  }
+  .palette {
+    gap: 12px 18px;
+  }
+  .coverage > div {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio * {
+    scroll-behavior: auto;
+  }
+}
+
+.meeting::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--canvas), transparent);
+}
+.watermark {
+  z-index: 1;
+}
+.cameraGuide {
+  z-index: 3;
+}

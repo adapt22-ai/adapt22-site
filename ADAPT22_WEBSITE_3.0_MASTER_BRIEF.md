@@ -85,3 +85,6 @@ Owner requests comprehensive performance, content, accessibility, link, SEO, sec
 
 ## Contact setup follow-up
 See docs/CONTACT_SETUP.md. Owner-approved managed Turnstile, free Upstash Redis rate limiting, sending-SPF repair and one actual form test are complete. Gmail inbox delivery and SPF/DKIM/DMARC pass verified. Native Marketplace KV_REST_API_URL/KV_REST_API_TOKEN are accepted alongside direct-Upstash settings. No production release or further real messages authorized.
+
+## Brand direction review before asset production
+Owner requests a compact linked preview for coordinated social/account avatars, applicable banners, call backgrounds, editorial images and email signature before producing the full set. Keep C3/palette, compare three systems and three separate short sayings for banners/backgrounds. See docs/BRAND_DIRECTIONS.md. This is protected staging only; no new live-site release or account changes authorized.

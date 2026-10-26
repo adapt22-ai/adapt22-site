@@ -2,7 +2,11 @@
 
 Updated October 26, 2026 (America/Chicago), after prelaunch audit.
 
-## Mobile consistency update: latest status
+## Private brand direction review: latest task
+
+Owner requests direction selection before full asset production. Private /brand-directions implements A ink/bronze, B paper/bronze and C slate/landscape, plus independent banner/call-background sayings. Shows representative avatar/banner, small circular/square marks, call background with toggleable guide, email signature and three creative-image concepts. All use approved C3 and existing imagery; no final export set or account changes. Build and eight focused Chromium/WebKit checks pass across eight device configurations, all three directions and slogan changes; images/overflow/axe checked. Protected preview verification pending below. Production/main remain a91aac712f9ba7dfdec21965c042079715bdd1e5. See docs/BRAND_DIRECTIONS.md.
+
+## Mobile consistency update: previous release
 
 Owner requested and authorized live fixes for iPhone emoji arrows, blue Menu/Close controls, team booking copy and favicon discovery. PR #3 merged as a91aac712f9ba7dfdec21965c042079715bdd1e5; fresh production dpl_3kajE5cvWxQpiCq95cMcXXVgmFCs is READY at https://www.adapt22.ai/ . All arrows are shared decorative SVGs; menu colors explicit; contact now invites booking with the adapt22 team. Fresh C3 favicon URLs published and 12 old icon/manifest cache entries purged. Seven live icon files match C3 sources. Build, 11 handler tests, 32 focused local checks and eight live checks pass across eight Chromium/WebKit configurations. See docs/MOBILE_FIXES.md for evidence and external favicon-cache limits. No real emails, bookings, DNS changes or paid upgrades.
 
