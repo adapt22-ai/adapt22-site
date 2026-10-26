@@ -37,7 +37,8 @@ export default function About() {
   return (
     <>
       <PageIntro
-        image={false}
+        image="/images/summit.jpg"
+        imageAlt="A dark alpine peak surrounded by snow and mist"
         label="The company behind the work"
         title={
           <>

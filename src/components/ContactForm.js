@@ -1,6 +1,6 @@
 "use client";
 import Script from "next/script";
-import Link from "next/link";
+import Link from "@/components/RouteLink";
 import { useRef, useState } from "react";
 export default function ContactForm({ enabled, siteKey }) {
   const [state, setState] = useState("idle");
@@ -20,7 +20,7 @@ export default function ContactForm({ enabled, siteKey }) {
         "error-callback": () => {
           setToken("");
           setMessage(
-            "The verification could not load. Please reload or email our team.",
+            "The verification could not load. Please reload or use the scheduling link.",
           );
         },
       });
@@ -55,7 +55,7 @@ export default function ContactForm({ enabled, siteKey }) {
       setState("error");
       setMessage(
         error.message ||
-          "Your message could not be sent. Please email our team.",
+          "Your message could not be sent. Please use the scheduling link.",
       );
       setToken("");
       if (window.turnstile && widgetId.current !== null)
@@ -145,9 +145,8 @@ export default function ContactForm({ enabled, siteKey }) {
         </>
       ) : (
         <p className="form-status">
-          The message form is temporarily unavailable. Please email{" "}
-          <a href="mailto:info@adapt22.ai">info@adapt22.ai</a> or book a
-          conversation.
+          The message form is temporarily unavailable. Please use the scheduling
+          link to arrange a conversation with our team.
         </p>
       )}
       <p className="consent">

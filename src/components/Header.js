@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Link from "@/components/RouteLink";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Mark from "./Mark";
@@ -45,6 +45,7 @@ export default function Header() {
         id="main-navigation"
         className={open ? "nav open" : "nav"}
         aria-label="Main navigation"
+        onClick={() => setOpen(false)}
       >
         {links.map(([label, href]) => (
           <Link

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/RouteLink";
 export function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -15,9 +15,9 @@ export function CTA() {
         </h2>
         <div>
           <p>
-            A system that keeps breaking. A Salesforce project. A business that
-            needs someone to own its technology. Start with what you need help
-            with.
+            A growing business without a technology leader. An acquisition that
+            needs a systems plan. An AI initiative that needs an owner. Let’s
+            talk about the responsibility you need us to take on.
           </p>
           <Link href="/contact" className="button">
             Start a conversation <Arrow />
@@ -31,13 +31,13 @@ export function PageIntro({
   label,
   title,
   description,
-  image = "/images/ridges.jpg",
-  imageAlt = "Layers of mountain ridges fading into a blue-gray horizon",
+  image = "/images/summit.jpg",
+  imageAlt = "A snow-covered mountain summit emerging through mist",
   className = "",
 }) {
   return (
     <section
-      className={`page-intro section ${image ? "page-intro-split" : ""} ${className}`}
+      className={`page-intro section ${image ? "page-banner" : ""} ${className}`}
     >
       <div className="intro-text">
         <p className="eyebrow">{label}</p>
@@ -46,13 +46,7 @@ export function PageIntro({
       </div>
       {image && (
         <div className="intro-image">
-          <Image
-            src={image}
-            alt={imageAlt}
-            fill
-            priority
-            sizes="(max-width: 700px) 100vw, 42vw"
-          />
+          <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
         </div>
       )}
     </section>

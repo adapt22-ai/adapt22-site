@@ -15,3 +15,10 @@
 - Existing forest and deer files remain in Git for provenance but are no longer loaded by website pages.
 - `/brand-review` contains three authored SVG studies in the approved palette. The current mark remains the site identity until a direction is chosen. These are new studies, not a reconstruction of missing generated artwork. The review route returns 404 in production and is excluded from the sitemap.
 - Review 2 also replaces favicon, Apple touch icon, and manifest icons with rasterizations of the current authored triskelion in bronze on ink. The manifest now uses adapt22 / a22 and the approved palette; no legacy green icon remains active in linked metadata.
+
+## Review 3 banners
+- Services: `public/images/coast.jpg`, https://images.unsplash.com/photo-1518837695005-2083093ee35b . Ocean surface and pale horizon; downloaded at 2200px under the standard Unsplash license.
+- About and service detail default: `public/images/summit.jpg`, Tobias Stonjeck, https://unsplash.com/photos/F2gembQ10zA ; source https://images.unsplash.com/photo-1508972036778-18166e320345 . Muted alpine summit; standard Unsplash license.
+- Contact: `public/images/lake.jpg`, Zak Bernadsky, https://unsplash.com/photos/a-mountain-with-a-lake-in-front-of-it-xk-zYQSopow ; source https://images.unsplash.com/photo-1643662372752-b4263e1b41ab . Mountain lake reflection; standard Unsplash license.
+- Home's secondary ridge scene remains unique to that homepage placement; Services, Approach, About, and Contact use four distinct sources as full-width backgrounds. The original homepage mountain is preserved.
+- Logo review expanded to 12 newly authored SVG studies in four families: geometric, fluid, engineered, and emblematic. No new study has been adopted as the website logo.

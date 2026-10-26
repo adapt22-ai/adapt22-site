@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { services } from "../../lib/content";
+import Link from "@/components/RouteLink";
+import { services, serviceGroups } from "../../lib/content";
 import { PageIntro, CTA, Arrow } from "../../components/Shared";
 export const metadata = {
   title: "Services",
   description:
-    "Custom software, fractional technology leadership, applied AI, enterprise modernization, integrations, and transaction readiness.",
+    "Embedded technology leadership, applied AI, and business systems delivery, with the specialist capabilities to carry the roadmap through.",
   alternates: { canonical: "/services" },
 };
 export default function Services() {
@@ -12,6 +12,8 @@ export default function Services() {
     <>
       <PageIntro
         label="What we do"
+        image="/images/coast.jpg"
+        imageAlt="Slate ocean water and a pale horizon"
         title={
           <>
             The right work.
@@ -19,11 +21,27 @@ export default function Services() {
             Done properly.
           </>
         }
-        description="We plan, build, connect, and manage your technology. From Salesforce and custom software to AI and ongoing leadership, our team takes responsibility for getting the work done."
+        description="We take responsibility for the technology function: setting the roadmap, leading the people and providers, and carrying the work through. AI, Salesforce, data, and delivery sit inside that wider business responsibility."
       />
-      <section className="service-grid section">
+      <section className="service-overview section">
+        <p className="eyebrow">One partnership, with the depth to deliver</p>
+        <h2>
+          Three connected areas.
+          <br />
+          One accountable team.
+        </h2>
+        <div>
+          {serviceGroups.map((g) => (
+            <article key={g.id}>
+              <h3>{g.title}</h3>
+              <p>{g.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section id="business-systems" className="service-grid section">
         {services.map((s, i) => (
-          <article key={s.slug}>
+          <article key={s.slug} data-service={s.slug}>
             <span className="eyebrow">0{i + 1} /</span>
             <h2>
               <Link href={"/services/" + s.slug}>{s.title}</Link>

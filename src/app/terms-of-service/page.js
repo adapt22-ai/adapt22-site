@@ -7,12 +7,12 @@ export const metadata = {
 export default function Terms() {
   return (
     <article className="section legal">
-      <p className="eyebrow">Website information / October 25, 2026</p>
+      <p className="eyebrow">Website information / October 26, 2026</p>
       <h1>Website terms</h1>
       <p>
-        This website is operated by Adapt 22 LLC under the adapt22 brand and
+        This website is operated by adapt22 LLC under the adapt22 brand and
         describes our services and provides ways to start a conversation. For
-        questions, email <a href="mailto:info@adapt22.ai">info@adapt22.ai</a>.
+        questions, use <a href="/contact">our contact page</a>.
       </p>
       <h2>Service information</h2>
       <p>

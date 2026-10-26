@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/RouteLink";
 import { PageIntro, CTA, Arrow } from "../../components/Shared";
 import { faqs } from "../../lib/content";
 export const metadata = {

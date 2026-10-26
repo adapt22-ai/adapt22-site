@@ -10,7 +10,7 @@ export default function Accessibility() {
       <p className="eyebrow">Using this website</p>
       <h1>Accessibility</h1>
       <p>
-        Adapt 22 LLC aims to make the adapt22 website usable with a keyboard, a
+        adapt22 LLC aims to make the adapt22 website usable with a keyboard, a
         screen reader, and a range of screen sizes and browser settings.
       </p>
       <h2>How the site is designed</h2>
@@ -30,11 +30,11 @@ export default function Accessibility() {
       </p>
       <h2>Tell us about a problem</h2>
       <p>
-        If something is difficult to read or use, email{" "}
-        <a href="mailto:info@adapt22.ai">info@adapt22.ai</a>. Please include the
-        page, what you were trying to do, and the browser or assistive
-        technology you were using, if you are comfortable sharing it. We can
-        also discuss the website’s information by email or in a conversation.
+        If something is difficult to read or use, contact us through{" "}
+        <a href="/contact">our contact page</a>. Please include the page, what
+        you were trying to do, and the browser or assistive technology you were
+        using, if you are comfortable sharing it. We can also discuss the
+        website’s information in a scheduled conversation.
       </p>
     </article>
   );

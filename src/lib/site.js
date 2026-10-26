@@ -1,7 +1,6 @@
 export const site = {
   name: "adapt22",
-  legalName: "Adapt 22 LLC",
-  email: "info@adapt22.ai",
+  legalName: "adapt22 LLC",
   description:
-    "Technology consulting, custom software, Salesforce, and ongoing support.",
+    "Embedded technology leadership, applied AI, and business systems delivery.",
 };

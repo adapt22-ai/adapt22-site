@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/RouteLink";
 export default function NotFound() {
   return (
     <section className="section not-found">

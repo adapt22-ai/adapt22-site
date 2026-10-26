@@ -20,6 +20,8 @@ export default function Contact() {
     <>
       <PageIntro
         label="Let’s talk"
+        image="/images/lake.jpg"
+        imageAlt="A calm mountain lake under a muted sky"
         title={
           <>
             Start with
@@ -27,9 +29,9 @@ export default function Contact() {
             what’s on your mind.
           </>
         }
-        description="You don’t need a finished brief. Tell us what you need help with, from a Salesforce issue to finding a team that can take care of your technology."
+        description="Bring us the technology decisions your leadership team needs to make, the systems that are not keeping pace, or an AI strategy that needs someone to lead it."
       />
-      <section className="contact-layout section">
+      <section id="message" className="contact-layout section">
         <div className="contact-options">
           <div>
             <h2>
@@ -50,10 +52,6 @@ export default function Contact() {
               Find a time to talk <span aria-hidden="true">↗</span>
               <span className="sr-only"> (opens Calendly in a new tab)</span>
             </a>
-          </div>
-          <div>
-            <p className="eyebrow">Prefer email?</p>
-            <a href="mailto:info@adapt22.ai">info@adapt22.ai ↗</a>
           </div>
         </div>
         <ContactForm

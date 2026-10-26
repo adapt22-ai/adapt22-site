@@ -6,12 +6,12 @@ export const metadata = {
 export default function Privacy() {
   return (
     <article className="section legal">
-      <p className="eyebrow">Website information / October 25, 2026</p>
+      <p className="eyebrow">Website information / October 26, 2026</p>
       <h1>Privacy notice</h1>
       <p>
-        Adapt 22 LLC operates the adapt22 website. This notice describes how
-        information is handled here. Questions or privacy requests can be sent
-        to <a href="mailto:info@adapt22.ai">info@adapt22.ai</a>.
+        adapt22 LLC operates the adapt22 website. This notice describes how
+        information is handled here. Questions or privacy requests can be
+        submitted through <a href="/contact">our contact page</a>.
       </p>
       <h2>Information you choose to provide</h2>
       <p>
@@ -55,10 +55,10 @@ export default function Privacy() {
       <h2>Use, access, and retention</h2>
       <p>
         Inquiry information is intended for responding to you and evaluating a
-        working relationship. Access and deletion requests can be sent to our
-        team at the address above. Retention of correspondence and provider logs
-        depends on the systems in which it is held; contact us for questions
-        about a specific record.
+        working relationship. Access and deletion requests can be sent through
+        our contact page. Retention of correspondence and provider logs depends
+        on the systems in which it is held; contact us for questions about a
+        specific record.
       </p>
       <h2>Self-hosted content and external services</h2>
       <p>

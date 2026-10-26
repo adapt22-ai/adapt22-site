@@ -1,4 +1,5 @@
 import "./globals.css";
+import ScrollReset from "../components/ScrollReset";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SiteAnalytics from "../components/Analytics";
@@ -6,11 +7,11 @@ const production = process.env.VERCEL_ENV === "production";
 export const metadata = {
   metadataBase: new URL("https://adapt22.ai"),
   title: {
-    default: "adapt22 | Technology consulting, software & Salesforce",
+    default: "adapt22 | Embedded technology leadership",
     template: "%s | adapt22",
   },
   description:
-    "A technology consulting team for custom software, Salesforce, AI, data, and ongoing leadership. We take responsibility for the work so you can focus on the business.",
+    "Technology leadership embedded in your business. We set the roadmap, lead the team, and take responsibility for technology, AI, data, and business systems.",
   robots: { index: production, follow: production },
   openGraph: {
     type: "website",
@@ -18,7 +19,7 @@ export const metadata = {
     locale: "en_US",
     title: "adapt22 | Built for what comes next.",
     description:
-      "A team to plan, build, and manage your technology. Software, Salesforce, AI, and ongoing support.",
+      "A technology leader and delivery team inside your business. We set direction and stay accountable for execution.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
@@ -32,6 +33,7 @@ export default function Layout({ children }) {
         <a className="skip-link" href="#main">
           Skip to content
         </a>
+        <ScrollReset />
         <Header />
         <main id="main">{children}</main>
         <Footer />
@@ -43,9 +45,8 @@ export default function Layout({ children }) {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               name: "adapt22",
-              legalName: "Adapt 22 LLC",
+              legalName: "adapt22 LLC",
               url: "https://adapt22.ai",
-              email: "info@adapt22.ai",
               founder: { "@type": "Person", name: "Jackson McConnell" },
               description:
                 "Technology consulting, custom software, Salesforce consulting, fractional leadership, AI, modernization, and integrations.",

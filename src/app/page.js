@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { services } from "../lib/content";
+import Link from "@/components/RouteLink";
+import { serviceGroups } from "../lib/content";
 import { Arrow, CTA } from "../components/Shared";
 import Mark from "../components/Mark";
 export const metadata = { alternates: { canonical: "/" } };
@@ -29,9 +29,9 @@ export default function Home() {
           </h1>
           <div className="hero-bottom">
             <p>
-              Technology consulting, custom software,
+              Technology leadership, embedded in your business.
               <br />
-              Salesforce, and ongoing support.
+              We set the direction, lead the team, and own the execution.
             </p>
             <Link href="/services" className="button button-light">
               Explore what we do <Arrow />
@@ -75,7 +75,9 @@ export default function Home() {
       <section className="services-home section">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">What we do / 01–07</p>
+            <p className="eyebrow">
+              One partnership / Three connected responsibilities
+            </p>
             <h2>
               Your technology.
               <br />
@@ -89,16 +91,12 @@ export default function Home() {
           </p>
         </div>
         <div className="service-list">
-          {services.map((s, i) => (
-            <Link
-              href={"/services/" + s.slug}
-              key={s.slug}
-              className="service-row"
-            >
+          {serviceGroups.map((s, i) => (
+            <Link href={s.href} key={s.id} className="service-row">
               <span className="service-number">0{i + 1}</span>
               <div>
                 <h3>{s.title}</h3>
-                <p>{s.short}</p>
+                <p>{s.description}</p>
               </div>
               <Arrow />
             </Link>

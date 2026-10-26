@@ -1,5 +1,5 @@
 export const calendlyUrl = "https://calendly.com/jackson-adapt22";
-export const services = [
+const capabilities = [
   {
     slug: "technology-leadership",
     title: "Fractional technology leadership",
@@ -19,13 +19,13 @@ export const services = [
   },
   {
     slug: "custom-software",
-    title: "Custom software",
-    short: "Built around the way you actually work.",
+    title: "AI-enabled custom software",
+    short: "Purpose-built applications with AI where it earns its place.",
     description:
-      "When a spreadsheet has become a system, or an off-the-shelf tool keeps getting in the way, build what the business needs. Start with the people using it and work back to the technology.",
+      "Build the internal applications and workflows your business cannot buy off the shelf. We combine software engineering with AI capabilities such as document processing, knowledge search, and assisted decisions when they make the application more useful.",
     items: [
-      "Internal tools and operational platforms",
-      "Customer and partner portals",
+      "Internal applications with AI-assisted workflows",
+      "Knowledge search and document processing applications",
       "Workflow and approval applications",
       "Product development and ongoing maintenance",
     ],
@@ -61,7 +61,7 @@ export const services = [
       "Salesforce strategy, implementation, and administration",
       "Process design, configuration, and automation",
       "Data migration, integrations, and reporting",
-      "User training, adoption, and ongoing support",
+      "Platform ownership, user adoption, and continuous improvement",
     ],
     result:
       "A clear plan for Salesforce, a platform that supports the agreed workflows, and an owner for what happens next.",
@@ -118,6 +118,46 @@ export const services = [
       "An evidence-based view of technology risks, dependencies, costs, and the work ahead.",
     trigger:
       "An acquisition, expansion, or exit is approaching and you need to know whether the technology can support it.",
+  },
+];
+export const services = [
+  "technology-leadership",
+  "applied-ai",
+  "salesforce-consulting",
+  "enterprise-modernization",
+  "integrations-data",
+  "growth-transaction-readiness",
+  "custom-software",
+].map((slug) => capabilities.find((s) => s.slug === slug));
+export const serviceGroups = [
+  {
+    id: "leadership",
+    title: "Embedded technology leadership",
+    description:
+      "We join your leadership team, set the technology roadmap, lead the people and providers, and stay accountable for execution.",
+    href: "/services/technology-leadership",
+    slugs: ["technology-leadership", "growth-transaction-readiness"],
+  },
+  {
+    id: "ai",
+    title: "Applied AI & automation",
+    description:
+      "Turn AI into working business processes. We choose the use cases, connect the data, and own the rollout and oversight.",
+    href: "/services/applied-ai",
+    slugs: ["applied-ai"],
+  },
+  {
+    id: "business-systems",
+    title: "Business systems & delivery",
+    description:
+      "Make Salesforce, data, and core systems work as one. Our delivery team handles modernization, integrations, and purpose-built applications.",
+    href: "/services#business-systems",
+    slugs: [
+      "salesforce-consulting",
+      "enterprise-modernization",
+      "integrations-data",
+      "custom-software",
+    ],
   },
 ];
 export const faqs = [

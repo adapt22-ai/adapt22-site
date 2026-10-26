@@ -48,3 +48,13 @@ The owner's later first-pass review supersedes earlier copy and visual choices:
 - Keep current logo provisional; use bronze and prepare separate logo directions for review. Do not claim prior artwork recovery.
 - Compact sticky navigation, accessible at different screen sizes. Remove em dashes from public copy.
 - No disabled contact form may silently ship in production. Secure credentials and real delivery acceptance remain prerequisites.
+
+## Owner review 3: superseding direction
+- Position adapt22 as embedded technology leadership, with the roadmap, team/provider leadership, and responsibility for execution. Replace generic homepage service-list phrasing and low-level support positioning.
+- Present three connected areas on the homepage. Preserve detailed capabilities; leadership first, applied AI second, custom software last and AI-enabled.
+- Company name is adapt22 LLC with no space between adapt and 22.
+- Remove all public email addresses, including notices, structured data, footer, contact fallback, and API errors. Keep backend delivery configuration server-only and preserve a private scheduling/contact path.
+- Full-width photographic background banners on Services, Approach, About, and Contact. Distinct imagery per page; smaller than the homepage hero. Uniform service-card fill, no alternating checkerboard.
+- Match the portrait section to the existing grayscale photo background; retain uncropped arms.
+- Restrained brand/navigation hover and press motion, with reduced-motion behavior. Every non-anchor page navigation must begin at the top.
+- Expand the private triskelion review to twelve studies in four families. Keep existing site logo unchanged pending a decision.

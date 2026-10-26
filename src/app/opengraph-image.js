@@ -38,7 +38,7 @@ export default function Image() {
           letterSpacing: 3,
         }}
       >
-        TECHNOLOGY CONSULTING. SOFTWARE. SALESFORCE.
+        TECHNOLOGY LEADERSHIP. ACCOUNTABLE DELIVERY.
       </div>
     </div>,
     size,

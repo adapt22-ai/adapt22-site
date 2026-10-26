@@ -118,29 +118,29 @@ test("reduced motion disables decorative animation", async ({ page }) => {
   ).toBe("none");
 });
 
-test("updated identity, public email, legal links and Salesforce are visible", async ({
+test("private contact paths, legal name and focused service positioning", async ({
   page,
 }) => {
   await page.goto("/");
-  const footer = page.locator("footer");
-  await expect(
-    footer.getByText("info@adapt22.ai", { exact: false }),
-  ).toBeVisible();
-  await expect(footer.getByText(/Adapt 22 LLC/)).toBeVisible();
-  await expect(
-    footer.getByRole("link", { name: "Privacy", exact: true }),
-  ).toHaveAttribute("href", "/privacy-policy");
-  await expect(
-    footer.getByRole("link", { name: "Terms", exact: true }),
-  ).toHaveAttribute("href", "/terms-of-service");
-  await expect(
-    footer.getByRole("link", { name: "Accessibility", exact: true }),
-  ).toHaveAttribute("href", "/accessibility");
-  await expect(
-    page.getByRole("link", { name: /Salesforce consulting/ }),
-  ).toBeVisible();
-  expect(await page.locator("body").innerText()).not.toContain(
-    "jackson@adapt22.ai",
+  await expect(page.locator("footer").getByText(/adapt22 LLC/)).toBeVisible();
+  expect(await page.content()).not.toMatch(/[a-z0-9._%+-]+@adapt22\.ai/i);
+  await expect(page.locator('a[href^="mailto:"]')).toHaveCount(0);
+  await expect(page.locator(".service-list > a")).toHaveCount(3);
+  await expect(page.locator(".service-list > a").first()).toContainText(
+    "Embedded technology leadership",
+  );
+  await page.goto("/services");
+  await expect(page.locator("[data-service]").first()).toHaveAttribute(
+    "data-service",
+    "technology-leadership",
+  );
+  await expect(page.locator("[data-service]").nth(1)).toHaveAttribute(
+    "data-service",
+    "applied-ai",
+  );
+  await expect(page.locator("[data-service]").last()).toHaveAttribute(
+    "data-service",
+    "custom-software",
   );
 });
 test("sticky header leaves anchor content visible", async ({ page }) => {
@@ -167,4 +167,53 @@ test("portrait preserves source aspect ratio and all arms", async ({
   }));
   expect(result.fit).toBe("contain");
   expect(Math.abs(result.ratio - result.natural)).toBeLessThan(0.02);
+});
+
+test("all navigation destinations open at the top from a scrolled page", async ({
+  page,
+}) => {
+  await page.goto("/");
+  for (const [label, url] of [
+    ["Services", "/services"],
+    ["Our approach", "/approach"],
+    ["About", "/about"],
+    ["Let’s talk", "/contact"],
+  ]) {
+    await page.evaluate(() =>
+      scrollTo(0, document.documentElement.scrollHeight),
+    );
+    if (page.viewportSize().height <= 500)
+      await page.evaluate(() => scrollTo(0, 0));
+    if (page.viewportSize().width <= 700)
+      await page.locator(".menu-toggle").click();
+    await page
+      .locator("header nav")
+      .getByRole("link", { name: label, exact: true })
+      .click();
+    await expect(page).toHaveURL(new RegExp(url + "$"));
+    await page.waitForTimeout(100);
+    expect(await page.evaluate(() => scrollY)).toBe(0);
+  }
+  await page.evaluate(() => scrollTo(0, 600));
+  if (page.viewportSize().height <= 500)
+    await page.evaluate(() => scrollTo(0, 0));
+  await page.locator("header .brand").click();
+  await expect(page).toHaveURL(/\/$/);
+  expect(await page.evaluate(() => scrollY)).toBe(0);
+});
+test("full width banners, non-repeating imagery, and no public addresses", async ({
+  page,
+}) => {
+  const sources = [];
+  for (const path of ["/services", "/approach", "/about", "/contact"]) {
+    await page.goto(path);
+    await expect(page.locator(".page-banner")).toHaveCount(1);
+    const box = await page.locator(".page-banner .intro-image").boundingBox();
+    expect(Math.abs(box.width - page.viewportSize().width)).toBeLessThan(2);
+    sources.push(await page.locator(".page-banner img").getAttribute("src"));
+    expect(await page.content()).not.toMatch(/[a-z0-9._%+-]+@adapt22\.ai/i);
+  }
+  expect(new Set(sources).size).toBe(4);
+  await page.goto("/brand-review");
+  await expect(page.locator("[data-concept]")).toHaveCount(12);
 });

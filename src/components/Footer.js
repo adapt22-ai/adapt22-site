@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/RouteLink";
 import Mark from "./Mark";
 import { site } from "../lib/site";
 export default function Footer() {
@@ -10,12 +10,11 @@ export default function Footer() {
           <span>adapt22</span>
         </Link>
         <p>
-          Technology consulting.
+          Technology leadership.
           <br />
-          Software, Salesforce, and support.
+          Part of your team. Accountable for the work.
         </p>
         <div>
-          <a href={`mailto:${site.email}`}>{site.email} ↗</a>
           <Link href="/contact">Talk to our team ↗</Link>
         </div>
       </div>

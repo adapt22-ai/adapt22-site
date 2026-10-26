@@ -76,7 +76,7 @@ export async function handleContact(
   )
     return response(
       503,
-      "The message form is temporarily unavailable. Please email info@adapt22.ai.",
+      "The message form is temporarily unavailable. Please use the scheduling link.",
     );
   try {
     const verified = await fetcher(
@@ -110,7 +110,7 @@ export async function handleContact(
     if (!ip)
       return response(
         503,
-        "The message form is temporarily unavailable. Please email info@adapt22.ai.",
+        "The message form is temporarily unavailable. Please use the scheduling link.",
       );
     const hash = createHash("sha256")
       .update(ip + env.TURNSTILE_SECRET_KEY)
@@ -129,13 +129,13 @@ export async function handleContact(
     if (!rate.ok)
       return response(
         503,
-        "The message form is temporarily unavailable. Please email info@adapt22.ai.",
+        "The message form is temporarily unavailable. Please use the scheduling link.",
       );
     const rateData = await rate.json();
     if (rateData.error || !Number.isInteger(rateData.result))
       return response(
         503,
-        "The message form is temporarily unavailable. Please email info@adapt22.ai.",
+        "The message form is temporarily unavailable. Please use the scheduling link.",
       );
     if (rateData.result > 5)
       return response(
@@ -155,7 +155,7 @@ export async function handleContact(
     if (sent.error || !sent.data?.id)
       return response(
         502,
-        "Your message could not be sent. Please try again or email info@adapt22.ai.",
+        "Your message could not be sent. Please try again or use the scheduling link.",
       );
     return Response.json(
       { success: true },
@@ -164,7 +164,7 @@ export async function handleContact(
   } catch {
     return response(
       503,
-      "The message form is temporarily unavailable. Please try again or email info@adapt22.ai.",
+      "The message form is temporarily unavailable. Please try again or use the scheduling link.",
     );
   }
 }
