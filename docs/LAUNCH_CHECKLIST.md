@@ -1,6 +1,6 @@
 # Release checklist
 
-October 26, 2026. Status: **contact setup verified; hold production pending separate release approval and remaining acceptance checks**. The audit and development commit do not authorize main, production, DNS, live service changes, real email, or bookings.
+October 26, 2026. Status: **released with explicit owner approval**; see PRODUCTION_RELEASE.md for live verification and remaining follow-up items. The audit and development commit do not authorize main, production, DNS, live service changes, real email, or bookings.
 
 ## Finish before requesting release approval
 
@@ -12,7 +12,7 @@ October 26, 2026. Status: **contact setup verified; hold production pending sepa
 - [ ] Review the broader Calendly intake-question wording; keep the confirmed Eastern schedule, active discovery event, and Google Meet unchanged.
 - [ ] Verify hosted CI green for the final code commit and administrator-enforced review/check requirements on main. Connector cannot inspect branch-protection administration.
 - [ ] Complete an assistive-technology user pass (VoiceOver/NVDA or independent specialist) and actual device spot checks. No ADA legal guarantee follows from automated checks. Confirm notices match actual business privacy/retention/deletion practices.
-- [ ] Record the exact reviewed commit and preview. Refresh recovery bundle. Obtain separate explicit release approval only after the result and remaining live changes are concrete.
+- [x] Record the exact reviewed commit and preview. Refresh recovery bundle. Obtain separate explicit release approval only after the result and remaining live changes are concrete.
 
 ## Approved release execution only
 
