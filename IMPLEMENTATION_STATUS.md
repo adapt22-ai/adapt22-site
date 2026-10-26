@@ -1,11 +1,11 @@
 # Implementation status
 
-Updated October 26, 2026 (America/Chicago), during owner review 6.
+Updated October 26, 2026 (America/Chicago), after owner review 6.
 
 ## Review 6: logo page only
 N11-C retained unchanged as the reference. Twelve new single-color vector studies are grouped into C1–C6 (tapered/connected returns) and P1–P6 (paisley/floral/three-part departures). Comparison page has thirteen marks, overview anchors, larger lockups, dark and small-size views. New styling is scoped to that route. Public page content, imagery, styles and identity components are unchanged.
 
-Build and 24 focused browser checks pass across eight Chromium/WebKit configurations. Desktop/390px/320px visual review completed. Protected deployment verification follows the development commit. See docs/REVIEW_6.md. Prior revision evidence below is historical.
+Build and 24 focused browser checks pass across eight Chromium/WebKit configurations. Desktop/390px/320px visual review completed. Protected revision 6 logo preview: https://adapt22-site-76mcqj610-adapt22s-projects.vercel.app/brand-review . Implementation commit f344ce05a34e62a909e7fe21cf39bf9780fb8163; deployment dpl_5dehoCNCa7y6BBNmfrwTj9qVuBYb, READY, preview target, verified development branch/project. Authenticated logo and home checks return 200 with noindex headers; deployed review confirms thirteen marks, unchanged N11-C and the new C/P studies. Anonymous logo access returns 302 to authentication. See docs/REVIEW_6.md. Prior revision evidence below is historical.
 
 ## Review 5 implementation
 All four interior banners share full-width image-overlay dimensions at each breakpoint. Bison compositions support wide and vertical layouts. Every service has four bullets; IT scope is condensed without dropping the core responsibilities. Homepage ridge wording is now "You run the business. We lead the technology." Footer positioning uses three deliberate lines. Original headshot remains unchanged with a clipped fabric repair beneath its small alpha notch. Private logo review retains four original references plus N2/N4/N11 and ten focused variations, seventeen marks total.
