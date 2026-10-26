@@ -3,7 +3,9 @@
 Updated October 26, 2026 (America/Chicago), after owner review 3.
 
 ## Current branch and scope
-Development branch `website-3-rebrand`; draft PR https://github.com/adapt22-ai/adapt22-site/pull/2 . Production/main/DNS remain outside the authorized scope. A new protected preview URL will be recorded after this revision deploys. Prior immutable preview URLs do not update.
+Development branch `website-3-rebrand`; draft PR https://github.com/adapt22-ai/adapt22-site/pull/2 . Production/main/DNS remain outside the authorized scope. Protected revision 3 preview: https://adapt22-site-50z9bzmlb-adapt22s-projects.vercel.app . Logo review: https://adapt22-site-50z9bzmlb-adapt22s-projects.vercel.app/brand-review . Implementation commit ea92b5cb9ac285e157b26c45636a179aaf669a35; deployment dpl_FkNKcd2dbq6zsgnytaNGomrJmC6Y. Prior immutable preview URLs do not update.
+
+Authenticated smoke checks of home, Services, About, Contact, and logo review return 200 and noindex/nofollow/noarchive. None contain public adapt22 email addresses. Deployed logo review contains all twelve studies. Anonymous access redirects (302) to Vercel authentication. Main remains a82280731d2e04b5e1c8b5038b34b2dfcd1b6057.
 
 ## Review 3 implemented
 - New homepage positioning: "Technology leadership, embedded in your business. We set the direction, lead the team, and own the execution."
