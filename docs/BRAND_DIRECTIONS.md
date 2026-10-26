@@ -15,4 +15,8 @@ No final exports, images generated, profile uploads, signatures installed, messa
 
 Route is excluded from public links/sitemap, noindex on staging, access-protected by Vercel, and returns 404 when built for production. Styling is scoped to the route and public-site chrome is hidden only while this private studio is present. Existing live design/C3 remains unchanged.
 
-Build and eight focused Chromium/WebKit tests across desktop/tablet/phone configurations pass, including three directions, slogan changes in both background types, camera-guide toggle, images, overflow and axe checks. Final blend refinement and remote deployment verification recorded below after completion. Physical device certification and final export approval are not claimed.
+Build and eight focused Chromium/WebKit tests across desktop/tablet/phone configurations pass, including three directions, slogan changes in both background types, camera-guide toggle, images, overflow and axe checks. Final background-blend refinement also passes build and all eight focused browser checks. Physical device certification and final export approval are not claimed.
+
+
+## Protected preview
+Implementation 6fd111dca417b24bd541bbe1599d9bd1b9fd489f; deployment dpl_HmKj16Uxt6mpHFK4adgjk7qmRPH6, READY, preview target, verified project and development branch. Review URL: https://adapt22-site-fiyrqq3wv-adapt22s-projects.vercel.app/brand-directions . Authenticated response 200 with noindex/nofollow/noarchive; all three directions and sayings present, no public email. Anonymous access returns 302 to authentication. Deployed browser interaction confirms changing B + saying 2 updates both banner and call-background text; reset to recommended A + saying 1. Selection is not saved as owner approval. Production route returns 404; main independently unchanged at a91aac712f9ba7dfdec21965c042079715bdd1e5. No production deployment, DNS/account change, real email or booking.
