@@ -5,13 +5,13 @@ import Footer from "../components/Footer";
 import SiteAnalytics from "../components/Analytics";
 const production = process.env.VERCEL_ENV === "production";
 export const metadata = {
-  metadataBase: new URL("https://adapt22.ai"),
+  metadataBase: new URL("https://www.adapt22.ai"),
   title: {
     default: "adapt22 | Embedded technology leadership",
     template: "%s | adapt22",
   },
   description:
-    "Technology leadership embedded in your business. We set the roadmap, lead the team, and take responsibility for technology, AI, data, and business systems.",
+    "Technology leadership embedded in your business. We turn your priorities into a roadmap, lead the team, and take responsibility for technology, AI, data, and business systems.",
   robots: { index: production, follow: production },
   openGraph: {
     type: "website",
@@ -35,7 +35,9 @@ export default function Layout({ children }) {
         </a>
         <ScrollReset />
         <Header />
-        <main id="main">{children}</main>
+        <main id="main" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
         {production && <SiteAnalytics />}
         <script
@@ -46,7 +48,7 @@ export default function Layout({ children }) {
               "@type": "ProfessionalService",
               name: "adapt22",
               legalName: "adapt22 LLC",
-              url: "https://adapt22.ai",
+              url: "https://www.adapt22.ai",
               founder: { "@type": "Person", name: "Jackson McConnell" },
               description:
                 "Technology consulting, custom software, Salesforce consulting, fractional leadership, AI, modernization, and integrations.",

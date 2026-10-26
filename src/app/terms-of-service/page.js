@@ -10,9 +10,9 @@ export default function Terms() {
       <p className="eyebrow">Website information / October 26, 2026</p>
       <h1>Website terms</h1>
       <p>
-        This website is operated by adapt22 LLC under the adapt22 brand and
-        describes our services and provides ways to start a conversation. For
-        questions, use <a href="/contact">our contact page</a>.
+        adapt22 LLC operates this website to explain our services and provide
+        ways to start a conversation. For questions, use{" "}
+        <a href="/contact">our contact page</a>.
       </p>
       <h2>Service information</h2>
       <p>

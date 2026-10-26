@@ -34,7 +34,7 @@ export default function Privacy() {
         The booking link opens Calendly, where you choose whether to provide
         scheduling details. Calendly handles that information under its own{" "}
         <a
-          href="https://calendly.com/privacy"
+          href="https://calendly.com/legal/privacy-notice"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -49,8 +49,8 @@ export default function Privacy() {
         Analytics and Speed Insights to understand page usage and performance.
         Vercel describes its Web Analytics service as using no third-party
         cookies. Analytics are disabled in development and preview builds. Query
-        strings and fragments are removed from Web Analytics page URLs by this
-        site.
+        strings and fragments are removed from Web Analytics and Speed Insights
+        URLs by this site.
       </p>
       <h2>Use, access, and retention</h2>
       <p>

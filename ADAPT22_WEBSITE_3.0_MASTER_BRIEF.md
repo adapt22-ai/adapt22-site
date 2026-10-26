@@ -79,3 +79,6 @@ The website is accepted for this design round. Focus solely on the private logo 
 
 ## Owner review 7: identity selected
 C3 / Shared center is selected for implementation across the website, including shared logo placements, browser/app icons and social preview. Retain its exact study geometry and the existing bronze/ink palette. This overrides prior provisional-logo and logo-page-only restrictions. Production/live-site changes still require separate explicit approval. See docs/REVIEW_7.md.
+
+## Prelaunch audit, October 26
+Owner requests comprehensive performance, content, accessibility, link, SEO, security, and connected-service readiness checks, with the approved visual design/C3 retained. See docs/PRELAUNCH_AUDIT.md and docs/LAUNCH_CHECKLIST.md. No production release authorized. Owner confirmed private info@ alias delivers to Jackson and Calendly retains its current Eastern schedule. Direct active booking link is now https://calendly.com/jackson-adapt22/discoverycall . Earlier public email instructions are superseded; public addresses remain prohibited. Contact infrastructure and sending SPF repair remain open; provider status must not be mistaken for tested delivery. Production requires a fresh production build, not promotion of a preview artifact.

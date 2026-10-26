@@ -93,7 +93,7 @@ export async function handleContact(
     if (!verified.ok)
       return response(
         503,
-        "Verification is unavailable. Please try again or email Jackson.",
+        "Verification is unavailable. Please try again or use the scheduling link.",
       );
     const result = await verified.json();
     if (

@@ -1,6 +1,28 @@
 # Implementation status
 
-Updated October 26, 2026 (America/Chicago), after owner review 7.
+Updated October 26, 2026 (America/Chicago), after prelaunch audit.
+
+## Prelaunch audit: latest status
+
+Website fixes implemented: static responsive scene images with inline placeholders and intent warmup; consistent hero motion; sampled photo-text contrast repairs; enlarged-text grid reflow; skip-link and form-success focus; both analytics URL sanitizers; www canonical consistency; direct active Calendly event; concise copy corrections; pinned CI workflow. C3 and approved photography/layout preserved.
+
+Local verification: build passes, 10 contact-handler tests pass, 264 browser checks pass across eight Chromium/WebKit configurations. After the final lower-homepage overlay refinement, eight additional homepage checks pass. All 60 sampled photographic text regions meet the applicable contrast threshold at desktop/390px/320px. Full and production dependency audits report zero known vulnerabilities. Public internal link inventory (16 distinct destinations) and six external scheduling/privacy links all return 200; anchors exist. Text-spacing/reflow checks at 320/640px show no overflow or clipped banner copy. No real messages or bookings were sent. See docs/PRELAUNCH_AUDIT.md for methods, limitations, source-bounded copy review, and service findings.
+
+### Mobile lab observations
+
+| Page | LCP before → after | Image bytes before → after |
+|---|---:|---:|
+| / | 1.43s → 0.88s | 46,212 → 23,556 |
+| /services | 1.28s → 0.71s | 35,746 → 17,054 |
+| /approach | 1.71s → 1.08s | 74,738 → 31,428 |
+| /about | 1.10s → 0.66s | 58,586 → 48,070 |
+| /contact | 0.75s → 0.62s | 11,476 → 6,862 |
+
+390×844, fresh browser context, disabled browser cache, ~1.6 Mbps, 150ms simulated latency, 4× CPU slowdown; local server document TTFB only 2–6ms and baseline image-transform cache already warm. These are local observations, not production field Core Web Vitals. After samples ran without concurrent browser tests. Image-byte totals include images requested during the initial measurement window, not the entire scrolled page. CLS after is 0.00006–0.0127 across the five routes. Inline placeholders and removal of cold transforms address perceived blank-image delay; slow connections still take time to download full images.
+
+### Release hold
+
+Owner confirms info@ alias delivery and unchanged Calendly Eastern schedule. Contact lacks Turnstile and shared-rate-store settings in Vercel; no widget/store provisioned. Resend lists sending verified, but live DNS lacks its sending-subdomain SPF TXT. No DNS changes made. Configure securely, repair SPF only with separate DNS approval, validate forwarded client IP through current Cloudflare proxy, and perform separately authorized real delivery test before acceptance. GitHub main protection cannot be read through the connector's administrative permissions. Hosted CI and latest protected preview are pending verification below. Search Console ownership and actual business privacy practices remain unverified. Fresh production build required after separate release approval; never promote a preview artifact. Main/production/live DNS unchanged.
 
 ## Review 7: C3 selected and applied
 C3 / Shared center implemented across shared site marks, browser/app icons and social preview. Geometry and stroke weight retained exactly; review page labels C3 Selected. No other content/layout/photo/contact changes. Build passes; C3 header/footer placement verified on 15 public routes, six icon responses and social preview return 200. All 232 browser checks pass across eight Chromium/WebKit desktop/tablet/phone configurations. Protected C3 preview: https://adapt22-site-cys3rs2jx-adapt22s-projects.vercel.app . Implementation commit 485c02af012c4893ac1e4ee957d3c01289f037c9; deployment dpl_56mdKrQ2t7RQHeBd1rtFqcZneNgD, READY, preview target, verified project/development branch. Authenticated home/About/icon/logo-review checks return 200 with noindex; C3 placements, SVG icon geometry and Selected label are confirmed in deployed responses. Anonymous home request returns 302 to authentication. Main remains a82280731d2e04b5e1c8b5038b34b2dfcd1b6057. See docs/REVIEW_7.md. Earlier provisional identity notes below are historical.

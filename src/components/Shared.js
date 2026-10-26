@@ -1,4 +1,4 @@
-import Image, { getImageProps } from "next/image";
+import SceneImage from "./SceneImage";
 import Link from "@/components/RouteLink";
 export function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -15,9 +15,9 @@ export function CTA() {
         </h2>
         <div>
           <p>
-            A growing business without a technology leader. An acquisition that
-            needs a systems plan. An AI initiative that needs an owner. Let’s
-            talk about the responsibility you need us to take on.
+            A business without a technology leader. An acquisition that needs a
+            systems plan. An AI initiative that needs an owner. Let’s talk about
+            what you need us to take on.
           </p>
           <Link href="/contact" className="button">
             Start a conversation <Arrow />
@@ -36,15 +36,6 @@ export function PageIntro({
   className = "",
   mobileImage,
 }) {
-  const mobileProps = mobileImage
-    ? getImageProps({
-        src: mobileImage,
-        alt: imageAlt,
-        width: 1024,
-        height: 1536,
-        sizes: "100vw",
-      }).props
-    : null;
   return (
     <section
       className={`page-intro section ${image ? "page-banner" : ""} ${className}`}
@@ -57,12 +48,12 @@ export function PageIntro({
       </div>
       {image && (
         <div className="intro-image">
-          <picture>
-            {mobileImage && (
-              <source media="(max-width: 700px)" srcSet={mobileProps.srcSet} />
-            )}
-            <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
-          </picture>
+          <SceneImage
+            src={image}
+            mobileImage={mobileImage}
+            alt={imageAlt}
+            eager
+          />
         </div>
       )}
     </section>

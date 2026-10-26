@@ -21,7 +21,7 @@ export default function Services() {
             Done properly.
           </>
         }
-        description="We take responsibility for the technology function: turning your business priorities into a roadmap, leading the people and providers, and carrying the work through. AI, Salesforce, data, and delivery sit inside that wider business responsibility."
+        description="We turn your business priorities into a technology roadmap, lead the people and providers, and carry the work through. AI, Salesforce, IT, and data sit within that responsibility."
       />
       <section className="service-overview section">
         <p className="eyebrow">One partnership, with the depth to deliver</p>

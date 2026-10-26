@@ -10,5 +10,5 @@ export default function sitemap() {
     "/terms-of-service",
     "/accessibility",
     ...services.map((s) => "/services/" + s.slug),
-  ].map((path) => ({ url: "https://adapt22.ai" + path }));
+  ].map((path) => ({ url: "https://www.adapt22.ai" + path }));
 }

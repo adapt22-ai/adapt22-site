@@ -1,11 +1,11 @@
-export const calendlyUrl = "https://calendly.com/jackson-adapt22";
+export const calendlyUrl = "https://calendly.com/jackson-adapt22/discoverycall";
 const capabilities = [
   {
     slug: "technology-leadership",
     title: "Fractional technology leadership",
     short: "Your technology, with a team responsible for it.",
     description:
-      "A technology lead who works as part of your business, backed by a team that carries the work through. You set the business priorities and approve the investment. We turn that into a technology roadmap, lead the people and vendors, and take responsibility for delivery.",
+      "We work as part of your leadership team. You set business priorities and approve the investment; we turn them into a technology roadmap, lead the people and vendors, and take responsibility for delivery.",
     items: [
       "Technology strategy and investment priorities",
       "Vendor selection, contracts, and accountability",

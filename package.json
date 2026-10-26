@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start --hostname 0.0.0.0",
     "test": "node --test tests/*.test.mjs",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",

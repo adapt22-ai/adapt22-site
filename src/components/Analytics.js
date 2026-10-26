@@ -10,7 +10,12 @@ export default function SiteAnalytics() {
           url: event.url.split("?")[0].split("#")[0],
         })}
       />
-      <SpeedInsights />
+      <SpeedInsights
+        beforeSend={(event) => ({
+          ...event,
+          url: event.url.split("?")[0].split("#")[0],
+        })}
+      />
     </>
   );
 }

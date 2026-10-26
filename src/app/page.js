@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SceneImage from "../components/SceneImage";
 import Link from "@/components/RouteLink";
 import { serviceGroups } from "../lib/content";
 import { Arrow, CTA } from "../components/Shared";
@@ -8,12 +8,10 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <Image
+        <SceneImage
           src="/images/landscape.jpg"
           alt="Mountain ridges receding into a broad, open horizon"
-          fill
-          priority
-          sizes="100vw"
+          eager
           className="hero-image"
         />
         <div className="hero-shade" />
@@ -105,11 +103,9 @@ export default function Home() {
         </div>
       </section>
       <section className="nature-break">
-        <Image
+        <SceneImage
           src="/images/ridges.jpg"
           alt="Muted mountain ridges receding into mist"
-          fill
-          sizes="100vw"
         />
         <div>
           <p className="eyebrow">A plan. A team. Follow-through.</p>

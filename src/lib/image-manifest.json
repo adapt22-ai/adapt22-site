@@ -1,0 +1,51 @@
+{
+  "/images/landscape.jpg": {
+    "width": 2400,
+    "height": 1600,
+    "src": "/images/optimized/landscape-1200-c5aa4eb240.webp",
+    "srcSet": "/images/optimized/landscape-480-c5aa4eb240.webp 480w, /images/optimized/landscape-768-c5aa4eb240.webp 768w, /images/optimized/landscape-1200-c5aa4eb240.webp 1200w, /images/optimized/landscape-1600-c5aa4eb240.webp 1600w, /images/optimized/landscape-2200-c5aa4eb240.webp 2200w, /images/optimized/landscape-2400-c5aa4eb240.webp 2400w",
+    "placeholder": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAADwBQCdASogABUAPxF2s1IsJySisBgIAYAiCWIArAAPo8gjVKX84k5xJOTo6IU5rF4A+HvpdZIogAD9dtBl4HPQJ6mQrfq3nEolf3ZEpdRYNyQu3LhazbhrLH1gK4rolCUHEHWR/OvDx9x6DIerKw3q/1RhvHStIzEU1m1uNoMIN/fLwy+n7saxgsMDIPykuO7WXI7mjWLcp8Hu4LTOUNaqxBbmNZJG5599Vmcq1brQznAfZONEBg7izCqb4IV5gJgAAA=="
+  },
+  "/images/ridges.jpg": {
+    "width": 2000,
+    "height": 1335,
+    "src": "/images/optimized/ridges-1200-a232639dac.webp",
+    "srcSet": "/images/optimized/ridges-480-a232639dac.webp 480w, /images/optimized/ridges-768-a232639dac.webp 768w, /images/optimized/ridges-1200-a232639dac.webp 1200w, /images/optimized/ridges-1600-a232639dac.webp 1600w, /images/optimized/ridges-2000-a232639dac.webp 2000w",
+    "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQBACdASogABUAPwFmrFArJSQit/qoAWAgCWcAz6Ah3yID864+EoS81DccM4AA/sODG6iZ76KzQPPymbjBG7gDPbbknDbROw/oJ7B0RSe0O64tlAAAAA=="
+  },
+  "/images/alpine-valley.jpg": {
+    "width": 2400,
+    "height": 1601,
+    "src": "/images/optimized/alpine-valley-1200-cde5c5aed9.webp",
+    "srcSet": "/images/optimized/alpine-valley-480-cde5c5aed9.webp 480w, /images/optimized/alpine-valley-768-cde5c5aed9.webp 768w, /images/optimized/alpine-valley-1200-cde5c5aed9.webp 1200w, /images/optimized/alpine-valley-1600-cde5c5aed9.webp 1600w, /images/optimized/alpine-valley-2200-cde5c5aed9.webp 2200w, /images/optimized/alpine-valley-2400-cde5c5aed9.webp 2400w",
+    "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADQBACdASogABUAPxF6tVOsJ6UiqAqpgCIJYwDDNBEZ14Yn0cUfz4sQ1xFk36eryAD+00hhe2AR57waE7aZwAV0U8Dj9+OgdoZxy/EAzGuYPC5Gjdns4iMKyfWXLfZpuhZ/Vwcl1987mKkm6uGZkdof7jdOwdadssIVZyiSlzD7YnW8O5aTLxpJLB1RQFeJQf+GygAA"
+  },
+  "/images/summit.jpg": {
+    "width": 2200,
+    "height": 1467,
+    "src": "/images/optimized/summit-1200-5fc29483d4.webp",
+    "srcSet": "/images/optimized/summit-480-5fc29483d4.webp 480w, /images/optimized/summit-768-5fc29483d4.webp 768w, /images/optimized/summit-1200-5fc29483d4.webp 1200w, /images/optimized/summit-1600-5fc29483d4.webp 1600w, /images/optimized/summit-2200-5fc29483d4.webp 2200w",
+    "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBQCdASogABUAPxFytFMsJiSisBgIAYAiCWUAyJg0c6yN+wk2CNRLD0ANL76HSVqprLJAAP60k1p6hLvQsKyavawYv/eBiSXcS+go24ZZKZWgfCaiGDMyQ7AjtHwjMYNXJ1k8PHtNRmpSZ+r+YipNFa1j3DGbxJR8fdGH8iuKY2aI9q2Iz+/nhn+qBoUKk9IAN1rtb3rfw9nf1El6mp2Tqzzesfl2DsFl6wAA"
+  },
+  "/images/lake.jpg": {
+    "width": 2200,
+    "height": 1467,
+    "src": "/images/optimized/lake-1200-5885010131.webp",
+    "srcSet": "/images/optimized/lake-480-5885010131.webp 480w, /images/optimized/lake-768-5885010131.webp 768w, /images/optimized/lake-1200-5885010131.webp 1200w, /images/optimized/lake-1600-5885010131.webp 1600w, /images/optimized/lake-2200-5885010131.webp 2200w",
+    "placeholder": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBQCdASogABUAPxFytFMsJiSisBgIAYAiCWMAsOwQ8OzJsCYKU7YWUaB6/hom/H1RgAD+jD1BqXYX12XDGlmYUGCQTR680tvdWWwEwbJ72uvcq4N3zKuRPlOBqVKVUiqI2uUhNsY33RC4SHv+VbIu+uXJGf5wWHdyLEe9otLJ14C3c+en1CSYmsAAAA=="
+  },
+  "/images/bison-banner.png": {
+    "width": 2172,
+    "height": 724,
+    "src": "/images/optimized/bison-banner-1200-f69d2a55f1.webp",
+    "srcSet": "/images/optimized/bison-banner-480-f69d2a55f1.webp 480w, /images/optimized/bison-banner-768-f69d2a55f1.webp 768w, /images/optimized/bison-banner-1200-f69d2a55f1.webp 1200w, /images/optimized/bison-banner-1600-f69d2a55f1.webp 1600w, /images/optimized/bison-banner-2172-f69d2a55f1.webp 2172w",
+    "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASogAAsAPxFysVAsJqSisAgBgCIJZwDCgGmitiWVWjfZ4AAA/uqRbS74tt3Ahj3t2JBDq49q6yehPQAtorYxjZ5RsV8zBnHQYoP9hAAAAAA="
+  },
+  "/images/bison-mobile.png": {
+    "width": 1024,
+    "height": 1536,
+    "src": "/images/optimized/bison-mobile-1024-bfc7ecbe61.webp",
+    "srcSet": "/images/optimized/bison-mobile-480-bfc7ecbe61.webp 480w, /images/optimized/bison-mobile-768-bfc7ecbe61.webp 768w, /images/optimized/bison-mobile-1024-bfc7ecbe61.webp 1024w",
+    "placeholder": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADQBQCdASogADAAPxF2rVCsJ7Kiqq36UCIJZQDOOF/WR6zW9U5x3/9FfGOrjrYqV1qny1QCzUgAAP7uO89glugr4Jpsf45alE2FoJNIzmzQCBnV+hc6R5bSsU+CSbpgaECfTOtQVAo5ho3zrGqiYyqoTB/NCJhDMkVecOtrwOhza50BH2so5Bp1NN2t/F1JCoH4RYYk6U39Ob9PxMqA+1KMxKdsBWcntOKgAA=="
+  }
+}

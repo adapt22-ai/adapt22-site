@@ -48,7 +48,7 @@ export default function About() {
             Delivered by a team.
           </>
         }
-        description="You get a direct relationship with our founder and a team that carries the work through. We work alongside your people and take responsibility for the technology scope we agree together."
+        description="A direct relationship with our founder. A team to carry the work through. We work alongside your people and own the technology responsibilities we agree together."
       />
       <section className="founder section">
         <div className="portrait">

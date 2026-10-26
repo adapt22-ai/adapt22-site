@@ -1,11 +1,15 @@
 "use client";
 import Script from "next/script";
 import Link from "@/components/RouteLink";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 export default function ContactForm({ enabled, siteKey }) {
   const [state, setState] = useState("idle");
   const [message, setMessage] = useState("");
   const [token, setToken] = useState("");
+  const successHeading = useRef(null);
+  useEffect(() => {
+    if (state === "sent") successHeading.current?.focus();
+  }, [state]);
   const widget = useRef(null);
   const widgetId = useRef(null);
   const submissionId = useRef(null);
@@ -66,7 +70,9 @@ export default function ContactForm({ enabled, siteKey }) {
     return (
       <div className="contact-form form-success" role="status">
         <p className="eyebrow">Message submitted</p>
-        <h2>Thanks for getting in touch.</h2>
+        <h2 ref={successHeading} tabIndex={-1}>
+          Thanks for getting in touch.
+        </h2>
         <p>
           Your message was accepted for delivery to our team. You can also use
           the scheduling link to find a time to talk.

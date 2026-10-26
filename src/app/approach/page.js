@@ -49,7 +49,7 @@ export default function Approach() {
             Our responsibility.
           </>
         }
-        description="Bring us the technology questions, the data problems, the AI ideas, and the systems nobody wants to deal with. We work as part of your company and take the agreed work off your shoulders."
+        description="Bring us the technology questions, data problems, AI ideas, and systems nobody owns. We work as part of your company and take responsibility for the agreed work."
       />
       <section className="ownership section">
         <div>

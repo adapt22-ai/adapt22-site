@@ -83,7 +83,7 @@ test("contact has usable external alternatives and honest disabled form", async 
   await page.goto("/contact");
   await expect(page.getByRole("link", { name: /Find a time/ })).toHaveAttribute(
     "href",
-    "https://calendly.com/jackson-adapt22",
+    "https://calendly.com/jackson-adapt22/discoverycall",
   );
   await expect(
     page.getByRole("button", { name: /Send your message/ }),
@@ -291,4 +291,93 @@ test("owner authority, four bullets, equal overlay banners, and focused logo rev
     "N12",
   ])
     await expect(page.locator(`[data-concept="${id}"]`)).toHaveCount(0);
+});
+
+test("interior hero motion, placeholders, and reduced motion agree", async ({
+  page,
+}) => {
+  for (const path of ["/services", "/approach", "/about", "/contact"]) {
+    await page.goto(path);
+    await expect(page.locator(".page-banner h1")).toHaveCSS(
+      "animation-name",
+      "text-in",
+    );
+    await expect(page.locator(".page-banner img")).toHaveCSS(
+      "animation-name",
+      "landscape-in",
+    );
+    expect(
+      await page
+        .locator(".page-banner img")
+        .evaluate((e) => e.style.backgroundImage),
+    ).toContain("data:image/webp;base64,");
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await expect(page.locator(".page-banner h1")).toHaveCSS(
+      "animation-name",
+      "none",
+    );
+    await expect(page.locator(".page-banner img")).toHaveCSS(
+      "animation-name",
+      "none",
+    );
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+  }
+});
+
+test("canonical metadata and fingerprinted image caching", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/services");
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    "href",
+    "https://www.adapt22.ai/services",
+  );
+  const src = await page.locator(".page-banner img").getAttribute("src");
+  const image = await request.get(src);
+  expect(image.status()).toBe(200);
+  expect(image.headers()["cache-control"]).toContain("immutable");
+  const sitemap = await (await request.get("/sitemap.xml")).text();
+  expect(sitemap).toContain("https://www.adapt22.ai/");
+  expect(sitemap).not.toContain("brand-review");
+});
+
+test("skip link moves focus into main content", async ({
+  page,
+  browserName,
+}) => {
+  await page.goto("/");
+  // WebKit automation defaults to skipping links in its Tab preference.
+  if (browserName === "webkit") await page.locator(".skip-link").focus();
+  else await page.keyboard.press("Tab");
+  await expect(
+    page.getByText("Skip to content", { exact: true }),
+  ).toBeFocused();
+  await page.keyboard.press("Enter");
+  await expect(page.locator("main")).toBeFocused();
+});
+
+test("enlarged text spacing reflows on narrow screens", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.setViewportSize({ width: 320, height: 900 });
+  for (const path of ["/", "/services", "/approach", "/about", "/contact"]) {
+    await page.goto(path);
+    await page.addStyleTag({
+      content:
+        "* { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }",
+    });
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth > innerWidth,
+      ),
+    ).toBe(false);
+    const banner = page.locator(".page-banner");
+    if (await banner.count()) {
+      const copy = await banner.locator(".intro-text").boundingBox();
+      const bounds = await banner.boundingBox();
+      expect(copy.y + copy.height).toBeLessThanOrEqual(
+        bounds.y + bounds.height,
+      );
+    }
+  }
 });

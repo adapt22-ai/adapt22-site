@@ -36,6 +36,9 @@ test("contact waiting, sending and success states", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "Thanks for getting in touch." }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Thanks for getting in touch." }),
+  ).toBeFocused();
   await page.getByRole("button", { name: /Write another/ }).click();
   await expect(page.getByLabel("Name", { exact: true })).toHaveValue("");
 });
@@ -43,7 +46,7 @@ test("contact error retains message and permits recovery", async ({ page }) => {
   await page.route("**/api/contact", (route) =>
     route.fulfill({
       status: 503,
-      json: { error: "Please try again or email Jackson directly." },
+      json: { error: "Please try again or use the scheduling link." },
     }),
   );
   await fill(page);
