@@ -1,8 +1,7 @@
 import SceneImage from "./SceneImage";
 import Link from "@/components/RouteLink";
-export function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
+import Arrow from "./Arrow";
+export { Arrow };
 export function CTA() {
   return (
     <section className="cta section">

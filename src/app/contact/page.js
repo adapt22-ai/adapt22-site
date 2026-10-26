@@ -1,3 +1,4 @@
+import Arrow from "@/components/Arrow";
 import { contactRateConfig } from "../../lib/contact-rate-config.mjs";
 import { PageIntro } from "../../components/Shared";
 import ContactForm from "../../components/ContactForm";
@@ -6,7 +7,7 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Start a conversation",
   description:
-    "Talk with Jackson McConnell about your next technology decision, custom software project, or business change.",
+    "Talk with the adapt22 team about your next technology decision, custom software project, or business change.",
   alternates: { canonical: "/contact" },
 };
 export default function Contact() {
@@ -40,8 +41,9 @@ export default function Contact() {
               what you need.
             </h2>
             <p>
-              Book a conversation with Jackson. We’ll talk about what is on your
-              plate, where you need help, and whether our team is the right fit.
+              Book a conversation with the adapt22 team. We’ll talk about what
+              is on your plate, where you need help, and whether our team is the
+              right fit.
             </p>
             <a
               className="button"
@@ -49,7 +51,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Find a time to talk <span aria-hidden="true">↗</span>
+              Find a time to talk <Arrow />
               <span className="sr-only"> (opens Calendly in a new tab)</span>
             </a>
           </div>

@@ -381,3 +381,45 @@ test("enlarged text spacing reflows on narrow screens", async ({ page }) => {
     }
   }
 });
+
+test("drawn arrows, native menu colors, team booking and current icons", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/");
+  expect(
+    await page.locator("main,header,footer").allTextContents(),
+  ).not.toEqual(expect.arrayContaining([expect.stringMatching(/[↗↓]/)]));
+  expect(await page.locator("[data-ui-arrow] svg").count()).toBeGreaterThan(5);
+  await expect(page.locator(".menu-toggle")).toHaveCSS(
+    "color",
+    "rgb(21, 25, 30)",
+  );
+  await expect(page.locator(".menu-toggle")).toHaveCSS(
+    "-webkit-text-fill-color",
+    "rgb(21, 25, 30)",
+  );
+  if (page.viewportSize().width <= 700) {
+    await page.locator(".menu-toggle").click();
+    await expect(page.locator(".menu-toggle")).toContainText("Close");
+    await expect(page.locator(".menu-toggle")).toHaveCSS(
+      "color",
+      "rgb(21, 25, 30)",
+    );
+  }
+  await page.goto("/contact");
+  await expect(page.locator(".contact-options")).toContainText(
+    "Book a conversation with the adapt22 team.",
+  );
+  await expect(
+    page.locator('link[rel="icon"][href="/favicon-c3.svg"]'),
+  ).toHaveCount(1);
+  for (const url of [
+    "/favicon-c3.svg",
+    "/favicon-c3.ico",
+    "/apple-touch-icon-c3.png",
+    "/a22-c3-192.png",
+    "/a22-c3-512.png",
+  ])
+    expect((await request.get(url)).status()).toBe(200);
+});

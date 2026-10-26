@@ -24,7 +24,14 @@ export const metadata = {
   },
   twitter: { card: "summary_large_image" },
   manifest: "/site.webmanifest",
-  icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
+  icons: {
+    icon: [
+      { url: "/favicon-c3.ico", sizes: "any" },
+      { url: "/favicon-c3.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon-c3.ico",
+    apple: "/apple-touch-icon-c3.png",
+  },
 };
 export default function Layout({ children }) {
   return (

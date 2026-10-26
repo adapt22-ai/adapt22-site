@@ -1,3 +1,4 @@
+import Arrow from "@/components/Arrow";
 import Link from "@/components/RouteLink";
 import Mark from "./Mark";
 import { site } from "../lib/site";
@@ -15,7 +16,9 @@ export default function Footer() {
           <span>Accountable for the work.</span>
         </p>
         <div>
-          <Link href="/contact">Talk to our team ↗</Link>
+          <Link href="/contact">
+            Talk to our team <Arrow />
+          </Link>
         </div>
       </div>
       <div className="footer-bottom">
