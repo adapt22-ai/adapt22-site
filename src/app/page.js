@@ -31,7 +31,8 @@ export default function Home() {
             <p>
               Technology leadership, embedded in your business.
               <br />
-              We set the direction, lead the team, and own the execution.
+              You set the business priorities. We lead the technology team and
+              own the execution.
             </p>
             <Link href="/services" className="button button-light">
               Explore what we do <Arrow />
@@ -111,13 +112,13 @@ export default function Home() {
           sizes="100vw"
         />
         <div>
-          <p className="eyebrow">A longer view</p>
+          <p className="eyebrow">From priorities to delivery</p>
           <h2>
-            Make the next move.
+            Know what needs doing.
             <br />
-            Keep the whole
+            Know who’s
             <br />
-            picture in view.
+            responsible.
           </h2>
           <p>
             A practical roadmap. Clear priorities. A team that stays involved.

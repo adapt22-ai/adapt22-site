@@ -12,8 +12,8 @@ export default function Services() {
     <>
       <PageIntro
         label="What we do"
-        image="/images/coast.jpg"
-        imageAlt="Slate ocean water and a pale horizon"
+        image="/images/alpine-valley.jpg"
+        imageAlt="A winding path through an alpine valley, with pine forests and open mountain slopes"
         title={
           <>
             The right work.
@@ -21,7 +21,7 @@ export default function Services() {
             Done properly.
           </>
         }
-        description="We take responsibility for the technology function: setting the roadmap, leading the people and providers, and carrying the work through. AI, Salesforce, data, and delivery sit inside that wider business responsibility."
+        description="We take responsibility for the technology function: turning your business priorities into a roadmap, leading the people and providers, and carrying the work through. AI, Salesforce, data, and delivery sit inside that wider business responsibility."
       />
       <section className="service-overview section">
         <p className="eyebrow">One partnership, with the depth to deliver</p>

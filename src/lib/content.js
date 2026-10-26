@@ -5,7 +5,7 @@ const capabilities = [
     title: "Fractional technology leadership",
     short: "Your technology, with a team responsible for it.",
     description:
-      "A technology lead who works as part of your business, backed by a team that carries the work through. We take responsibility for the roadmap, budget, vendors, systems, and day-to-day priorities.",
+      "A technology lead who works as part of your business, backed by a team that carries the work through. You set the business priorities and approve the investment. We turn that into a technology roadmap, lead the people and vendors, and take responsibility for delivery.",
     items: [
       "Technology strategy and investment priorities",
       "Vendor selection, contracts, and accountability",
@@ -70,20 +70,22 @@ const capabilities = [
   },
   {
     slug: "enterprise-modernization",
-    title: "Enterprise modernization",
+    title: "IT infrastructure & modernization",
     short: "Move forward without losing what works.",
     description:
-      "Replace the parts of your technology that hold the business back. Plan the migration around real dependencies, day-to-day operations, and the people who need to keep working through the change.",
+      "Take responsibility for the IT your team relies on: devices, identity, networks, workplace platforms, and providers. Modernize existing systems or separate a business from a shared IT environment, with a plan to keep people working through the change.",
     items: [
-      "CRM, business systems, and cloud planning",
-      "Legacy application and data migration",
-      "Identity, permissions, and governance",
-      "Rollout planning, training, and adoption",
+      "Hardware, device management, and endpoint security",
+      "Identity, access, permissions, and account transitions",
+      "Networks, connectivity, and cloud infrastructure",
+      "Microsoft 365, Google Workspace, and workplace systems",
+      "IT separations, carve-outs, and provider transitions",
+      "Application and data migration, cutover, and recovery planning",
     ],
     result:
       "A migration plan with dependencies, rollback steps, and responsibilities made explicit.",
     trigger:
-      "Legacy systems are expensive to maintain, hard to connect, or too fragile to change with confidence.",
+      "You need to modernize your IT, establish independent systems after a separation, or coordinate providers without disrupting daily operations.",
   },
   {
     slug: "integrations-data",
@@ -134,7 +136,7 @@ export const serviceGroups = [
     id: "leadership",
     title: "Embedded technology leadership",
     description:
-      "We join your leadership team, set the technology roadmap, lead the people and providers, and stay accountable for execution.",
+      "You set the business priorities. We turn them into a technology roadmap, lead the people and providers, and stay accountable for execution.",
     href: "/services/technology-leadership",
     slugs: ["technology-leadership", "growth-transaction-readiness"],
   },
@@ -142,7 +144,7 @@ export const serviceGroups = [
     id: "ai",
     title: "Applied AI & automation",
     description:
-      "Turn AI into working business processes. We choose the use cases, connect the data, and own the rollout and oversight.",
+      "Turn AI into working business processes. We agree the use cases with you, connect the data, and own the rollout and oversight.",
     href: "/services/applied-ai",
     slugs: ["applied-ai"],
   },
@@ -150,7 +152,7 @@ export const serviceGroups = [
     id: "business-systems",
     title: "Business systems & delivery",
     description:
-      "Make Salesforce, data, and core systems work as one. Our delivery team handles modernization, integrations, and purpose-built applications.",
+      "Make Salesforce, data, and IT infrastructure work together. Our team handles hardware, modernization, business separations, integrations, and purpose-built applications.",
     href: "/services#business-systems",
     slugs: [
       "salesforce-consulting",

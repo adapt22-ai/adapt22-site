@@ -2456,3 +2456,245 @@ summary {
     font-size: 16px;
   }
 }
+
+/* Review 4: natural color, visible subjects, and steady reading surfaces. */
+.page-banner .intro-image img {
+  filter: saturate(0.86);
+}
+.page-banner:after {
+  background: linear-gradient(
+    90deg,
+    rgba(21, 25, 30, 0.88),
+    rgba(21, 25, 30, 0.57) 55%,
+    rgba(21, 25, 30, 0.12)
+  );
+}
+.nature-break img {
+  filter: saturate(0.85);
+}
+.subject-banner.page-intro {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background: #4e5b63;
+}
+.subject-banner .intro-text {
+  width: 47%;
+  max-width: 650px;
+}
+.subject-banner h1 {
+  font-size: clamp(42px, 4.5vw, 68px);
+}
+.subject-banner .intro-copy {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.subject-banner .intro-image img {
+  width: 57% !important;
+  left: auto !important;
+  right: 0 !important;
+  object-fit: contain;
+  object-position: right center;
+  mask-image: linear-gradient(90deg, transparent, black 15%);
+}
+.approach-intro.page-intro {
+  background: #c5cbcd;
+  color: var(--ink);
+}
+.approach-intro .intro-image {
+  background: transparent;
+}
+.approach-intro .intro-image img {
+  width: 43% !important;
+}
+.approach-intro .intro-copy {
+  color: var(--ink);
+}
+.approach-intro .eyebrow {
+  color: var(--slate);
+}
+.approach-intro:after {
+  background: linear-gradient(
+    90deg,
+    #c8cdce,
+    rgba(200, 205, 206, 0.65) 40%,
+    transparent 65%
+  );
+}
+.summit-intro.page-intro {
+  min-height: 620px;
+  height: 50vw;
+  max-height: 800px;
+}
+.summit-intro .intro-image img {
+  width: 100% !important;
+  object-fit: cover;
+  object-position: center top;
+  mask-image: none;
+}
+.summit-intro:after {
+  background: linear-gradient(
+    90deg,
+    rgba(21, 25, 30, 0.88),
+    rgba(21, 25, 30, 0.65) 44%,
+    rgba(21, 25, 30, 0.08) 72%
+  );
+}
+.service-overview,
+.ownership {
+  background: var(--warm-paper);
+  color: var(--ink);
+}
+.service-overview > .eyebrow,
+.ownership .eyebrow {
+  color: var(--slate);
+}
+.service-overview article p,
+.ownership > div > p:not(.eyebrow),
+.ownership li {
+  color: var(--slate);
+}
+.service-overview article,
+.ownership li {
+  border-color: #343c4538;
+}
+.engagements,
+.method,
+.values {
+  background: var(--warm-paper);
+}
+.cta {
+  background: var(--sand);
+}
+.logo-family .logo-concepts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.logo-family .logo-large {
+  height: 280px;
+}
+.logo-overview {
+  background: var(--reading);
+}
+.logo-overview h2 {
+  font-size: clamp(32px, 4vw, 54px);
+  margin: 22px 0;
+}
+.logo-overview .overview-note {
+  max-width: 680px;
+  color: var(--slate);
+  line-height: 1.8;
+}
+.logo-overview > div {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  margin-top: 35px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.logo-overview a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  gap: 16px;
+  padding: 20px 12px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.2s;
+}
+.logo-overview a:hover {
+  background: var(--sand);
+}
+.logo-overview svg {
+  width: 76px;
+  height: 76px;
+  color: var(--ink);
+}
+.logo-overview span {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+[data-concept] {
+  scroll-margin-top: 110px;
+}
+@media (min-width: 1600px) {
+  .logo-family .logo-concepts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1000px) {
+  .logo-overview > div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1000px) and (min-width: 701px) {
+  .subject-banner.page-intro {
+    min-height: 650px;
+  }
+  .subject-banner .intro-text {
+    width: 49%;
+  }
+  .subject-banner h1 {
+    font-size: 44px;
+  }
+  .approach-intro .intro-image img {
+    width: 50% !important;
+  }
+}
+@media (max-width: 700px) {
+  .subject-banner.page-intro {
+    display: block;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding-top: calc(100vw + 25px);
+    padding-bottom: 45px;
+    background: var(--slate);
+    color: var(--paper);
+  }
+  .subject-banner .intro-text {
+    width: 100%;
+    max-width: none;
+  }
+  .subject-banner h1 {
+    font-size: clamp(38px, 10.8vw, 53px);
+  }
+  .subject-banner .intro-image {
+    height: 100vw;
+  }
+  .subject-banner .intro-image img {
+    width: 100% !important;
+    object-fit: contain;
+    object-position: center top;
+    mask-image: linear-gradient(black 80%, transparent);
+  }
+  .summit-intro.page-intro {
+    padding-top: calc(66.68vw + 25px);
+  }
+  .summit-intro .intro-image {
+    height: 66.68vw;
+  }
+  .subject-banner:after {
+    background: none;
+  }
+  .approach-intro .intro-copy,
+  .approach-intro .eyebrow {
+    color: var(--paper);
+  }
+  .logo-family .logo-concepts {
+    grid-template-columns: 1fr;
+  }
+  .logo-family .logo-large {
+    height: 240px;
+  }
+  .logo-overview a {
+    min-height: 112px;
+    padding: 15px 7px;
+    gap: 10px;
+  }
+  .logo-overview svg {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -58,3 +58,10 @@ The owner's later first-pass review supersedes earlier copy and visual choices:
 - Match the portrait section to the existing grayscale photo background; retain uncropped arms.
 - Restrained brand/navigation hover and press motion, with reduced-motion behavior. Every non-anchor page navigation must begin at the top.
 - Expand the private triskelion review to twelve studies in four families. Keep existing site logo unchanged pending a decision.
+
+## Owner review 4: superseding direction
+- The owner sets business priorities; adapt22 leads technology work, the people/providers, and execution. Avoid language claiming authority over the owner's direction.
+- Plain descriptions replace the vague longer-view mountain slogans.
+- Keep the homepage photograph as the alpine/natural-color anchor. Replace generic Services water imagery. Preserve the bison's recognizable outline and the About mountain peak across breakpoints; audit whole-page color transitions.
+- Explicitly include IT hardware, infrastructure, workplace platforms, identity, networking, separations and provider transitions within modernization. Do not publish private client or project names.
+- Keep G1, G2, F1 and B2 as references only. Remove other earlier studies; explore new triskelion structures without treating the shortlist as approval.

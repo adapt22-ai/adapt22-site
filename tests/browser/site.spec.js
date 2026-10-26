@@ -215,5 +215,49 @@ test("full width banners, non-repeating imagery, and no public addresses", async
   }
   expect(new Set(sources).size).toBe(4);
   await page.goto("/brand-review");
-  await expect(page.locator("[data-concept]")).toHaveCount(12);
+  await expect(page.locator("[data-concept]")).toHaveCount(16);
+});
+
+test("owner authority, explicit IT scope, and uncropped subject banners", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator(".hero-bottom")).toContainText(
+    "You set the business priorities",
+  );
+  await expect(page.locator(".nature-break")).toContainText(
+    /Know who’s\s*responsible/,
+  );
+  await page.goto("/services/enterprise-modernization");
+  await expect(page.locator("main")).toContainText(
+    "Hardware, device management",
+  );
+  await expect(page.locator("main")).toContainText(
+    "IT separations, carve-outs",
+  );
+  for (const path of ["/approach", "/about"]) {
+    await page.goto(path);
+    const fit = await page
+      .locator(".subject-banner img")
+      .evaluate((i) => getComputedStyle(i).objectFit);
+    expect(fit).toBe(
+      path === "/about" && page.viewportSize().width > 700
+        ? "cover"
+        : "contain",
+    );
+    if (path === "/about")
+      await expect(page.locator(".subject-banner img")).toHaveCSS(
+        "object-position",
+        "50% 0%",
+      );
+  }
+  await page.goto("/brand-review");
+  await expect(page.locator(".logo-overview a")).toHaveCount(16);
+  await page.locator('.logo-overview a[href="#concept-N8"]').click();
+  await expect(page).toHaveURL(/#concept-N8$/);
+  await expect(page.locator('[data-concept="N8"]')).toBeInViewport();
+  for (const id of ["G1", "G2", "F1", "B2", "N1", "N12"])
+    await expect(page.locator(`[data-concept="${id}"]`)).toHaveCount(1);
+  for (const id of ["G3", "F2", "F3", "E1", "E2", "E3", "B1", "B3"])
+    await expect(page.locator(`[data-concept="${id}"]`)).toHaveCount(0);
 });

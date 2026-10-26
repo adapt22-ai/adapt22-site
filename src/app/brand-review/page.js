@@ -7,106 +7,130 @@ export const metadata = {
 };
 const families = [
   {
-    id: "geometric",
-    label: "01 / Geometric",
-    title: "Structure & precision",
-    copy: "Clear construction, measured angles, and three equal responsibilities. These lean toward a precise, ordered company identity.",
+    id: "references",
+    label: "Reference shortlist / Not a selection",
+    title: "The four worth keeping in view",
+    copy: "G1, G2, F1, and B2 are retained exactly as comparison references. All other previous studies have been removed. None of these four is treated as your chosen direction.",
     concepts: [
       [
         "current",
         "G1",
         "Current angular",
-        "The current website mark. Keep this as the baseline when comparing the others.",
+        "The existing website mark, unchanged.",
       ],
       [
         "open",
         "G2",
         "Open geometry",
-        "A lighter, rounded interpretation of the current construction.",
+        "The lighter open construction from the last review.",
       ],
-      [
-        "triad",
-        "G3",
-        "Triad",
-        "Three compact, angular arms with a stronger solid silhouette.",
-      ],
-    ],
-  },
-  {
-    id: "fluid",
-    label: "02 / Fluid",
-    title: "Movement & continuity",
-    copy: "More expressive, with a stronger connection to a traditional triskelion. These are the closest family to the sense of natural movement you described.",
-    concepts: [
       [
         "swept",
         "F1",
         "Swept",
-        "The fluid option from the previous review, retained for comparison.",
-      ],
-      [
-        "spiral",
-        "F2",
-        "Spiral",
-        "A more recognizably spiral form, with three turning arms and open ends.",
-      ],
-      [
-        "orbit",
-        "F3",
-        "Orbit",
-        "Three broad arcs balancing movement with a simpler outline.",
-      ],
-    ],
-  },
-  {
-    id: "engineered",
-    label: "03 / Engineered",
-    title: "Connection & construction",
-    copy: "Ribbon-like forms and deliberate turns. A more technical interpretation that still keeps the three-arm foundation.",
-    concepts: [
-      [
-        "ribbon",
-        "E1",
-        "Ribbon",
-        "Folded, continuous-looking strokes and a compact central connection.",
-      ],
-      [
-        "fold",
-        "E2",
-        "Fold",
-        "Three directional bands with a more pronounced change of angle.",
-      ],
-      [
-        "monoline",
-        "E3",
-        "Circuit",
-        "A restrained, fine-line option with right-angle returns.",
-      ],
-    ],
-  },
-  {
-    id: "bold",
-    label: "04 / Emblematic",
-    title: "Presence & recognition",
-    copy: "More visual weight and a stronger silhouette. Useful to compare for small icons, proposals, and a company identity that needs to stand on its own.",
-    concepts: [
-      [
-        "blades",
-        "B1",
-        "Momentum",
-        "Three curved, filled arms that suggest forward motion without adding an arrow.",
+        "The filled, curved return from the last review.",
       ],
       [
         "interlock",
         "B2",
         "Interlock",
-        "Three linked loops with a firmer, more substantial stroke.",
+        "The linked angular loops from the last review.",
+      ],
+    ],
+  },
+  {
+    id: "loops",
+    label: "New studies / 01–04",
+    title: "Open loops & returning arms",
+    copy: "Four different ways for each arm to turn back toward the center. Compare the open space, the shape of the return, and how distinctly the three arms read at a small size.",
+    concepts: [
+      [
+        "helix",
+        "N1",
+        "Helix",
+        "Long, open turns with a smaller internal curl. More organic than the reference shortlist.",
       ],
       [
-        "seal",
-        "B3",
-        "Enclosed",
-        "A triskelion enclosed in a fine ring, giving it the feel of a deliberate company emblem.",
+        "return",
+        "N2",
+        "Return",
+        "Broad rounded returns with short inward stems. A more compact, substantial silhouette.",
+      ],
+      [
+        "oval",
+        "N3",
+        "Oval",
+        "Three elongated loops leave more air around the center.",
+      ],
+      [
+        "hook",
+        "N4",
+        "Square return",
+        "A straight stem meets a rounded outer return, with deliberately flat terminals.",
+      ],
+    ],
+  },
+  {
+    id: "carved",
+    label: "New studies / 05–08",
+    title: "Carved forms & negative space",
+    copy: "Solid silhouettes rather than outlined loops. Each uses a different internal cut: stepped, triangular, faceted, or curved. View these in one color before judging the bronze version.",
+    concepts: [
+      [
+        "cutstone",
+        "N5",
+        "Cut stone",
+        "Stepped inner cuts and three faceted returns. A heavier alternative to G2.",
+      ],
+      [
+        "aperture",
+        "N6",
+        "Aperture",
+        "Three folded planes leave angular openings around a triangular center.",
+      ],
+      [
+        "chisel",
+        "N7",
+        "Chisel",
+        "Offset facets create a less regular outside edge and a sharply cut interior.",
+      ],
+      [
+        "crescent",
+        "N8",
+        "Crescent",
+        "A solid crescent-shaped arm with a broad outer curve and tapered inner return.",
+      ],
+    ],
+  },
+  {
+    id: "connected",
+    label: "New studies / 09–12",
+    title: "Interwoven bands & parallel lines",
+    copy: "These explore the connection between the arms more directly: a folded band, an angular link, a broad arc, and a double contour. They keep the three-part construction while changing its weight and rhythm.",
+    concepts: [
+      [
+        "weave",
+        "N9",
+        "Woven band",
+        "Filled bands with narrow internal channels and a compact center.",
+      ],
+      [
+        "link",
+        "N10",
+        "Open link",
+        "An angular return with deliberate gaps and a more open center than B2.",
+      ],
+      [
+        "arc",
+        "N11",
+        "Broad arc",
+        "Wide circular turns with restrained internal detail.",
+      ],
+      [
+        "contour",
+        "N12",
+        "Double contour",
+        "Two parallel lines describe each return. A quieter, more intricate study.",
       ],
     ],
   },
@@ -117,16 +141,41 @@ export default function BrandReview() {
     <>
       <PageIntro
         image={false}
-        label="Private working review / 12 vector studies"
+        label="Private working review / 4 references + 12 new studies"
         title={
           <>
-            One foundation.
+            Keep the foundation.
             <br />
-            Twelve directions.
+            Explore the form.
           </>
         }
-        description="Four groups of triskelion studies, including the three earlier options. Compare the character of the group first, then the details of an individual mark. The current website logo remains unchanged."
+        description="Your four reference marks, followed by twelve newly drawn triskelion studies. These explore different structures, not just different colors or line weights. The website logo remains unchanged."
       />
+      <section
+        className="logo-overview section"
+        aria-labelledby="overview-title"
+      >
+        <p className="eyebrow">Compare the silhouettes first</p>
+        <h2 id="overview-title">All sixteen, side by side.</h2>
+        <p className="overview-note">
+          The first four are your references. N1–N12 are new. Select a mark to
+          see its larger study and small-size test.
+        </p>
+        <div>
+          {families
+            .flatMap((f) => f.concepts)
+            .map(([variant, id, title]) => (
+              <a
+                href={`#concept-${id}`}
+                key={id}
+                aria-label={`${id}: ${title}`}
+              >
+                <LogoConcept variant={variant} />
+                <span>{id}</span>
+              </a>
+            ))}
+        </div>
+      </section>
       <nav className="logo-family-nav section" aria-label="Logo families">
         {families.map((f) => (
           <a href={"#" + f.id} key={f.id}>
@@ -145,7 +194,7 @@ export default function BrandReview() {
           </div>
           <div className="logo-concepts section">
             {f.concepts.map(([variant, id, title, copy]) => (
-              <article key={id} data-concept={id}>
+              <article key={id} id={`concept-${id}`} data-concept={id}>
                 <p className="eyebrow">
                   {id} / {title}
                 </p>
@@ -179,12 +228,12 @@ export default function BrandReview() {
           Then refine the mark.
         </h2>
         <p>
-          Compare G1 with the fluid group first. If the fluid group feels
-          closer, F1 and F2 give us two distinct starting points. If you prefer
-          a stronger company emblem, compare B2 and B3. Each direction still
-          needs final optical refinement and identity clearance before adoption.
-          These are newly drawn studies, not recovered versions of the missing
-          earlier artwork.
+          Start with the silhouette at the small-size test. Then compare how the
+          arms connect and how much open space remains. The reference shortlist
+          is here to help you explain what is closer, not to force a choice.
+          These are exploration drawings; a selected direction still needs
+          optical refinement and identity clearance before adoption. None is
+          claimed to reproduce the missing earlier artwork.
         </p>
       </section>
     </>

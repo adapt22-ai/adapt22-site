@@ -22,3 +22,8 @@
 - Contact: `public/images/lake.jpg`, Zak Bernadsky, https://unsplash.com/photos/a-mountain-with-a-lake-in-front-of-it-xk-zYQSopow ; source https://images.unsplash.com/photo-1643662372752-b4263e1b41ab . Mountain lake reflection; standard Unsplash license.
 - Home's secondary ridge scene remains unique to that homepage placement; Services, Approach, About, and Contact use four distinct sources as full-width backgrounds. The original homepage mountain is preserved.
 - Logo review expanded to 12 newly authored SVG studies in four families: geometric, fluid, engineered, and emblematic. No new study has been adopted as the website logo.
+
+## Review 4
+- Services: `public/images/alpine-valley.jpg`, Florian Schindler, https://unsplash.com/photos/winding-path-through-mountain-valley-fzt9wBqln-8 ; source https://images.unsplash.com/photo-1791190291291-c521b1e30d9e . Standard Unsplash license explicitly displayed on the source page, checked October 26, 2026. Downloaded at 2400px, quality 85. Warm alpine pine valley replaces the generic ocean surface; the earlier file is preserved but unused.
+- Bison and summit source files unchanged. Responsive composition preserves the bison's complete outline and the summit's peak. CSS grading retains more natural source color.
+- Logo review now contains four unchanged reference studies (G1/G2/F1/B2) and twelve new authored SVG studies (N1–N12). Rejected prior options removed from the review. No study adopted as the final identity.

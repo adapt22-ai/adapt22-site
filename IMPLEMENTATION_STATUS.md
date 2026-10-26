@@ -1,6 +1,11 @@
 # Implementation status
 
-Updated October 26, 2026 (America/Chicago), after owner review 3.
+Updated October 26, 2026 (America/Chicago), after owner review 4.
+
+## Review 4 implementation
+Owner-priority wording replaces direction-setting claims. Homepage mountain copy now names planning and responsibility. Services uses a new alpine valley; bison outline and About summit peak are preserved with responsive composition. Warm reading surfaces reduce repeated dark/light transitions. IT infrastructure and modernization explicitly includes hardware, identity, networks, workplace systems, separations and cutover. Four logo references retained; twelve new structures and an equal-scale overview added.
+
+See docs/REVIEW_4.md. Local verification: build passes; 232 browser checks pass across eight Chromium/WebKit screen configurations; 56 focused checks pass after final banner/overview refinements; 10 contact-handler tests pass; production dependency audit reports zero vulnerabilities. Full-page desktop/mobile visual review completed, including both scroll directions. No real emails or bookings. Protected deployment verification follows this development commit. Prior revision 3 evidence below remains historical.
 
 ## Current branch and scope
 Development branch `website-3-rebrand`; draft PR https://github.com/adapt22-ai/adapt22-site/pull/2 . Production/main/DNS remain outside the authorized scope. Protected revision 3 preview: https://adapt22-site-50z9bzmlb-adapt22s-projects.vercel.app . Logo review: https://adapt22-site-50z9bzmlb-adapt22s-projects.vercel.app/brand-review . Implementation commit ea92b5cb9ac285e157b26c45636a179aaf669a35; deployment dpl_FkNKcd2dbq6zsgnytaNGomrJmC6Y. Prior immutable preview URLs do not update.

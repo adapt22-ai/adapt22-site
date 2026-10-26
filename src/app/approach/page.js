@@ -40,7 +40,7 @@ export default function Approach() {
         label="How we work"
         image="/images/bison.jpg"
         imageAlt="A bison standing in falling snow, framed by muted brown and slate tones"
-        className="approach-intro"
+        className="subject-banner approach-intro"
         title={
           <>
             Your team.

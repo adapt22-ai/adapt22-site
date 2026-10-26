@@ -38,6 +38,7 @@ export default function About() {
     <>
       <PageIntro
         image="/images/summit.jpg"
+        className="subject-banner summit-intro"
         imageAlt="A dark alpine peak surrounded by snow and mist"
         label="The company behind the work"
         title={
@@ -81,10 +82,11 @@ export default function About() {
             sense to all three.
           </p>
           <p>
-            Jackson leads the client relationship and helps set the direction.
-            The team brings the product, engineering, systems, and data skills
-            needed to deliver it. We stay close to the day-to-day work instead
-            of leaving you with a recommendation and another supplier to manage.
+            Jackson leads the client relationship and translates your business
+            priorities into the technology plan. The team brings the product,
+            engineering, systems, and data skills needed to deliver it. We stay
+            close to the day-to-day work instead of leaving you with a
+            recommendation and another supplier to manage.
           </p>
           <p className="founder-signoff">
             One accountable relationship. A team behind the work.

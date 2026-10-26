@@ -38,6 +38,7 @@ export function PageIntro({
   return (
     <section
       className={`page-intro section ${image ? "page-banner" : ""} ${className}`}
+      style={image ? { "--banner-photo": `url("${image}")` } : undefined}
     >
       <div className="intro-text">
         <p className="eyebrow">{label}</p>

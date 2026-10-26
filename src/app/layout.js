@@ -19,7 +19,7 @@ export const metadata = {
     locale: "en_US",
     title: "adapt22 | Built for what comes next.",
     description:
-      "A technology leader and delivery team inside your business. We set direction and stay accountable for execution.",
+      "A technology leader and delivery team inside your business. Your business priorities, with our team accountable for technology delivery.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },

@@ -13,3 +13,4 @@ Read ADAPT22_WEBSITE_3.0_MASTER_BRIEF.md and IMPLEMENTATION_STATUS.md before con
 - The Website 3.0 workspace is a complete Git checkout on website-3-rebrand. The original Mac checkouts remain separate and unchanged. A recovery Git bundle is available locally and excluded from Git.
 
 - Read docs/REVIEW_3.md for the owner’s latest direction. The later review 3 supersedes the email direction: do not publish any email addresses or mailto links, including metadata and notices. Use adapt22 LLC without a space in the name. Preserve team positioning without invented individuals. Current logo is provisional; /brand-review is staging-only and must never be linked in public navigation.
+- Read docs/REVIEW_4.md for the latest owner feedback. Owner controls business priorities; adapt22 leads technology execution. Preserve the bison outline and summit peak. G1/G2/F1/B2 are references only; N1–N12 are new exploration studies, not adopted identity.
