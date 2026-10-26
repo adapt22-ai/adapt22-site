@@ -2,7 +2,11 @@
 
 Updated October 26, 2026 (America/Chicago), after prelaunch audit.
 
-## Production release: latest status
+## Mobile consistency update: latest status
+
+Owner requested and authorized live fixes for iPhone emoji arrows, blue Menu/Close controls, team booking copy and favicon discovery. PR #3 merged as a91aac712f9ba7dfdec21965c042079715bdd1e5; fresh production dpl_3kajE5cvWxQpiCq95cMcXXVgmFCs is READY at https://www.adapt22.ai/ . All arrows are shared decorative SVGs; menu colors explicit; contact now invites booking with the adapt22 team. Fresh C3 favicon URLs published and 12 old icon/manifest cache entries purged. Seven live icon files match C3 sources. Build, 11 handler tests, 32 focused local checks and eight live checks pass across eight Chromium/WebKit configurations. See docs/MOBILE_FIXES.md for evidence and external favicon-cache limits. No real emails, bookings, DNS changes or paid upgrades.
+
+## Production release: earlier launch evidence
 
 Owner explicitly approved going live. PR #2 merged into main as b060cac20ba0af408101473489eef15edda09de9. Fresh production deployment dpl_3UNMEdEKZm5hoGdLte92jLTX6Ykk is READY and serves https://www.adapt22.ai/ . This was a production-environment build, not preview promotion. All 15 public routes and release assets passed HTTP smoke checks; production indexing enabled, private brand review 404, contact enabled, invalid-token rejection verified, analytics scripts present, initial error/fatal query empty. Latest reviewed-source CI passed. See docs/PRODUCTION_RELEASE.md for rollback target and precise follow-up limits. Earlier hold/no-production statements below are historical and superseded by this section. No further live edits or real emails are implied by the completed release.
 
