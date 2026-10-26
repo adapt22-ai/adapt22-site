@@ -2781,3 +2781,5 @@ main h3 {
 @media (max-width: 950px) {
   .header .nav { background: var(--slate); color: var(--paper); border-bottom-color: rgba(242,240,235,.2); }
 }
+
+.footer-bottom { color: #d5cfc4; }
