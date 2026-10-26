@@ -12,7 +12,7 @@ export default function Image() {
         justifyContent: "space-between",
         width: "100%",
         height: "100%",
-        background: "#15191e",
+        background: "#343c45",
         color: "#f2f0eb",
         padding: 70,
       }}
@@ -26,7 +26,7 @@ export default function Image() {
           letterSpacing: -2,
         }}
       >
-        <div style={{ display: "flex", color: "#9b8264" }}>
+        <div style={{ display: "flex", color: "#f2f0eb" }}>
           <Mark size={70} />
         </div>
         adapt22

@@ -9,7 +9,7 @@ test("private direction review updates every sample and stays accessible", async
     "Pick the direction.",
   );
   await expect(
-    page.getByRole("radio", { name: "A Ink & bronze", exact: true }),
+    page.getByRole("radio", { name: "C Slate & landscape", exact: true }),
   ).toBeChecked();
   for (const [id, name] of [
     ["A", "Ink & bronze"],

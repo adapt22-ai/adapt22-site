@@ -7,7 +7,7 @@ const directions = [
     id: "A",
     name: "Ink & bronze",
     mood: "Confident. Warm. Established.",
-    note: "Recommended: the closest continuation of the website. Bronze on deep ink for recognition; warm photography for the wider canvas.",
+    note: "An alternative continuation of the earlier website. Bronze on deep ink for recognition; warm photography for the wider canvas.",
     canvas: "#15191E",
     mark: "#9B8264",
     text: "#F2F0EB",
@@ -89,7 +89,7 @@ function Slogan({ slogan }) {
   );
 }
 export default function BrandDirections() {
-  const [choice, setChoice] = useState("A");
+  const [choice, setChoice] = useState("C");
   const [saying, setSaying] = useState("1");
   const [guides, setGuides] = useState(true);
   const direction = directions.find((d) => d.id === choice);
@@ -139,7 +139,7 @@ export default function BrandDirections() {
                 <Avatar tiny />
                 <span>
                   {d.id}
-                  {d.id === "A" ? <small>Recommended</small> : null}
+                  {d.id === "C" ? <small>Selected direction</small> : null}
                 </span>
               </div>
               <strong>{d.name}</strong>
@@ -415,10 +415,9 @@ export default function BrandDirections() {
           Pick a saying.
         </h2>
         <p>
-          My starting recommendation is <strong>A + saying 1</strong>: ink and
-          bronze, with “Your technology. Our responsibility.” It connects most
-          closely to the website and makes the service clear. Choose another
-          combination above if it feels more like adapt22.
+          Your chosen direction is <strong>C + saying 1</strong>: slate and
+          landscape, with “Your technology. Our responsibility.” White branding
+          stays clear against the slate and photographic backgrounds.
         </p>
         <p>
           Tell me your letter and saying number in the chat, plus anything you’d

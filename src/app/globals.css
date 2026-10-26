@@ -2766,3 +2766,18 @@ main h3 {
   width: 100%;
   height: 100%;
 }
+
+/* Owner-selected Slate & landscape: preview-only white identity. */
+.header, .footer { background: var(--slate); color: var(--paper); }
+.header { border-bottom-color: rgba(242,240,235,.16); box-shadow: none; }
+.header .brand, .header .brand svg, .footer .brand, .footer .brand svg,
+.footer-a22, .founder-note > svg, .values-grid > svg { color: var(--paper); }
+.header .menu-toggle { color: var(--paper); -webkit-text-fill-color: var(--paper); }
+.header .nav-cta { border-color: rgba(242,240,235,.7); }
+.header .nav-cta:hover { background: var(--paper); color: var(--slate); }
+.header a:focus-visible, .header button:focus-visible { outline-color: var(--paper); }
+.values { background: var(--slate); color: var(--paper); }
+.values-grid p { color: #dce0e3; }
+@media (max-width: 950px) {
+  .header .nav { background: var(--slate); color: var(--paper); border-bottom-color: rgba(242,240,235,.2); }
+}

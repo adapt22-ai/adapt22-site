@@ -26,3 +26,5 @@ Read ADAPT22_WEBSITE_3.0_MASTER_BRIEF.md and IMPLEMENTATION_STATUS.md before con
 - Mobile follow-up released with owner approval: docs/MOBILE_FIXES.md, main a91aac712f9ba7dfdec21965c042079715bdd1e5. Use shared Arrow.js SVGs for all UI arrows; never Unicode arrows that can become emoji. Menu/Close use explicit ink/WebKit text-fill colors. Contact invitation is the adapt22 team. C3-specific favicon URLs are current; external cached icons may lag.
 
 - Latest task: docs/BRAND_DIRECTIONS.md. Owner requests a small private direction review before creating social/profile/banner/video-background/signature assets. /brand-directions compares three approved-palette systems and three independently selectable sayings. No final asset production, uploads, account changes, identity replacement, or live release authorized. Keep this route protected/noindex and production-404; C3 stays fixed until any future explicit instruction.
+
+- Latest owner choice: C / Slate & landscape with “Your technology. Our responsibility.” White identity on slate website preview only; no live release authorized.

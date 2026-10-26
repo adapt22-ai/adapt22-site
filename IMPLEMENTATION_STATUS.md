@@ -1,3 +1,7 @@
+# White identity preview — current work
+
+Owner selected Slate & landscape and saying 1. Header, footer, homepage mark and About identity block use paper-white branding on slate. Icons and social preview synchronized. Development preview only; production unchanged. Local compiler sandbox blocks Turbopack subprocess ports; validating through webpack and protected Vercel build.
+
 # Implementation status
 
 Updated October 26, 2026 (America/Chicago), after prelaunch audit.

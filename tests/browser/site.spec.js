@@ -393,18 +393,18 @@ test("drawn arrows, native menu colors, team booking and current icons", async (
   expect(await page.locator("[data-ui-arrow] svg").count()).toBeGreaterThan(5);
   await expect(page.locator(".menu-toggle")).toHaveCSS(
     "color",
-    "rgb(21, 25, 30)",
+    "rgb(242, 240, 235)",
   );
   await expect(page.locator(".menu-toggle")).toHaveCSS(
     "-webkit-text-fill-color",
-    "rgb(21, 25, 30)",
+    "rgb(242, 240, 235)",
   );
   if (page.viewportSize().width <= 700) {
     await page.locator(".menu-toggle").click();
     await expect(page.locator(".menu-toggle")).toContainText("Close");
     await expect(page.locator(".menu-toggle")).toHaveCSS(
       "color",
-      "rgb(21, 25, 30)",
+      "rgb(242, 240, 235)",
     );
   }
   await page.goto("/contact");
