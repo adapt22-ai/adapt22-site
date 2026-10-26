@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "@/components/RouteLink";
 export function Arrow() {
   return <span aria-hidden="true">↗</span>;
@@ -34,7 +34,17 @@ export function PageIntro({
   image = "/images/summit.jpg",
   imageAlt = "A snow-covered mountain summit emerging through mist",
   className = "",
+  mobileImage,
 }) {
+  const mobileProps = mobileImage
+    ? getImageProps({
+        src: mobileImage,
+        alt: imageAlt,
+        width: 1024,
+        height: 1536,
+        sizes: "100vw",
+      }).props
+    : null;
   return (
     <section
       className={`page-intro section ${image ? "page-banner" : ""} ${className}`}
@@ -47,7 +57,12 @@ export function PageIntro({
       </div>
       {image && (
         <div className="intro-image">
-          <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
+          <picture>
+            {mobileImage && (
+              <source media="(max-width: 700px)" srcSet={mobileProps.srcSet} />
+            )}
+            <Image src={image} alt={imageAlt} fill priority sizes="100vw" />
+          </picture>
         </div>
       )}
     </section>

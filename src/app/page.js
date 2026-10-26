@@ -112,13 +112,13 @@ export default function Home() {
           sizes="100vw"
         />
         <div>
-          <p className="eyebrow">From priorities to delivery</p>
+          <p className="eyebrow">A plan. A team. Follow-through.</p>
           <h2>
-            Know what needs doing.
+            You run the business.
             <br />
-            Know who’s
+            We lead the
             <br />
-            responsible.
+            technology.
           </h2>
           <p>
             A practical roadmap. Clear priorities. A team that stays involved.

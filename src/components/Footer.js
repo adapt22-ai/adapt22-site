@@ -10,9 +10,9 @@ export default function Footer() {
           <span>adapt22</span>
         </Link>
         <p>
-          Technology leadership.
-          <br />
-          Part of your team. Accountable for the work.
+          <span>Technology leadership.</span>
+          <span>Part of your team.</span>
+          <span>Accountable for the work.</span>
         </p>
         <div>
           <Link href="/contact">Talk to our team ↗</Link>

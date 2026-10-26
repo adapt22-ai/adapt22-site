@@ -38,9 +38,10 @@ export default function Approach() {
     <>
       <PageIntro
         label="How we work"
-        image="/images/bison.jpg"
+        image="/images/bison-banner.png"
+        mobileImage="/images/bison-mobile.png"
         imageAlt="A bison standing in falling snow, framed by muted brown and slate tones"
-        className="subject-banner approach-intro"
+        className="approach-intro"
         title={
           <>
             Your team.

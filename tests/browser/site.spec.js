@@ -157,7 +157,7 @@ test("portrait preserves source aspect ratio and all arms", async ({
   page,
 }) => {
   await page.goto("/about");
-  const image = page.locator(".portrait img");
+  const image = page.locator(".portrait-source");
   await image.scrollIntoViewIfNeeded();
   await image.evaluate((img) => img.decode());
   const result = await image.evaluate((img) => ({
@@ -215,10 +215,10 @@ test("full width banners, non-repeating imagery, and no public addresses", async
   }
   expect(new Set(sources).size).toBe(4);
   await page.goto("/brand-review");
-  await expect(page.locator("[data-concept]")).toHaveCount(16);
+  await expect(page.locator("[data-concept]")).toHaveCount(17);
 });
 
-test("owner authority, explicit IT scope, and uncropped subject banners", async ({
+test("owner authority, four bullets, equal overlay banners, and focused logo review", async ({
   page,
 }) => {
   await page.goto("/");
@@ -226,8 +226,13 @@ test("owner authority, explicit IT scope, and uncropped subject banners", async 
     "You set the business priorities",
   );
   await expect(page.locator(".nature-break")).toContainText(
-    /Know who’s\s*responsible/,
+    /You run the business/,
   );
+  await expect(page.locator(".footer-top p span")).toHaveText([
+    "Technology leadership.",
+    "Part of your team.",
+    "Accountable for the work.",
+  ]);
   await page.goto("/services/enterprise-modernization");
   await expect(page.locator("main")).toContainText(
     "Hardware, device management",
@@ -235,29 +240,55 @@ test("owner authority, explicit IT scope, and uncropped subject banners", async 
   await expect(page.locator("main")).toContainText(
     "IT separations, carve-outs",
   );
-  for (const path of ["/approach", "/about"]) {
+  const sizes = [];
+  for (const path of ["/services", "/approach", "/about", "/contact"]) {
     await page.goto(path);
-    const fit = await page
-      .locator(".subject-banner img")
-      .evaluate((i) => getComputedStyle(i).objectFit);
-    expect(fit).toBe(
-      path === "/about" && page.viewportSize().width > 700
-        ? "cover"
-        : "contain",
+    const banner = page.locator(".page-banner");
+    sizes.push(
+      await banner.evaluate((e) => ({
+        width: e.clientWidth,
+        height: e.clientHeight,
+      })),
     );
-    if (path === "/about")
-      await expect(page.locator(".subject-banner img")).toHaveCSS(
-        "object-position",
-        "50% 0%",
-      );
+    await expect(banner.locator("img")).toHaveCSS("object-fit", "cover");
+    const text = await banner.locator(".intro-text").boundingBox();
+    const box = await banner.boundingBox();
+    expect(text.y).toBeGreaterThanOrEqual(box.y);
+    expect(text.y + text.height).toBeLessThanOrEqual(box.y + box.height);
   }
+  expect(
+    sizes.every(
+      (s) => s.width === sizes[0].width && s.height === sizes[0].height,
+    ),
+  ).toBe(true);
+  await page.goto("/services");
+  for (const card of await page.locator("[data-service]").all())
+    await expect(card.locator("li")).toHaveCount(4);
   await page.goto("/brand-review");
-  await expect(page.locator(".logo-overview a")).toHaveCount(16);
-  await page.locator('.logo-overview a[href="#concept-N8"]').click();
-  await expect(page).toHaveURL(/#concept-N8$/);
-  await expect(page.locator('[data-concept="N8"]')).toBeInViewport();
-  for (const id of ["G1", "G2", "F1", "B2", "N1", "N12"])
+  await expect(page.locator(".logo-overview a")).toHaveCount(17);
+  await page.locator('.logo-overview a[href="#concept-N11-B"]').click();
+  await expect(page).toHaveURL(/#concept-N11-B$/);
+  await expect(page.locator('[data-concept="N11-B"]')).toBeInViewport();
+  for (const id of ["G1", "G2", "F1", "B2", "N2", "N4", "N11", "N11-F"])
     await expect(page.locator(`[data-concept="${id}"]`)).toHaveCount(1);
-  for (const id of ["G3", "F2", "F3", "E1", "E2", "E3", "B1", "B3"])
+  for (const id of [
+    "G3",
+    "F2",
+    "F3",
+    "E1",
+    "E2",
+    "E3",
+    "B1",
+    "B3",
+    "N1",
+    "N3",
+    "N5",
+    "N6",
+    "N7",
+    "N8",
+    "N9",
+    "N10",
+    "N12",
+  ])
     await expect(page.locator(`[data-concept="${id}"]`)).toHaveCount(0);
 });

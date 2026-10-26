@@ -2472,74 +2472,6 @@ summary {
 .nature-break img {
   filter: saturate(0.85);
 }
-.subject-banner.page-intro {
-  min-height: 620px;
-  display: flex;
-  align-items: center;
-  background: #4e5b63;
-}
-.subject-banner .intro-text {
-  width: 47%;
-  max-width: 650px;
-}
-.subject-banner h1 {
-  font-size: clamp(42px, 4.5vw, 68px);
-}
-.subject-banner .intro-copy {
-  font-size: 17px;
-  line-height: 1.8;
-}
-.subject-banner .intro-image img {
-  width: 57% !important;
-  left: auto !important;
-  right: 0 !important;
-  object-fit: contain;
-  object-position: right center;
-  mask-image: linear-gradient(90deg, transparent, black 15%);
-}
-.approach-intro.page-intro {
-  background: #c5cbcd;
-  color: var(--ink);
-}
-.approach-intro .intro-image {
-  background: transparent;
-}
-.approach-intro .intro-image img {
-  width: 43% !important;
-}
-.approach-intro .intro-copy {
-  color: var(--ink);
-}
-.approach-intro .eyebrow {
-  color: var(--slate);
-}
-.approach-intro:after {
-  background: linear-gradient(
-    90deg,
-    #c8cdce,
-    rgba(200, 205, 206, 0.65) 40%,
-    transparent 65%
-  );
-}
-.summit-intro.page-intro {
-  min-height: 620px;
-  height: 50vw;
-  max-height: 800px;
-}
-.summit-intro .intro-image img {
-  width: 100% !important;
-  object-fit: cover;
-  object-position: center top;
-  mask-image: none;
-}
-.summit-intro:after {
-  background: linear-gradient(
-    90deg,
-    rgba(21, 25, 30, 0.88),
-    rgba(21, 25, 30, 0.65) 44%,
-    rgba(21, 25, 30, 0.08) 72%
-  );
-}
 .service-overview,
 .ownership {
   background: var(--warm-paper);
@@ -2628,60 +2560,7 @@ summary {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-@media (max-width: 1000px) and (min-width: 701px) {
-  .subject-banner.page-intro {
-    min-height: 650px;
-  }
-  .subject-banner .intro-text {
-    width: 49%;
-  }
-  .subject-banner h1 {
-    font-size: 44px;
-  }
-  .approach-intro .intro-image img {
-    width: 50% !important;
-  }
-}
 @media (max-width: 700px) {
-  .subject-banner.page-intro {
-    display: block;
-    height: auto;
-    min-height: 0;
-    max-height: none;
-    padding-top: calc(100vw + 25px);
-    padding-bottom: 45px;
-    background: var(--slate);
-    color: var(--paper);
-  }
-  .subject-banner .intro-text {
-    width: 100%;
-    max-width: none;
-  }
-  .subject-banner h1 {
-    font-size: clamp(38px, 10.8vw, 53px);
-  }
-  .subject-banner .intro-image {
-    height: 100vw;
-  }
-  .subject-banner .intro-image img {
-    width: 100% !important;
-    object-fit: contain;
-    object-position: center top;
-    mask-image: linear-gradient(black 80%, transparent);
-  }
-  .summit-intro.page-intro {
-    padding-top: calc(66.68vw + 25px);
-  }
-  .summit-intro .intro-image {
-    height: 66.68vw;
-  }
-  .subject-banner:after {
-    background: none;
-  }
-  .approach-intro .intro-copy,
-  .approach-intro .eyebrow {
-    color: var(--paper);
-  }
   .logo-family .logo-concepts {
     grid-template-columns: 1fr;
   }
@@ -2697,4 +2576,107 @@ summary {
     width: 48px;
     height: 48px;
   }
+}
+
+/* Review 5: one shared photographic banner geometry for every interior page. */
+.page-intro.page-banner {
+  height: 560px;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  padding-block: 55px;
+  color: var(--paper);
+  background: var(--slate);
+}
+.page-banner .intro-text {
+  width: 100%;
+  max-width: 860px;
+}
+.page-banner .intro-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background: var(--slate);
+}
+.page-banner .intro-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  mask-image: none;
+}
+.page-banner .intro-copy,
+.page-banner .eyebrow {
+  color: var(--paper);
+}
+.summit-intro .intro-image img {
+  object-position: center 18%;
+}
+.approach-intro .intro-image img {
+  object-position: 75% center;
+}
+.footer-top p span {
+  display: block;
+}
+@media (max-width: 1000px) {
+  .page-intro.page-banner {
+    height: 580px;
+    min-height: 580px;
+  }
+}
+@media (max-width: 700px) {
+  .page-intro.page-banner {
+    height: 680px;
+    min-height: 680px;
+    padding-block: 45px;
+    align-items: flex-start;
+  }
+  .page-banner h1 {
+    font-size: clamp(38px, 10.8vw, 53px);
+  }
+  .page-banner .intro-copy {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+  .page-banner:after {
+    background: linear-gradient(
+      90deg,
+      rgba(21, 25, 30, 0.87),
+      rgba(21, 25, 30, 0.55)
+    );
+  }
+  .approach-intro .intro-image img {
+    object-position: center bottom;
+  }
+  .approach-intro:after {
+    background: linear-gradient(
+      180deg,
+      rgba(21, 25, 30, 0.9),
+      rgba(21, 25, 30, 0.75) 50%,
+      rgba(21, 25, 30, 0.12) 77%,
+      rgba(21, 25, 30, 0.05)
+    );
+  }
+  .footer-top p {
+    font-size: clamp(17px, 5vw, 21px);
+    max-width: none;
+  }
+}
+/* Only the defective transparent shirt notch reveals the generated repair layer.
+   The original portrait remains the foreground, preserving its pixels everywhere else. */
+.portrait-photo {
+  position: relative;
+}
+.portrait-photo .portrait-source {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+.portrait-photo .portrait-repair {
+  z-index: 0;
+  background: transparent;
+  clip-path: polygon(58% 97%, 70% 97%, 70% 100%, 58% 100%);
+  object-fit: contain;
 }

@@ -65,3 +65,11 @@ The owner's later first-pass review supersedes earlier copy and visual choices:
 - Keep the homepage photograph as the alpine/natural-color anchor. Replace generic Services water imagery. Preserve the bison's recognizable outline and the About mountain peak across breakpoints; audit whole-page color transitions.
 - Explicitly include IT hardware, infrastructure, workplace platforms, identity, networking, separations and provider transitions within modernization. Do not publish private client or project names.
 - Keep G1, G2, F1 and B2 as references only. Remove other earlier studies; explore new triskelion structures without treating the shortlist as approval.
+
+## Owner review 5: superseding direction
+- Four bullets on every service card; condense IT infrastructure into four important grouped responsibilities.
+- Services/Approach/About/Contact must have equal-size photographic banners and overlaid text at each screen size. Homepage hero remains larger and distinct. Preserve recognizable photographic subjects with responsive image compositions as needed.
+- Homepage ridge slogan must be direct; use "You run the business. We lead the technology."
+- Footer positioning should use three deliberate lines rather than an accidental sentence wrap.
+- Repair the inherited shirt/arm cutout notch while preserving the original portrait and full arms.
+- Retain G1/G2/F1/B2 and N2/N4/N11 for reference. Focus new variations on N11's longer, flower-like curves, with supporting N2/N4 refinements. Remove other N-series options. No mark adopted without selection.

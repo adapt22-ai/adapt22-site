@@ -1,6 +1,11 @@
 # Implementation status
 
-Updated October 26, 2026 (America/Chicago), after owner review 4.
+Updated October 26, 2026 (America/Chicago), after owner review 5.
+
+## Review 5 implementation
+All four interior banners share full-width image-overlay dimensions at each breakpoint. Bison compositions support wide and vertical layouts. Every service has four bullets; IT scope is condensed without dropping the core responsibilities. Homepage ridge wording is now "You run the business. We lead the technology." Footer positioning uses three deliberate lines. Original headshot remains unchanged with a clipped fabric repair beneath its small alpha notch. Private logo review retains four original references plus N2/N4/N11 and ten focused variations, seventeen marks total.
+
+Build, 232 browser checks across eight Chromium/WebKit configurations, and 10 contact-handler tests pass. Production dependency audit reports zero vulnerabilities. Desktop/phone/320px visual review confirms matching banners, visible bison/summit subjects, three footer lines and the portrait repair. Protected deployment evidence follows this development commit. See docs/REVIEW_5.md. Prior revision 4 evidence below is historical.
 
 ## Review 4 implementation
 Owner-priority wording replaces direction-setting claims. Homepage mountain copy now names planning and responsibility. Services uses a new alpine valley; bison outline and About summit peak are preserved with responsive composition. Warm reading surfaces reduce repeated dark/light transitions. IT infrastructure and modernization explicitly includes hardware, identity, networks, workplace systems, separations and cutover. Four logo references retained; twelve new structures and an equal-scale overview added.

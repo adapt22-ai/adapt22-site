@@ -10,7 +10,7 @@ const families = [
     id: "references",
     label: "Reference shortlist / Not a selection",
     title: "The four worth keeping in view",
-    copy: "G1, G2, F1, and B2 are retained exactly as comparison references. All other previous studies have been removed. None of these four is treated as your chosen direction.",
+    copy: "G1, G2, F1, and B2 are retained exactly as comparison references. The three newer references N2, N4 and N11 appear in their own groups below. None of these four is treated as your chosen direction.",
     concepts: [
       [
         "current",
@@ -39,98 +39,99 @@ const families = [
     ],
   },
   {
-    id: "loops",
-    label: "New studies / 01–04",
-    title: "Open loops & returning arms",
-    copy: "Four different ways for each arm to turn back toward the center. Compare the open space, the shape of the return, and how distinctly the three arms read at a small size.",
+    id: "n11",
+    label: "Primary exploration / N11",
+    title: "Let the curves keep going",
+    copy: "N11 is retained as the baseline. A, B and C progressively extend the same line. D opens the center, E broadens the petals, and F balances the longer return with a softer outline.",
     concepts: [
-      [
-        "helix",
-        "N1",
-        "Helix",
-        "Long, open turns with a smaller internal curl. More organic than the reference shortlist.",
-      ],
-      [
-        "return",
-        "N2",
-        "Return",
-        "Broad rounded returns with short inward stems. A more compact, substantial silhouette.",
-      ],
-      [
-        "oval",
-        "N3",
-        "Oval",
-        "Three elongated loops leave more air around the center.",
-      ],
-      [
-        "hook",
-        "N4",
-        "Square return",
-        "A straight stem meets a rounded outer return, with deliberately flat terminals.",
-      ],
-    ],
-  },
-  {
-    id: "carved",
-    label: "New studies / 05–08",
-    title: "Carved forms & negative space",
-    copy: "Solid silhouettes rather than outlined loops. Each uses a different internal cut: stepped, triangular, faceted, or curved. View these in one color before judging the bronze version.",
-    concepts: [
-      [
-        "cutstone",
-        "N5",
-        "Cut stone",
-        "Stepped inner cuts and three faceted returns. A heavier alternative to G2.",
-      ],
-      [
-        "aperture",
-        "N6",
-        "Aperture",
-        "Three folded planes leave angular openings around a triangular center.",
-      ],
-      [
-        "chisel",
-        "N7",
-        "Chisel",
-        "Offset facets create a less regular outside edge and a sharply cut interior.",
-      ],
-      [
-        "crescent",
-        "N8",
-        "Crescent",
-        "A solid crescent-shaped arm with a broad outer curve and tapered inner return.",
-      ],
-    ],
-  },
-  {
-    id: "connected",
-    label: "New studies / 09–12",
-    title: "Interwoven bands & parallel lines",
-    copy: "These explore the connection between the arms more directly: a folded band, an angular link, a broad arc, and a double contour. They keep the three-part construction while changing its weight and rhythm.",
-    concepts: [
-      [
-        "weave",
-        "N9",
-        "Woven band",
-        "Filled bands with narrow internal channels and a compact center.",
-      ],
-      [
-        "link",
-        "N10",
-        "Open link",
-        "An angular return with deliberate gaps and a more open center than B2.",
-      ],
       [
         "arc",
         "N11",
-        "Broad arc",
-        "Wide circular turns with restrained internal detail.",
+        "Original broad arc",
+        "Your reference from the previous review, unchanged.",
       ],
       [
-        "contour",
-        "N12",
-        "Double contour",
-        "Two parallel lines describe each return. A quieter, more intricate study.",
+        "arcPlus",
+        "N11-A",
+        "A little further",
+        "The original curve continues a short distance inward.",
+      ],
+      [
+        "arcFurther",
+        "N11-B",
+        "Longer return",
+        "The line continues into a fuller return, making each petal more apparent.",
+      ],
+      [
+        "arcCurl",
+        "N11-C",
+        "Turn inward",
+        "The longer line curls back inside the petal; a lighter stroke preserves the opening.",
+      ],
+      [
+        "arcAir",
+        "N11-D",
+        "Open flower",
+        "More room at the center and a finer line separate the three petals.",
+      ],
+      [
+        "arcPetal",
+        "N11-E",
+        "Broad petals",
+        "A wider outer sweep and longer inward return make the flower-like silhouette more distinct.",
+      ],
+      [
+        "arcSoft",
+        "N11-F",
+        "Soft return",
+        "A more compact petal with an extended, rounded inner return.",
+      ],
+    ],
+  },
+  {
+    id: "n2",
+    label: "Supporting exploration / N2",
+    title: "Refine the returning loop",
+    copy: "Keep the N2 structure in view while testing a longer inner stem and a more open, lighter return.",
+    concepts: [
+      ["return", "N2", "Original return", "The N2 source study, unchanged."],
+      [
+        "returnLong",
+        "N2-A",
+        "Longer stem",
+        "The inner line extends farther up the loop.",
+      ],
+      [
+        "returnOpen",
+        "N2-B",
+        "Open return",
+        "A shorter terminal and lighter stroke leave a larger opening.",
+      ],
+    ],
+  },
+  {
+    id: "n4",
+    label: "Supporting exploration / N4",
+    title: "Soften the square return",
+    copy: "Keep the straighter stem of N4 while exploring rounded terminals and an extended inward turn.",
+    concepts: [
+      [
+        "hook",
+        "N4",
+        "Original square return",
+        "The N4 source study, unchanged.",
+      ],
+      [
+        "hookRound",
+        "N4-A",
+        "Rounded terminals",
+        "A lighter stroke and rounded ends soften the original geometry.",
+      ],
+      [
+        "hookInward",
+        "N4-B",
+        "Inward turn",
+        "The terminal continues inward, bringing more of the returning-loop character into N4.",
       ],
     ],
   },
@@ -141,25 +142,26 @@ export default function BrandReview() {
     <>
       <PageIntro
         image={false}
-        label="Private working review / 4 references + 12 new studies"
+        label="Private working review / N11 / N2 / N4 refinements"
         title={
           <>
-            Keep the foundation.
+            Follow the curve.
             <br />
-            Explore the form.
+            Refine the mark.
           </>
         }
-        description="Your four reference marks, followed by twelve newly drawn triskelion studies. These explore different structures, not just different colors or line weights. The website logo remains unchanged."
+        description="Your four original references remain. This round focuses on N2, N4, and especially N11: longer curves, more open centers, and a simple three-petal character. The website logo remains unchanged."
       />
       <section
         className="logo-overview section"
         aria-labelledby="overview-title"
       >
         <p className="eyebrow">Compare the silhouettes first</p>
-        <h2 id="overview-title">All sixteen, side by side.</h2>
+        <h2 id="overview-title">Compare every mark at the same scale.</h2>
         <p className="overview-note">
-          The first four are your references. N1–N12 are new. Select a mark to
-          see its larger study and small-size test.
+          The first four are the original references. N11, N2 and N4 are
+          retained as baselines, followed by their new variations. Select a mark
+          to see the larger study.
         </p>
         <div>
           {families

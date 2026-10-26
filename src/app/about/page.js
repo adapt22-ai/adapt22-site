@@ -38,7 +38,7 @@ export default function About() {
     <>
       <PageIntro
         image="/images/summit.jpg"
-        className="subject-banner summit-intro"
+        className="summit-intro"
         imageAlt="A dark alpine peak surrounded by snow and mist"
         label="The company behind the work"
         title={
@@ -52,13 +52,24 @@ export default function About() {
       />
       <section className="founder section">
         <div className="portrait">
-          <Image
-            src="/headshot.png"
-            alt="Jackson McConnell, founder of adapt22, standing with his arms folded"
-            width={1080}
-            height={1448}
-            sizes="(max-width: 700px) 90vw, 40vw"
-          />
+          <div className="portrait-photo">
+            <Image
+              src="/images/portrait-repair.png"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="(max-width: 700px) 90vw, 40vw"
+              className="portrait-repair"
+            />
+            <Image
+              className="portrait-source"
+              src="/headshot.png"
+              alt="Jackson McConnell, founder of adapt22, standing with his arms folded"
+              width={1086}
+              height={1448}
+              sizes="(max-width: 700px) 90vw, 40vw"
+            />
+          </div>
           <p>
             Jackson McConnell <span>Founder / adapt22</span>
           </p>

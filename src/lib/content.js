@@ -76,11 +76,9 @@ const capabilities = [
       "Take responsibility for the IT your team relies on: devices, identity, networks, workplace platforms, and providers. Modernize existing systems or separate a business from a shared IT environment, with a plan to keep people working through the change.",
     items: [
       "Hardware, device management, and endpoint security",
-      "Identity, access, permissions, and account transitions",
-      "Networks, connectivity, and cloud infrastructure",
-      "Microsoft 365, Google Workspace, and workplace systems",
+      "Identity, networks, and workplace platforms",
       "IT separations, carve-outs, and provider transitions",
-      "Application and data migration, cutover, and recovery planning",
+      "Cloud and data migration, cutover, and recovery planning",
     ],
     result:
       "A migration plan with dependencies, rollback steps, and responsibilities made explicit.",
