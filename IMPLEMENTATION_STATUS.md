@@ -2,7 +2,11 @@
 
 Updated October 26, 2026 (America/Chicago), after prelaunch audit.
 
-## Contact setup: latest status
+## Production release: latest status
+
+Owner explicitly approved going live. PR #2 merged into main as b060cac20ba0af408101473489eef15edda09de9. Fresh production deployment dpl_3UNMEdEKZm5hoGdLte92jLTX6Ykk is READY and serves https://www.adapt22.ai/ . This was a production-environment build, not preview promotion. All 15 public routes and release assets passed HTTP smoke checks; production indexing enabled, private brand review 404, contact enabled, invalid-token rejection verified, analytics scripts present, initial error/fatal query empty. Latest reviewed-source CI passed. See docs/PRODUCTION_RELEASE.md for rollback target and precise follow-up limits. Earlier hold/no-production statements below are historical and superseded by this section. No further live edits or real emails are implied by the completed release.
+
+## Contact setup: previous setup evidence
 
 Owner authorized the SPF repair, real contact configuration, free-tier Upstash terms acceptance, and one real email test. All three requested setup tasks are complete on protected staging: managed Turnstile and free shared Redis connected; SPF repaired and re-verified; actual form message delivered to the owner-confirmed inbox with SPF/DKIM/DMARC all passing. Eleven handler tests and local build pass. Exact evidence, provider/resource details and remaining production-network/replay-test limits: docs/CONTACT_SETUP.md.
 

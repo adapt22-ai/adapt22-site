@@ -40,7 +40,7 @@ export default function Home() {
         <div className="hero-caption">
           <span>ADAPT / EVOLVE / MOVE FORWARD</span>
           <a href="#perspective">
-            A different perspective <span aria-hidden="true">↓</span>
+            A different perspective <Arrow direction="down" />
           </a>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import Arrow from "@/components/Arrow";
 import { notFound } from "next/navigation";
 import LogoStudy from "../../components/LogoStudy";
 import styles from "./studio.module.css";
@@ -155,7 +156,7 @@ export default function BrandReview() {
       <nav className="logo-family-nav section" aria-label="Logo families">
         {families.map((f) => (
           <a href={"#" + f.id} key={f.id}>
-            {f.title} <span aria-hidden="true">↓</span>
+            {f.title} <Arrow direction="down" />
           </a>
         ))}
       </nav>

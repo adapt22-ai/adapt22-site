@@ -1,4 +1,5 @@
 "use client";
+import Arrow from "@/components/Arrow";
 import Link from "@/components/RouteLink";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -61,7 +62,7 @@ export default function Header() {
           className="nav-cta"
           aria-current={path === "/contact" ? "page" : undefined}
         >
-          Let’s talk <span aria-hidden="true">↗</span>
+          Let’s talk <Arrow />
         </Link>
       </nav>
     </header>

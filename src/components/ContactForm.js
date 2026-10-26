@@ -1,4 +1,5 @@
 "use client";
+import Arrow from "@/components/Arrow";
 import Script from "next/script";
 import Link from "@/components/RouteLink";
 import { useEffect, useRef, useState } from "react";
@@ -86,7 +87,7 @@ export default function ContactForm({ enabled, siteKey }) {
             setState("idle");
           }}
         >
-          Write another message ↗
+          Write another message <Arrow />
         </button>
       </div>
     );
@@ -170,8 +171,7 @@ export default function ContactForm({ enabled, siteKey }) {
         type="submit"
         disabled={!enabled || !token || state === "sending"}
       >
-        {state === "sending" ? "Sending…" : "Send your message"}{" "}
-        <span aria-hidden="true">↗</span>
+        {state === "sending" ? "Sending…" : "Send your message"} <Arrow />
       </button>
     </form>
   );
