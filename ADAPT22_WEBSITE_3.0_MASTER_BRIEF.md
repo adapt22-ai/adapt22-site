@@ -73,3 +73,6 @@ The owner's later first-pass review supersedes earlier copy and visual choices:
 - Footer positioning should use three deliberate lines rather than an accidental sentence wrap.
 - Repair the inherited shirt/arm cutout notch while preserving the original portrait and full arms.
 - Retain G1/G2/F1/B2 and N2/N4/N11 for reference. Focus new variations on N11's longer, flower-like curves, with supporting N2/N4 refinements. Remove other N-series options. No mark adopted without selection.
+
+## Owner review 6: logo-only scope
+The website is accepted for this design round. Focus solely on the private logo page: N11-C as reference, endpoints that merge/taper into other lines, paisley/circle forms, and adventurous alternatives with triskelion roots. Preserve public page content, layout, imagery and current identity. No final logo selected yet. See docs/REVIEW_6.md.

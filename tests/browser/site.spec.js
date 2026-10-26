@@ -215,7 +215,7 @@ test("full width banners, non-repeating imagery, and no public addresses", async
   }
   expect(new Set(sources).size).toBe(4);
   await page.goto("/brand-review");
-  await expect(page.locator("[data-concept]")).toHaveCount(17);
+  await expect(page.locator("[data-concept]")).toHaveCount(13);
 });
 
 test("owner authority, four bullets, equal overlay banners, and focused logo review", async ({
@@ -265,11 +265,11 @@ test("owner authority, four bullets, equal overlay banners, and focused logo rev
   for (const card of await page.locator("[data-service]").all())
     await expect(card.locator("li")).toHaveCount(4);
   await page.goto("/brand-review");
-  await expect(page.locator(".logo-overview a")).toHaveCount(17);
-  await page.locator('.logo-overview a[href="#concept-N11-B"]').click();
-  await expect(page).toHaveURL(/#concept-N11-B$/);
-  await expect(page.locator('[data-concept="N11-B"]')).toBeInViewport();
-  for (const id of ["G1", "G2", "F1", "B2", "N2", "N4", "N11", "N11-F"])
+  await expect(page.locator(".logo-overview a")).toHaveCount(13);
+  await page.locator('.logo-overview a[href="#concept-C2"]').click();
+  await expect(page).toHaveURL(/#concept-C2$/);
+  await expect(page.locator('[data-concept="C2"]')).toBeInViewport();
+  for (const id of ["N11-C", "C1", "C6", "P1", "P6"])
     await expect(page.locator(`[data-concept="${id}"]`)).toHaveCount(1);
   for (const id of [
     "G3",
