@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# adapt22 Website 3.0
 
-## Getting Started
+A separate-branch redesign of adapt22.ai. Production release requires separate user approval.
 
-First, run the development server:
+Read [the master brief](ADAPT22_WEBSITE_3.0_MASTER_BRIEF.md), [working instructions](AGENTS.md), and [implementation status](IMPLEMENTATION_STATUS.md). Source gaps and actual verification results are recorded explicitly.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Development
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Node.js 22 or later. `npm ci`, `npm run dev`. Release build: `npm run build`, then `npm start`. Browser tests use port 3100 (`npm start -- -p 3100`) plus a dummy-configured contact server on 3101, documented in docs/CONFIGURATION.md.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Tests: `npm test` for contact handling; `npm run test:e2e` with the local server running for desktop, tablet, phone, landscape, and WebKit routes, accessibility, images, navigation, redirects, and preview indexing. Install Chromium with `npx playwright install chromium`, or use `PLAYWRIGHT_CHANNEL=chrome` when Chrome is installed.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Integration and deployment
 
-## Learn More
+See [configuration](docs/CONFIGURATION.md) and [asset provenance](docs/ASSETS.md). No secrets in this repository. Contact submissions fail closed until sending and abuse-prevention credentials are configured. Email and Calendly links remain available.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy previews only, with Vercel authentication protection verified before deployment. Do not merge, deploy production, change DNS, or assign adapt22.ai without explicit approval.

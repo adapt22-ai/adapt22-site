@@ -1,0 +1,26 @@
+{
+  "/": {
+    "src": "/images/optimized/landscape-1200-c5aa4eb240.webp",
+    "srcSet": "/images/optimized/landscape-480-c5aa4eb240.webp 480w, /images/optimized/landscape-768-c5aa4eb240.webp 768w, /images/optimized/landscape-1200-c5aa4eb240.webp 1200w, /images/optimized/landscape-1600-c5aa4eb240.webp 1600w, /images/optimized/landscape-2200-c5aa4eb240.webp 2200w, /images/optimized/landscape-2400-c5aa4eb240.webp 2400w"
+  },
+  "/services": {
+    "src": "/images/optimized/alpine-valley-1200-cde5c5aed9.webp",
+    "srcSet": "/images/optimized/alpine-valley-480-cde5c5aed9.webp 480w, /images/optimized/alpine-valley-768-cde5c5aed9.webp 768w, /images/optimized/alpine-valley-1200-cde5c5aed9.webp 1200w, /images/optimized/alpine-valley-1600-cde5c5aed9.webp 1600w, /images/optimized/alpine-valley-2200-cde5c5aed9.webp 2200w, /images/optimized/alpine-valley-2400-cde5c5aed9.webp 2400w"
+  },
+  "/approach": {
+    "src": "/images/optimized/bison-banner-1200-f69d2a55f1.webp",
+    "srcSet": "/images/optimized/bison-banner-480-f69d2a55f1.webp 480w, /images/optimized/bison-banner-768-f69d2a55f1.webp 768w, /images/optimized/bison-banner-1200-f69d2a55f1.webp 1200w, /images/optimized/bison-banner-1600-f69d2a55f1.webp 1600w, /images/optimized/bison-banner-2172-f69d2a55f1.webp 2172w",
+    "mobile": {
+      "src": "/images/optimized/bison-mobile-1024-bfc7ecbe61.webp",
+      "srcSet": "/images/optimized/bison-mobile-480-bfc7ecbe61.webp 480w, /images/optimized/bison-mobile-768-bfc7ecbe61.webp 768w, /images/optimized/bison-mobile-1024-bfc7ecbe61.webp 1024w"
+    }
+  },
+  "/about": {
+    "src": "/images/optimized/summit-1200-5fc29483d4.webp",
+    "srcSet": "/images/optimized/summit-480-5fc29483d4.webp 480w, /images/optimized/summit-768-5fc29483d4.webp 768w, /images/optimized/summit-1200-5fc29483d4.webp 1200w, /images/optimized/summit-1600-5fc29483d4.webp 1600w, /images/optimized/summit-2200-5fc29483d4.webp 2200w"
+  },
+  "/contact": {
+    "src": "/images/optimized/lake-1200-5885010131.webp",
+    "srcSet": "/images/optimized/lake-480-5885010131.webp 480w, /images/optimized/lake-768-5885010131.webp 768w, /images/optimized/lake-1200-5885010131.webp 1200w, /images/optimized/lake-1600-5885010131.webp 1600w, /images/optimized/lake-2200-5885010131.webp 2200w"
+  }
+}

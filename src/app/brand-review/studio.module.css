@@ -1,0 +1,63 @@
+.studio :global(.logo-overview > div) {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.studio :global(.logo-family .logo-concepts) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.studio :global(.logo-family .logo-large) {
+  height: 245px;
+}
+.studio :global(#reference .logo-concepts) {
+  grid-template-columns: 1fr;
+}
+.studio :global(#reference article) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5vw;
+}
+.studio :global(#reference article > .eyebrow) {
+  grid-column: 1/-1;
+}
+.studio :global(#reference .logo-large) {
+  grid-column: 1;
+  grid-row: 2/6;
+  height: auto;
+  min-height: 280px;
+}
+.studio :global(#reference .logo-large svg) {
+  width: 230px;
+  height: 230px;
+}
+.studio :global(#reference .concept-copy) {
+  min-height: 0;
+  margin-block: 22px;
+}
+.studio :global(#reference .logo-dark) {
+  margin-top: 0;
+}
+@media (max-width: 1000px) {
+  .studio :global(.logo-overview > div) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .studio :global(.logo-family .logo-concepts) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .studio :global(#reference .logo-concepts) {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .studio :global(.logo-family .logo-concepts) {
+    grid-template-columns: 1fr;
+  }
+  .studio :global(#reference article) {
+    display: block;
+  }
+  .studio :global(#reference .logo-large) {
+    min-height: 240px;
+  }
+  .studio :global(#reference .logo-large svg) {
+    width: 190px;
+    height: 190px;
+  }
+}

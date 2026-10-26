@@ -1,0 +1,37 @@
+name: Website checks
+on:
+  pull_request:
+  push:
+    branches: [website-3-rebrand]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+        env:
+          VERCEL_ENV: preview
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Browser checks with stubbed delivery
+        run: |
+          npm start -- -p 3100 > /tmp/site.log 2>&1 &
+          RESEND_API_KEY=local-mock TURNSTILE_SECRET_KEY=local-mock NEXT_PUBLIC_TURNSTILE_SITE_KEY=local-mock UPSTASH_REDIS_REST_URL=https://local-mock.invalid UPSTASH_REDIS_REST_TOKEN=local-mock npm start -- -p 3101 > /tmp/contact.log 2>&1 &
+          for port in 3100 3101; do
+            for attempt in $(seq 1 30); do
+              if curl --fail --silent http://localhost:$port/contact > /dev/null; then break; fi
+              sleep 1
+            done
+            curl --fail --silent http://localhost:$port/contact > /dev/null
+          done
+          npm run test:e2e

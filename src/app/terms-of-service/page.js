@@ -1,58 +1,45 @@
 export const metadata = {
-  title: "Terms of Service | Adapt22",
-  description: "Understand the terms for using our services and website.",
+  title: "Website terms",
+  description:
+    "Information about using the adapt22 website and discussing a potential engagement.",
+  alternates: { canonical: "/terms-of-service" },
 };
-
-export default function TermsPage() {
+export default function Terms() {
   return (
-    <div className="bg-background text-textPrimary">
-      <section className="py-20 px-4 sm:px-8">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {/* Heading + Gold Bar */}
-          <div className="space-y-4">
-            <div className="inline-flex flex-col items-start">
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-accentIndigo">Terms of Service</h1>
-              <div className="h-1 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[50ch] bg-primaryDark rounded-full mt-2" />
-            </div>
-            <p className="text-md sm:text-lg textMuted">
-              By accessing this website or using our services, you agree to be bound by the following terms. If you do not agree, please do not use this site or our services.
-            </p>
-          </div>
-
-          {/* Terms Sections */}
-          <div className="space-y-10 text-base leading-relaxed">
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-primaryDark mb-2">1. Use of Services</h2>
-              <p>
-                You agree to use Adapt22 services responsibly, for lawful purposes only, and in accordance with all applicable laws and regulations.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-primaryDark mb-2">2. Intellectual Property</h2>
-              <p>
-                All content on this website, including text, graphics, logos, and software, is the property of Adapt22 unless otherwise stated.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-primaryDark mb-2">3. Liability</h2>
-              <p>
-                Adapt22 is not liable for any damages arising from the use of this website or its services, including errors, omissions, or interruptions.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-primaryDark mb-2">4. Changes to Terms</h2>
-              <p>
-                We reserve the right to update these terms at any time. Continued use of the website after changes means you accept the new terms.
-              </p>
-            </div>
-
-            <p className="text-sm textMuted mt-8">Last updated: May 2025</p>
-          </div>
-        </div>
-      </section>
-    </div>
+    <article className="section legal">
+      <p className="eyebrow">Website information / October 26, 2026</p>
+      <h1>Website terms</h1>
+      <p>
+        adapt22 LLC operates this website to explain our services and provide
+        ways to start a conversation. For questions, use{" "}
+        <a href="/contact">our contact page</a>.
+      </p>
+      <h2>Service information</h2>
+      <p>
+        Service descriptions illustrate potential areas of work. They are not a
+        proposal, a fixed package, or a guarantee of a particular business
+        result. An engagement begins only after scope, responsibilities,
+        deliverables, fees, and applicable terms are separately agreed.
+      </p>
+      <h2>Submitting an inquiry</h2>
+      <p>
+        A contact message or scheduled conversation does not establish an
+        engagement or a confidentiality agreement. Please keep initial messages
+        to a general description of your situation and avoid sharing
+        confidential records, credentials, or sensitive personal information.
+      </p>
+      <h2>Third-party services</h2>
+      <p>
+        Scheduling links and other external links lead to services operated by
+        their respective providers. Their availability and terms are governed by
+        those providers.
+      </p>
+      <h2>Website content</h2>
+      <p>
+        Information may change as services develop. If you need to rely on a
+        specific capability, availability, or delivery timeline, confirm it
+        directly with our team and include it in the agreed scope.
+      </p>
+    </article>
   );
 }
